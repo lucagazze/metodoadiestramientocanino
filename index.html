@@ -108,7 +108,7 @@ section{padding:52px 0}
 .pl-destacado{border-color:#e0c9c9;background:#fffdfd}
 .pl-nombre{display:block;font-family:var(--display);font-size:19px;font-weight:700;color:var(--tx);line-height:1.2;padding-right:34px}
 .pl-clases{display:block;font-size:12.8px;color:var(--tx3);margin-top:2px}
-.pl-antes{display:block;margin-top:12px;font-size:14.5px;color:#b6bec6;text-decoration:line-through;text-decoration-thickness:1.5px;line-height:1}
+.pl-antes{display:block;margin-top:12px;font-size:17px;font-weight:600;color:#96a0a8;text-decoration:line-through;text-decoration-color:#c96464;text-decoration-thickness:2px;line-height:1.1}
 .pl-precio{display:block;margin:4px 0 2px}
 .pl-ahorro{display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:4px 9px;border-radius:100px;margin:6px 0 6px}
 .pl-precio b{font-family:var(--display);font-size:30px;font-weight:700;color:var(--tx);letter-spacing:-.02em;line-height:1}
@@ -122,10 +122,17 @@ section{padding:52px 0}
 .pl-lista li.no:before{content:"\2715";color:#d8dee3;font-size:13px}
 .pl-salto{display:block;margin-top:16px;padding:11px 13px;background:#faf4f4;border:1px solid #eedada;border-radius:9px;font-family:var(--display);font-size:13.4px;font-weight:700;color:var(--vino);line-height:1.4}
 .pl-salto small{display:block;font-family:var(--body);font-size:11.8px;font-weight:500;color:#a08282;margin-top:3px;line-height:1.45}
-.pl-cupos{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 0 16px;font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--vino)}
-.pl-cupos i{width:8px;height:8px;border-radius:50%;background:var(--vino);flex:0 0 auto;animation:lat 1.9s ease-in-out infinite}
+.pl-cupos{text-align:center;margin:0 0 26px}
+.pl-cupos span{display:inline-flex;align-items:center;gap:9px;background:#fbeded;border:1px solid #f0d3d3;color:var(--vino);font-family:var(--display);font-size:14.5px;font-weight:700;letter-spacing:-.01em;padding:10px 19px;border-radius:100px;line-height:1.3}
+.pl-cupos i{width:7px;height:7px;border-radius:50%;background:var(--vino);flex:0 0 auto;animation:lat 1.9s ease-in-out infinite}
+@media (max-width:400px){.pl-cupos span{font-size:13px;padding:9px 16px}}
 .pl-cta{text-align:center;margin-top:22px}
 .pl-nota{font-size:12.6px;color:var(--tx3);margin-top:12px}
+.pl-timer{margin:16px auto 0;max-width:340px}
+.pl-timer p{font-size:12.6px;color:var(--tx3);text-align:center;margin:0 0 8px;line-height:1.5}
+.pl-timer b{color:var(--vino);font-weight:700;font-variant-numeric:tabular-nums}
+.pl-timer .hilo{height:3px;border-radius:100px;background:#edf0f3;overflow:hidden}
+.pl-timer .hilo i{display:block;height:100%;border-radius:100px;background:var(--vino);transition:width 1s linear}
 .trust{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:18px}
 .tr{display:flex;align-items:center;gap:6px;font-size:12px;color:#6b7784;font-weight:600}
 .tr svg{width:14px;height:14px;flex:0 0 auto}
@@ -275,14 +282,14 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <h2>Elegí con cuánto <em>te lo querés llevar</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el día uno.</p>
     <div class="planes" id="planes-hero" data-planes>
-    <p class="pl-cupos"><i></i>Quedan 4 cupos a este precio</p>
+    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a este precio</span></p>
     <div class="pl-grid">
       <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
         <input type="radio" name="plan-hero" value="basico">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Básico</span>
         <span class="pl-clases">18 clases · 1 h 29 min</span>
-        <span class="pl-antes">AR$ 62.300</span>
+        <span class="pl-antes">Vuelve a AR$ 62.300</span>
         <span class="pl-precio"><b>AR$ 14.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 47.400</span>
         <span class="pl-unit">AR$ 828 por clase</span>
@@ -293,18 +300,18 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <span class="pl-badge">El más elegido</span><span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Completo</span>
         <span class="pl-clases">31 clases · 2 h 29 min</span>
-        <span class="pl-antes">AR$ 80.299</span>
+        <span class="pl-antes">Vuelve a AR$ 80.299</span>
         <span class="pl-precio"><b>AR$ 22.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 57.399</span>
         <span class="pl-unit">AR$ 739 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b><small>Salen AR$ 615 cada una. El precio por clase te baja de 828 a 739.</small></span>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b></span>
       </label>
       <label class="pl-card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
         <input type="radio" name="plan-hero" value="avanzado">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Avanzado</span>
         <span class="pl-clases">36 clases · 3 h 06 min</span>
-        <span class="pl-antes">AR$ 98.150</span>
+        <span class="pl-antes">Vuelve a AR$ 98.150</span>
         <span class="pl-precio"><b>AR$ 28.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 69.250</span>
         <span class="pl-unit">Incluye todo lo que se sume después</span>
@@ -314,6 +321,10 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
       <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
+      <div class="pl-timer">
+        <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
+        <div class="hilo"><i data-barra style="width:100%"></i></div>
+      </div>
     </div>
   </div>
     <div class="trust">
@@ -325,14 +336,6 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 </section>
 
 <section class="gris">
-  <div class="wrap">
-    <h2>Qué cambia <em>cuando lo hacés bien</em></h2>
-    <p class="baja">No son promesas: es lo que resuelve cada bloque del curso.</p>
-    <div class="benes"><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></i><b>Te hace caso a la primera</b><span>Sentado, echado, quieto y el llamado, con una sola indicación y sin levantar la voz.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/><path d="M10 21v-6h4v6"/></svg></i><b>Deja de romper la casa</b><span>Zapatos, cables y patas de mesa. Se corta la conducta, no se tapa.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="15" cy="12" r="1"/></svg></i><b>Se queda solo sin llorar</b><span>El llanto cuando cerrás la puerta tiene protocolo, y no es dejarlo llorar.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c0-4 3-6 6-6s6 2 6 6"/><circle cx="17.5" cy="6.5" r="3"/><path d="M14.8 8.2 11 12"/></svg></i><b>Paseás vos, no él</b><span>La correa floja desde la puerta de casa hasta la vuelta.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.6 6 10.4a6 6 0 0 1-12 0C6 10.1 12 3.5 12 3.5z"/></svg></i><b>Se deja bañar y curar</b><span>Baño, cepillo, pastilla y curaciones sin persecución ni bozal.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.2 2"/></svg></i><b>15 minutos por día</b><span>Clases de 2 a 12 minutos. Mirás una, la repetís con tu perro, seguís.</span></div></div>
-  </div>
-</section>
-
-<section>
   <div class="wrap">
     <h2>Todas las clases, <em>en el orden en que hay que verlas</em></h2>
     <p class="baja">Cada clase: qué hacer, cómo se hace y el error que casi todos cometen.</p>
@@ -545,6 +548,14 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <h2>Qué cambia <em>cuando lo hacés bien</em></h2>
+    <p class="baja">No son promesas: es lo que resuelve cada bloque del curso.</p>
+    <div class="benes"><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></i><b>Te hace caso a la primera</b><span>Sentado, echado, quieto y el llamado, con una sola indicación y sin levantar la voz.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/><path d="M10 21v-6h4v6"/></svg></i><b>Deja de romper la casa</b><span>Zapatos, cables y patas de mesa. Se corta la conducta, no se tapa.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="15" cy="12" r="1"/></svg></i><b>Se queda solo sin llorar</b><span>El llanto cuando cerrás la puerta tiene protocolo, y no es dejarlo llorar.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c0-4 3-6 6-6s6 2 6 6"/><circle cx="17.5" cy="6.5" r="3"/><path d="M14.8 8.2 11 12"/></svg></i><b>Paseás vos, no él</b><span>La correa floja desde la puerta de casa hasta la vuelta.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.6 6 10.4a6 6 0 0 1-12 0C6 10.1 12 3.5 12 3.5z"/></svg></i><b>Se deja bañar y curar</b><span>Baño, cepillo, pastilla y curaciones sin persecución ni bozal.</span></div><div class="bene"><i><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.2 2"/></svg></i><b>15 minutos por día</b><span>Clases de 2 a 12 minutos. Mirás una, la repetís con tu perro, seguís.</span></div></div>
+  </div>
+</section>
+
 <section class="gris">
   <div class="wrap">
     <h2>Los 2 manuales <em>van con cualquier plan</em></h2>
@@ -576,14 +587,14 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <h2>Empezá hoy <em>con tu perro</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. 7 días de garantía.</p>
     <div class="planes" id="planes-cierre" data-planes>
-    <p class="pl-cupos"><i></i>Quedan 4 cupos a este precio</p>
+    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a este precio</span></p>
     <div class="pl-grid">
       <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
         <input type="radio" name="plan-cierre" value="basico">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Básico</span>
         <span class="pl-clases">18 clases · 1 h 29 min</span>
-        <span class="pl-antes">AR$ 62.300</span>
+        <span class="pl-antes">Vuelve a AR$ 62.300</span>
         <span class="pl-precio"><b>AR$ 14.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 47.400</span>
         <span class="pl-unit">AR$ 828 por clase</span>
@@ -594,18 +605,18 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <span class="pl-badge">El más elegido</span><span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Completo</span>
         <span class="pl-clases">31 clases · 2 h 29 min</span>
-        <span class="pl-antes">AR$ 80.299</span>
+        <span class="pl-antes">Vuelve a AR$ 80.299</span>
         <span class="pl-precio"><b>AR$ 22.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 57.399</span>
         <span class="pl-unit">AR$ 739 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b><small>Salen AR$ 615 cada una. El precio por clase te baja de 828 a 739.</small></span>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b></span>
       </label>
       <label class="pl-card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
         <input type="radio" name="plan-cierre" value="avanzado">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Avanzado</span>
         <span class="pl-clases">36 clases · 3 h 06 min</span>
-        <span class="pl-antes">AR$ 98.150</span>
+        <span class="pl-antes">Vuelve a AR$ 98.150</span>
         <span class="pl-precio"><b>AR$ 28.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 69.250</span>
         <span class="pl-unit">Incluye todo lo que se sume después</span>
@@ -615,6 +626,10 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
       <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
+      <div class="pl-timer">
+        <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
+        <div class="hilo"><i data-barra style="width:100%"></i></div>
+      </div>
     </div>
   </div>
   </div>
@@ -637,8 +652,16 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     if(!v||v<=Date.now()){v=Date.now()+MIN*60000;try{localStorage.setItem(K,v)}catch(e){}}return v}
   var f=fin(), el=document.getElementById('reloj');
   function dd(n){return (n<10?'0':'')+n}
-  setInterval(function(){var r=f-Date.now(); if(r<=0){f=fin();r=f-Date.now()}
-    if(el) el.textContent=dd(Math.floor(r/60000))+':'+dd(Math.floor(r%60000/1000));},1000);
+  var TOT=MIN*60;
+  function tic(){
+    var r=f-Date.now(); if(r<=0){f=fin();r=f-Date.now()}
+    var t=dd(Math.floor(r/60000))+':'+dd(Math.floor(r%60000/1000));
+    if(el) el.textContent=t;
+    [].forEach.call(document.querySelectorAll('[data-reloj]'),function(x){x.textContent=t});
+    [].forEach.call(document.querySelectorAll('[data-barra]'),function(x){
+      x.style.width=Math.max(0,(r/1000)/TOT*100)+'%';});
+  }
+  setInterval(tic,1000); tic();
 
   // selectores de plan (hero y cierre, sincronizados)
   function fmt(n){try{return new Intl.NumberFormat('es-AR').format(n)}catch(e){return n}}
@@ -656,6 +679,10 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         }
       });
     });
+    var c2=document.querySelector('.pl-card[data-nombre="'+nombre+'"]');
+    if(c2){var an=c2.querySelector('.pl-antes');
+      if(an){var v=an.textContent.replace('Vuelve a ','');
+        [].forEach.call(document.querySelectorAll('[data-antes]'),function(x){x.textContent=v});}}
     var s=document.querySelector('.sticky a');
     if(s){var c=document.querySelector('.pl-card[data-nombre="'+nombre+'"]');
       s.setAttribute('href',c.getAttribute('data-link'));
