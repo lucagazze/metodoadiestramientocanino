@@ -443,19 +443,19 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="planes" id="planes-hero" data-planes>
     <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
     <div class="seg-btns">
-        <label class="seg-b" data-nombre="Básico" data-que="Solo obediencia y mañas"><input type="radio" name="planSel" value="básico"><span>Básico</span><em>18 clases</em></label>
-        <label class="seg-b sel" data-nombre="Completo" data-que="Suma los cuidados y los 9 trucos"><input type="radio" name="planSel" value="completo" checked><i class='seg-tag'>Más elegido</i><span>Completo</span><em>31 clases</em></label>
+        <label class="seg-b sel" data-nombre="Básico" data-que="Solo obediencia y mañas"><input type="radio" name="planSel" value="básico" checked><span>Básico</span><em>18 clases</em></label>
+        <label class="seg-b" data-nombre="Completo" data-que="Suma los cuidados y los 9 trucos"><input type="radio" name="planSel" value="completo"><i class='seg-tag'>Más elegido</i><span>Completo</span><em>31 clases</em></label>
         <label class="seg-b" data-nombre="Avanzado" data-que="Suma el paseo avanzado y el juego"><input type="radio" name="planSel" value="avanzado"><span>Avanzado</span><em>36 clases</em></label>
       </div>
       <div class="seg-precio">
-        <span class="seg-antes">Vuelve a AR$ 80.299</span>
-        <b class="seg-now">AR$ 22.900</b>
-        <span class="seg-ahorro">Ahorrás AR$ 57.399</span>
-        <span class="seg-que">Suma los cuidados y los 9 trucos</span>
-        <span class="seg-meta">31 clases · 2 h 29 min</span>
+        <span class="seg-antes">Vuelve a AR$ 62.300</span>
+        <b class="seg-now">AR$ 14.900</b>
+        <span class="seg-ahorro">Ahorrás AR$ 47.400</span>
+        <span class="seg-que">Solo obediencia y mañas</span>
+        <span class="seg-meta">18 clases · 1 h 29 min</span>
       </div>
     <div class="pl-cta">
-      <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
+      <a href="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" class="btn btn-xl" data-cta>Quiero el plan Básico — AR$ 14.900</a>
     </div>
   </div>
     <div class="trust">
@@ -741,7 +741,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="planes" id="planes-cierre" data-planes>
     <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
     <div class="pl-grid">
-      <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
+      <label class="pl-card" sel data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
         <input type="radio" name="plan-cierre" value="basico">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Básico</span>
@@ -753,7 +753,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="no">Los 2 manuales en PDF</li><li class="no">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="no">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li></ul>
       </label>
       <label class="pl-card pl-destacado" data-precio="22900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-nombre="Completo">
-        <input type="radio" name="plan-cierre" value="completo" checked>
+        <input type="radio" name="plan-cierre" value="completo">
         <span class="pl-badge">El más elegido</span><span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Completo</span>
         <span class="pl-clases">31 clases · 2 h 29 min</span>
@@ -776,7 +776,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       </label>
     </div>
     <div class="pl-cta">
-      <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
+      <a href="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" class="btn btn-xl" data-cta>Quiero el plan Básico — AR$ 14.900</a>
     </div>
   </div>
   </div>
@@ -998,7 +998,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </footer>
 
-<div class="sticky"><a class="btn" href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo">Empezar con el plan Completo</a></div>
+<div class="sticky"><a class="btn" href="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico">Empezar con el plan Básico</a></div>
 
 <script>
 (function(){
@@ -1074,7 +1074,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       var c=e.target.closest('.pl-card,.seg-b'); if(c) pintar(c.getAttribute('data-nombre'));
     });
   });
-  pintar('Completo');
+  pintar('Básico');
 
   // aula: los 4 adelantos, se van encadenando y se puede elegir
   (function(){
