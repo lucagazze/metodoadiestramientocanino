@@ -27,8 +27,9 @@ img{max-width:100%;height:auto;display:block}
 .wrap{max-width:760px;margin:0 auto;padding:0 18px}
 .wrap-w{max-width:1080px;margin:0 auto;padding:0 18px}
 h1,h2,h3{font-family:var(--display);color:var(--tx);letter-spacing:-.02em;line-height:1.18}
-h1{font-size:clamp(28px,5.4vw,42px);font-weight:700;text-align:center}
-h1 em{font-style:normal;color:var(--vino)}
+h1{font-size:clamp(22.5px,5.8vw,42px);font-weight:700;text-align:center;line-height:1.2}
+h1 span{display:block;white-space:nowrap}
+h1 em{display:block;font-style:normal;color:var(--vino);white-space:nowrap}
 h2{font-size:clamp(22px,3.6vw,30px);font-weight:700;text-align:center;margin-bottom:8px}
 h2 em{font-style:normal;color:var(--vino)}
 .baja{text-align:center;color:var(--tx3);font-size:15px;margin-bottom:26px;line-height:1.55}
@@ -62,7 +63,7 @@ section{padding:52px 0}
 
 /* cartel de compra reciente */
 .sp-toast{
-  position:fixed;left:14px;top:8px;z-index:99999;
+  position:fixed;left:14px;top:14px;z-index:99999;
   display:flex;align-items:center;gap:12px;
   background:#fff;border:1px solid #e4e9ee;border-radius:12px;
   padding:10px 14px 10px 10px;max-width:330px;
@@ -103,10 +104,10 @@ section{padding:52px 0}
   box-shadow:0 2px 8px rgba(18,25,31,.14);
   transition:background .18s ease, color .18s ease, transform .18s ease, border-color .18s ease;
 }
-.sp-close:hover{background:#7b1717;border-color:#7b1717;color:#fff;transform:scale(1.08)}
+.sp-close:hover{background:#ffffff;border-color:#cbd5e1;color:#12191f;transform:scale(1.08);box-shadow:0 4px 12px rgba(18,25,31,.2)}
 .sp-close:active{transform:scale(.96)}
 @media (max-width:560px){
-  .sp-toast{left:8px;right:8px;top:6px;max-width:none}
+  .sp-toast{left:8px;right:8px;top:10px;max-width:none}
 }
 
 /* hero */
@@ -331,7 +332,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 <header class="hero">
   <div class="wrap">
     <p class="hero-social"><svg class="estrellas" viewBox="0 0 90 18" role="img" aria-label="4,8 de 5"><defs><linearGradient id="acEstrellas" x1="0" x2="1" y1="0" y2="0"><stop offset="96.0%" stop-color="#f5a623"></stop><stop offset="96.0%" stop-color="#dfe3e8"></stop></linearGradient></defs><g fill="url(#acEstrellas)"><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(0 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(18 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(36 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(54 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(72 0)"></path></g></svg><span><b>4,8</b> de 324 personas</span></p>
-    <h1>Tu perro no te desobedece. <em>Nadie le explicó las reglas.</em></h1>
+    <h1><span>Tu perro no te desobedece.</span><em>Nadie le explicó las reglas.</em></h1>
     <p class="sub">Clases en video para educarlo vos mismo con <strong>15 minutos por día</strong>, sin pagar un adiestrador. Mirás la clase, la repetís con tu perro, y pasás a la siguiente.</p>
     <div class="pills">
       <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v13H4z"></path><path d="M8 21h8M12 17v4"></path></svg> <b>Clases en video</b></span>
