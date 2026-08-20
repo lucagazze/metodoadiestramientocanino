@@ -424,7 +424,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <span class="seg-antes">Vuelve a AR$ 80.299</span>
         <b class="seg-now">AR$ 22.900</b>
         <span class="seg-ahorro">Ahorrás AR$ 57.399</span>
-        <span class="seg-meta">31 clases · 2 h 29 min · AR$ 739 por clase</span>
+        <span class="seg-meta">31 clases · 2 h 29 min</span>
       </div>
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
@@ -734,7 +734,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <span class="pl-precio"><b>AR$ 22.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 57.399</span>
         <span class="pl-unit">AR$ 739 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b></span>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul>
       </label>
       <label class="pl-card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
         <input type="radio" name="plan-cierre" value="avanzado">
@@ -813,7 +813,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       box.querySelector('.seg-antes').textContent=tx('.pl-antes').replace('Vuelve a ','Vuelve a ');
       box.querySelector('.seg-now').textContent=tx('.pl-precio');
       box.querySelector('.seg-ahorro').textContent=tx('.pl-ahorro');
-      box.querySelector('.seg-meta').textContent=tx('.pl-clases')+' · '+tx('.pl-unit');
+      box.querySelector('.seg-meta').textContent=tx('.pl-clases');
     }
     if(card){[].forEach.call(document.querySelectorAll('[data-cta]'),function(x){
       x.setAttribute('href',card.getAttribute('data-link'));
