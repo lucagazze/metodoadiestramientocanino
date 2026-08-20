@@ -310,6 +310,29 @@ footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;l
 .seg-ahorro{display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:12px;font-weight:700;padding:5px 11px;border-radius:100px}
 .seg-meta{display:block;font-size:13px;color:var(--tx3);margin-top:10px}
 @media (max-width:520px){.seg-b{padding:13px 3px 11px}.seg-b span{font-size:14px}.seg-b em{font-size:10.5px}}
+
+.cmp-wrap{max-width:760px;margin:0 auto}
+.cmp{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;border:1px solid var(--bd);border-radius:13px;overflow:hidden;font-size:13.5px}
+.cmp th,.cmp td{padding:12px 8px;text-align:center;border-bottom:1px solid #f1f4f6}
+.cmp th:first-child{width:40%}
+.cmp th:not(:first-child){width:20%}
+.cmp thead th{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--tx);background:var(--bg2);padding:14px 8px}
+.cmp thead th.dest{color:var(--vino);background:#faf4f4}
+.cmp tbody th{text-align:left;font-weight:600;color:var(--tx2);line-height:1.35;padding-left:14px}
+.cmp tbody th span{display:block;font-size:11.5px;color:var(--tx3);font-weight:500;margin-top:1px}
+.cmp td.si{color:var(--ok);font-size:17px;font-weight:700}
+.cmp td.no{color:#d8dee3;font-size:15px}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmp-tot{background:#fcfdfd}
+.cmp-tot td b,.cmp-pre td b{font-family:var(--display);color:var(--tx)}
+.cmp-pre td b{font-size:15.5px}
+@media (max-width:520px){
+  .cmp{font-size:12.5px}
+  .cmp th,.cmp td{padding:10px 3px}
+  .cmp tbody th{padding-left:9px}
+  .cmp thead th{font-size:11.8px;letter-spacing:-.02em;padding:13px 2px}
+  .cmp-pre td b{font-size:14px}
+}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -419,42 +442,20 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   <div class="wrap-w">
     <h2>Qué trae <em>cada plan</em></h2>
     <p class="baja">La diferencia entre uno y otro, de un vistazo.</p>
-    <div class="planes" id="planes-detalle" data-planes>
-    <div class="pl-grid">
-      <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
-        <input type="radio" name="plan-hero" value="basico">
-        <span class="pl-check" aria-hidden="true"></span>
-        <span class="pl-nombre">Básico</span>
-        <span class="pl-clases">18 clases · 1 h 29 min</span>
-        <span class="pl-antes">Vuelve a AR$ 62.300</span>
-        <span class="pl-precio"><b>AR$ 14.900</b></span>
-        <span class="pl-ahorro">Ahorrás AR$ 47.400</span>
-        <span class="pl-unit">AR$ 828 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="no">Los 2 manuales en PDF</li><li class="no">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="no">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul>
-      </label>
-      <label class="pl-card pl-destacado" data-precio="22900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-nombre="Completo">
-        <input type="radio" name="plan-hero" value="completo" checked>
-        <span class="pl-badge">El más elegido</span><span class="pl-check" aria-hidden="true"></span>
-        <span class="pl-nombre">Completo</span>
-        <span class="pl-clases">31 clases · 2 h 29 min</span>
-        <span class="pl-antes">Vuelve a AR$ 80.299</span>
-        <span class="pl-precio"><b>AR$ 22.900</b></span>
-        <span class="pl-ahorro">Ahorrás AR$ 57.399</span>
-        <span class="pl-unit">AR$ 739 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b></span>
-      </label>
-      <label class="pl-card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
-        <input type="radio" name="plan-hero" value="avanzado">
-        <span class="pl-check" aria-hidden="true"></span>
-        <span class="pl-nombre">Avanzado</span>
-        <span class="pl-clases">36 clases · 3 h 06 min</span>
-        <span class="pl-antes">Vuelve a AR$ 98.150</span>
-        <span class="pl-precio"><b>AR$ 28.900</b></span>
-        <span class="pl-ahorro">Ahorrás AR$ 69.250</span>
-        <span class="pl-unit">Incluye todo lo que se sume después</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="si">Paseo avanzado, juego y métodos</li><li class="si">Las clases nuevas, de por vida</li></ul>
-      </label>
-    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th></th><th class="">Básico</th><th class="dest">Completo</th><th class="">Avanzado</th></tr></thead>
+        <tbody>
+          <tr><th>Obediencia y mañas<span>18 clases</span></th><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+          <tr><th>Los 2 manuales en PDF</th><td class="no">✕</td><td class="si">✓</td><td class="si">✓</td></tr>
+          <tr><th>Bañarlo, cepillarlo y curarlo<span>4 clases</span></th><td class="no">✕</td><td class="si">✓</td><td class="si">✓</td></tr>
+          <tr><th>Los trucos<span>9 clases</span></th><td class="no">✕</td><td class="si">✓</td><td class="si">✓</td></tr>
+          <tr><th>Paseo avanzado y juego<span>5 clases</span></th><td class="no">✕</td><td class="no">✕</td><td class="si">✓</td></tr>
+          <tr><th>Clases nuevas de por vida</th><td class="no">✕</td><td class="no">✕</td><td class="si">✓</td></tr>
+          <tr class="cmp-tot"><th>Clases en total</th><td><b>18</b></td><td><b>31</b></td><td><b>36</b></td></tr>
+          <tr class="cmp-pre"><th>Precio<span>en pesos</span></th><td><b>14.900</b></td><td><b>22.900</b></td><td><b>28.900</b></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
