@@ -333,6 +333,8 @@ footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;l
   .cmp thead th{font-size:11.8px;letter-spacing:-.02em;padding:13px 2px}
   .cmp-pre td b{font-size:14px}
 }
+.seg-que{display:block;font-family:var(--display);font-size:14.8px;font-weight:600;color:var(--tx2);margin-top:14px;line-height:1.4}
+.seg-meta{margin-top:4px}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -411,19 +413,20 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 
 <section id="planes-hero" style="padding-top:6px">
   <div class="wrap-w">
-    <h2>Elegí con cuánto <em>te lo querés llevar</em></h2>
+    <h2>Elegí <em>hasta dónde querés llegar</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el día uno.</p>
     <div class="planes" id="planes-hero" data-planes>
     <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
     <div class="seg-btns">
-        <label class="seg-b" data-nombre="Básico"><input type="radio" name="planSel" value="básico"><span>Básico</span><em>18 clases</em></label>
-        <label class="seg-b sel" data-nombre="Completo"><input type="radio" name="planSel" value="completo" checked><i class='seg-tag'>Más elegido</i><span>Completo</span><em>31 clases</em></label>
-        <label class="seg-b" data-nombre="Avanzado"><input type="radio" name="planSel" value="avanzado"><span>Avanzado</span><em>36 clases</em></label>
+        <label class="seg-b" data-nombre="Básico" data-que="Solo obediencia y mañas"><input type="radio" name="planSel" value="básico"><span>Básico</span><em>18 clases</em></label>
+        <label class="seg-b sel" data-nombre="Completo" data-que="Suma los cuidados y los 9 trucos"><input type="radio" name="planSel" value="completo" checked><i class='seg-tag'>Más elegido</i><span>Completo</span><em>31 clases</em></label>
+        <label class="seg-b" data-nombre="Avanzado" data-que="Todo, más las clases que se sumen"><input type="radio" name="planSel" value="avanzado"><span>Avanzado</span><em>36 clases</em></label>
       </div>
       <div class="seg-precio">
         <span class="seg-antes">Vuelve a AR$ 80.299</span>
         <b class="seg-now">AR$ 22.900</b>
         <span class="seg-ahorro">Ahorrás AR$ 57.399</span>
+        <span class="seg-que">Suma los cuidados y los 9 trucos</span>
         <span class="seg-meta">31 clases · 2 h 29 min</span>
       </div>
     <div class="pl-cta">
@@ -805,6 +808,8 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       var sel=b.getAttribute('data-nombre')===nombre;
       b.classList.toggle('sel',sel);
       var inp=b.querySelector('input'); if(inp) inp.checked=sel;
+      if(sel){var q=document.querySelector('.seg-que');
+        if(q) q.textContent=b.getAttribute('data-que')||'';}
     });
     var card=document.querySelector('.pl-card[data-nombre="'+nombre+'"]'),
         box=document.querySelector('.seg-precio');
