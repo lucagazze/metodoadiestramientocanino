@@ -35,9 +35,79 @@ h2 em{font-style:normal;color:var(--vino)}
 section{padding:52px 0}
 .gris{background:var(--bg2)}
 
-/* barra */
-.topbar{background:var(--vino);color:#fff;text-align:center;padding:9px 12px;font-size:14.5px;font-weight:600;line-height:1.4;position:sticky;top:0;z-index:60}
-.topbar b{font-variant-numeric:tabular-nums;background:rgba(0,0,0,.22);padding:2px 8px;border-radius:5px;margin-left:6px;display:inline-block}
+/* banner contador */
+.bf-countdown-banner{
+  background:var(--vino);color:#ffffff;padding:9px 12px;text-align:center;
+  position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+.bf-countdown-content{
+  max-width:1200px;margin:0 auto;display:flex;align-items:center;
+  justify-content:center;gap:16px;flex-wrap:wrap;
+}
+.bf-sale-text{font-size:15px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.bf-countdown-timer{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
+.bf-timer-label{text-transform:uppercase;font-size:13px;letter-spacing:.3px;opacity:.9}
+.bf-timer-digits{
+  font-size:17px;font-weight:700;letter-spacing:1px;
+  background:rgba(0,0,0,.24);padding:2px 10px;border-radius:6px;
+  font-variant-numeric:tabular-nums;
+}
+@media (max-width:768px){
+  .bf-countdown-banner{padding:8px 8px}
+  .bf-countdown-content{gap:4px}
+  .bf-sale-text{font-size:14px;width:100%;text-align:center}
+  .bf-timer-label{font-size:12.5px}
+  .bf-timer-digits{font-size:15px;padding:1px 8px}
+}
+
+/* cartel de compra reciente */
+.sp-toast{
+  position:fixed;left:20px;top:56px;z-index:1200;
+  display:flex;align-items:center;gap:12px;
+  background:#fff;border:1px solid #e4e9ee;border-radius:12px;
+  padding:11px 15px 11px 11px;max-width:330px;
+  box-shadow:0 10px 30px rgba(18,25,31,.16);
+  opacity:0;visibility:hidden;transform:translateY(-16px) scale(.97);
+  transition:opacity .45s ease, transform .45s cubic-bezier(.2,.8,.3,1), visibility .45s;
+}
+.sp-toast.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.sp-mini{
+  position:relative;flex:0 0 auto;width:66px;height:42px;border-radius:6px;overflow:hidden;
+  background:#0f1516;box-shadow:0 2px 8px rgba(18,25,31,.22);
+}
+.sp-mini img{width:100%;height:100%;object-fit:cover;border-radius:0;margin:0;display:block}
+.sp-mini:after{
+  content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  border-left:10px solid rgba(255,255,255,.95);border-top:6.5px solid transparent;
+  border-bottom:6.5px solid transparent;margin-left:2px;
+  filter:drop-shadow(0 1px 4px rgba(0,0,0,.6));
+}
+.sp-txt{min-width:0;line-height:1.4}
+.sp-name{font-size:13.5px;font-weight:700;color:#12191f;display:block}
+.sp-name b{font-weight:700}
+.sp-prod{
+  font-size:12px;color:#5b6874;display:block;margin-top:1px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.sp-meta{
+  font-size:10.5px;color:#98a3ad;display:flex;align-items:center;gap:5px;margin-top:3px;
+}
+.sp-meta .ok{color:#28a745;font-weight:700}
+.sp-close{
+  position:absolute;top:-10px;right:-10px;
+  width:26px;height:26px;padding:0;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid #e0e6eb;border-radius:50%;
+  background:#fff;color:#8a949e;font-size:16px;font-weight:600;
+  font-family:var(--body);cursor:pointer;
+  box-shadow:0 2px 8px rgba(18,25,31,.14);
+  transition:background .18s ease, color .18s ease, transform .18s ease, border-color .18s ease;
+}
+.sp-close:hover{background:#7b1717;border-color:#7b1717;color:#fff;transform:scale(1.08)}
+.sp-close:active{transform:scale(.96)}
+@media (max-width:560px){
+  .sp-toast{left:10px;right:10px;top:72px;max-width:none}
+}
 
 /* hero */
 .hero{padding:34px 0 8px}
@@ -91,7 +161,7 @@ section{padding:52px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--vino);color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;border-radius:100px;padding:17px 30px;font-size:16.5px;line-height:1.25;text-align:center;box-shadow:0 12px 30px rgba(123,23,23,.4);transition:background .2s,transform .15s,box-shadow .2s;position:relative;overflow:hidden}
 .btn:hover{background:var(--vino-osc);transform:translateY(-2px);box-shadow:0 16px 36px rgba(123,23,23,.48)}
 .btn:active{transform:translateY(0)}
-.btn-xl{width:100%;max-width:520px;padding:19px 26px;font-size:17.5px}
+.btn-xl{width:100%;max-width:520px;padding:18px 16px;font-size:clamp(12.5px,4vw,17.5px);white-space:nowrap}
 @keyframes brillo{0%{left:-60%;opacity:0}8%{opacity:1}40%{left:150%;opacity:0}100%{left:150%;opacity:0}}
 .btn:after{content:"";position:absolute;top:-20%;bottom:-20%;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.28) 50%,rgba(255,255,255,0));transform:skewX(-20deg);animation:brillo 5.2s ease-in-out infinite;pointer-events:none}
 
@@ -125,13 +195,13 @@ section{padding:52px 0}
 .pl-lista li.no:before{content:"\2715";color:#d8dee3;font-size:13px}
 .pl-salto{display:block;margin-top:16px;padding:11px 13px;background:#faf4f4;border:1px solid #eedada;border-radius:9px;font-family:var(--display);font-size:13.4px;font-weight:700;color:var(--vino);line-height:1.4}
 .pl-salto small{display:block;font-family:var(--body);font-size:11.8px;font-weight:500;color:#a08282;margin-top:3px;line-height:1.45}
-.pl-cupos{text-align:center;margin:0 0 26px}
+.pl-cupos{text-align:center;margin:0 0 10px}
 .pl-cupos span{display:inline-flex;align-items:center;gap:9px;background:#fbeded;border:1px solid #f0d3d3;color:var(--vino);font-family:var(--display);font-size:14.5px;font-weight:700;letter-spacing:-.01em;padding:10px 19px;border-radius:100px;line-height:1.3}
 .pl-cupos i{width:7px;height:7px;border-radius:50%;background:var(--vino);flex:0 0 auto;animation:lat 1.9s ease-in-out infinite}
 @media (max-width:400px){.pl-cupos span{font-size:13px;padding:9px 16px}}
 .pl-cta{text-align:center;margin-top:22px}
 .pl-nota{font-size:12.6px;color:var(--tx3);margin-top:12px}
-.pl-timer{margin:16px auto 0;max-width:340px}
+.pl-timer{margin:10px auto 26px;max-width:340px}
 .pl-timer p{font-size:12.6px;color:var(--tx3);text-align:center;margin:0 0 8px;line-height:1.5}
 .pl-timer b{color:var(--vino);font-weight:700;font-variant-numeric:tabular-nums}
 .pl-timer .hilo{height:3px;border-radius:100px;background:#edf0f3;overflow:hidden}
@@ -195,9 +265,8 @@ footer{border-top:1px solid var(--bd);padding:28px 0 90px;text-align:center;font
 footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;line-height:1.65}
 
 /* sticky */
-.sticky{position:fixed;left:14px;right:14px;bottom:14px;z-index:70;opacity:0;visibility:hidden;transform:translateY(16px);transition:all .3s ease}
-.sticky.on{opacity:1;visibility:visible;transform:none}
-.sticky a{width:100%;border-radius:14px;padding:16px 18px;font-size:16px}
+.sticky{position:fixed;left:14px;right:14px;bottom:14px;z-index:70;opacity:1;visibility:visible;transform:none}
+.sticky a{width:100%;border-radius:14px;padding:16px 18px;font-size:16px;white-space:nowrap}
 
 @media (min-width:700px){
   .benes{grid-template-columns:1fr 1fr}
@@ -239,7 +308,25 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 </head>
 <body>
 
-<div class="topbar">Precio de lanzamiento · vuelve a subir en <b id="reloj">15:00</b></div>
+<div class="bf-countdown-banner" id="bfCountdownBanner">
+  <div class="bf-countdown-content">
+    <div class="bf-sale-text">Quedan 4 cupos con descuento</div>
+    <div class="bf-countdown-timer">
+      <span class="bf-timer-label">Termina en:</span>
+      <span class="bf-timer-digits" id="bfCountdown">15:00</span>
+    </div>
+  </div>
+</div>
+
+<div class="sp-toast" id="spToast" role="status" aria-live="polite">
+  <button class="sp-close" id="spClose" aria-label="Cerrar">×</button>
+  <span class="sp-mini"><img id="spShot" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/05-da-la-pata.webp" alt=""></span>
+  <div class="sp-txt">
+    <span class="sp-name" id="spName">Carolina de Neuquén</span>
+    <span class="sp-prod" id="spProd">Entró al curso · acceso de por vida</span>
+    <span class="sp-meta"><span class="ok">✔ Acceso confirmado</span> · <span id="spTime">hace 4 minutos</span></span>
+  </div>
+</div>
 
 <header class="hero">
   <div class="wrap">
@@ -286,7 +373,11 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <h2>Elegí con cuánto <em>te lo querés llevar</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el día uno.</p>
     <div class="planes" id="planes-hero" data-planes>
-    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a este precio</span></p>
+    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
+    <div class="pl-timer">
+      <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
+      <div class="hilo"><i data-barra style="width:100%"></i></div>
+    </div>
     <div class="pl-grid">
       <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
         <input type="radio" name="plan-hero" value="basico">
@@ -325,10 +416,6 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
       <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
-      <div class="pl-timer">
-        <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
-        <div class="hilo"><i data-barra style="width:100%"></i></div>
-      </div>
     </div>
   </div>
     <div class="trust">
@@ -591,7 +678,11 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <h2>Empezá hoy <em>con tu perro</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. 7 días de garantía.</p>
     <div class="planes" id="planes-cierre" data-planes>
-    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a este precio</span></p>
+    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
+    <div class="pl-timer">
+      <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
+      <div class="hilo"><i data-barra style="width:100%"></i></div>
+    </div>
     <div class="pl-grid">
       <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
         <input type="radio" name="plan-cierre" value="basico">
@@ -630,10 +721,6 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
       <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
-      <div class="pl-timer">
-        <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
-        <div class="hilo"><i data-barra style="width:100%"></i></div>
-      </div>
     </div>
   </div>
   </div>
@@ -661,6 +748,8 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     var r=f-Date.now(); if(r<=0){f=fin();r=f-Date.now()}
     var t=dd(Math.floor(r/60000))+':'+dd(Math.floor(r%60000/1000));
     if(el) el.textContent=t;
+    var bfc=document.getElementById('bfCountdown');
+    if(bfc) bfc.textContent=t;
     [].forEach.call(document.querySelectorAll('[data-reloj]'),function(x){x.textContent=t});
     [].forEach.call(document.querySelectorAll('[data-barra]'),function(x){
       x.style.width=Math.max(0,(r/1000)/TOT*100)+'%';});
@@ -693,6 +782,9 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       s.textContent='Empezar con el plan '+nombre;}
   }
   grupos.forEach(function(g){
+    g.addEventListener('click',function(e){
+      var c=e.target.closest('.pl-card'); if(c) pintar(c.getAttribute('data-nombre'));
+    });
     g.addEventListener('change',function(e){
       var c=e.target.closest('.pl-card'); if(c) pintar(c.getAttribute('data-nombre'));
     });
@@ -762,6 +854,56 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     new IntersectionObserver(function(en){st.classList.toggle('on',!en[0].isIntersecting&&en[0].boundingClientRect.top<0)},
       {threshold:0}).observe(hero);
   }
+
+  // cartel de compra reciente (social proof toast)
+  (function(){
+    var buyers = [
+      { name: "Carolina de Neuquén", prod: "Entró al curso · acceso de por vida", time: "hace 4 minutos", img: "05-da-la-pata.webp" },
+      { name: "Gonzalo de Córdoba", prod: "Plan Completo · 31 clases", time: "hace 12 minutos", img: "01-que-se-siente.webp" },
+      { name: "Lucía de Rosario", prod: "Plan Avanzado · 36 clases", time: "hace 18 minutos", img: "08-el-primer-truco.webp" },
+      { name: "Martín de Mendoza", prod: "Entró al curso · acceso de por vida", time: "hace 25 minutos", img: "02-que-se-acueste.webp" },
+      { name: "Valentina de Buenos Aires", prod: "Plan Completo · 31 clases", time: "hace 31 minutos", img: "10-el-comando-no.webp" },
+      { name: "Matías de Salta", prod: "Entró al curso · acceso de por vida", time: "hace 39 minutos", img: "10-el-comando-no.webp" },
+      { name: "Camila de Santa Fe", prod: "Plan Avanzado · 36 clases", time: "hace 44 minutos", img: "05-da-la-pata.webp" },
+      { name: "Joaquín de Mar del Plata", prod: "Entró al curso · acceso de por vida", time: "hace 52 minutos", img: "01-que-se-siente.webp" }
+    ];
+    var idx = 0;
+    var toast = document.getElementById('spToast');
+    var spName = document.getElementById('spName');
+    var spProd = document.getElementById('spProd');
+    var spTime = document.getElementById('spTime');
+    var spShot = document.getElementById('spShot');
+    var spClose = document.getElementById('spClose');
+
+    if (!toast) return;
+
+    function showNext() {
+      var b = buyers[idx];
+      if (spName) spName.textContent = b.name;
+      if (spProd) spProd.textContent = b.prod;
+      if (spTime) spTime.textContent = b.time;
+      if (spShot) spShot.src = "https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/" + b.img;
+      toast.classList.add('show');
+
+      setTimeout(function() {
+        toast.classList.remove('show');
+      }, 4000);
+
+      idx = (idx + 1) % buyers.length;
+    }
+
+    if (spClose) {
+      spClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toast.classList.remove('show');
+      });
+    }
+
+    setTimeout(function() {
+      showNext();
+      setInterval(showNext, 10000);
+    }, 3000);
+  })();
 })();
 </script>
 </body>
