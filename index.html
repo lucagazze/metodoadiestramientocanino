@@ -27,20 +27,94 @@ img{max-width:100%;height:auto;display:block}
 .wrap{max-width:760px;margin:0 auto;padding:0 18px}
 .wrap-w{max-width:1080px;margin:0 auto;padding:0 18px}
 h1,h2,h3{font-family:var(--display);color:var(--tx);letter-spacing:-.02em;line-height:1.18}
-h1{font-size:clamp(28px,5.4vw,42px);font-weight:700;text-align:center}
-h1 em{font-style:normal;color:var(--vino)}
+h1{font-size:clamp(24.5px,6.2vw,44px);font-weight:700;text-align:center;line-height:1.2}
+h1 span{display:block;white-space:nowrap}
+h1 em{display:block;font-style:normal;color:var(--vino);white-space:nowrap}
 h2{font-size:clamp(22px,3.6vw,30px);font-weight:700;text-align:center;margin-bottom:8px}
 h2 em{font-style:normal;color:var(--vino)}
 .baja{text-align:center;color:var(--tx3);font-size:15px;margin-bottom:26px;line-height:1.55}
 section{padding:52px 0}
 .gris{background:var(--bg2)}
 
-/* barra */
-.topbar{background:var(--vino);color:#fff;text-align:center;padding:9px 12px;font-size:14.5px;font-weight:600;line-height:1.4;position:sticky;top:0;z-index:60}
-.topbar b{font-variant-numeric:tabular-nums;background:rgba(0,0,0,.22);padding:2px 8px;border-radius:5px;margin-left:6px;display:inline-block}
+/* banner contador */
+.bf-countdown-banner{
+  background:var(--vino);color:#ffffff;padding:9px 16px;text-align:center;
+  position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+.bf-countdown-content{
+  max-width:1200px;margin:0 auto;display:flex;align-items:center;
+  justify-content:center;gap:20px;flex-wrap:wrap;
+}
+.bf-sale-text{font-size:15.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+.bf-countdown-timer{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
+.bf-timer-label{text-transform:uppercase;font-size:13.5px;letter-spacing:.4px;opacity:.9}
+.bf-timer-digits{
+  font-size:17.5px;font-weight:700;letter-spacing:1px;
+  background:rgba(0,0,0,.24);padding:2px 10px;border-radius:6px;
+  font-variant-numeric:tabular-nums;
+}
+@media (max-width:768px){
+  .bf-countdown-banner{padding:4px 6px}
+  .bf-countdown-content{gap:4px}
+  .bf-sale-text{font-size:13px;width:100%;text-align:center}
+  .bf-timer-label{font-size:11.5px}
+  .bf-timer-digits{font-size:14px;padding:1px 6px}
+}
+
+/* cartel de compra reciente */
+.sp-toast{
+  position:fixed;left:14px;top:14px;z-index:99999;
+  display:flex;align-items:center;gap:12px;
+  background:#fff;border:1px solid #e4e9ee;border-radius:12px;
+  padding:10px 14px 10px 10px;max-width:330px;
+  box-shadow:0 10px 30px rgba(18,25,31,.22);
+  opacity:0;visibility:hidden;transform:translateY(-16px) scale(.97);
+  transition:opacity .45s ease, transform .45s cubic-bezier(.2,.8,.3,1), visibility .45s;
+}
+.sp-toast.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.sp-mini{
+  position:relative;flex:0 0 auto;width:66px;height:42px;border-radius:6px;overflow:hidden;
+  background:#0f1516;box-shadow:0 2px 8px rgba(18,25,31,.22);
+}
+.sp-mini img{width:100%;height:100%;object-fit:cover;border-radius:0;margin:0;display:block}
+.sp-mini:after{
+  content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  border-left:10px solid rgba(255,255,255,.95);border-top:6.5px solid transparent;
+  border-bottom:6.5px solid transparent;margin-left:2px;
+  filter:drop-shadow(0 1px 4px rgba(0,0,0,.6));
+}
+.sp-txt{min-width:0;line-height:1.4}
+.sp-name{font-size:13.5px;font-weight:700;color:#12191f;display:block}
+.sp-name b{font-weight:700}
+.sp-prod{
+  font-size:12px;color:#5b6874;display:block;margin-top:1px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.sp-meta{
+  font-size:10.5px;color:#98a3ad;display:flex;align-items:center;gap:5px;margin-top:3px;
+}
+.sp-meta .ok{color:#28a745;font-weight:700}
+.sp-close{
+  position:absolute;top:-10px;right:-10px;
+  width:26px;height:26px;padding:0;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid #e0e6eb;border-radius:50%;
+  background:#fff;color:#8a949e;font-size:16px;font-weight:600;
+  font-family:var(--body);cursor:pointer;
+  box-shadow:0 2px 8px rgba(18,25,31,.14);
+  transition:background .18s ease, color .18s ease, transform .18s ease, border-color .18s ease;
+}
+.sp-close:hover{background:#ffffff;border-color:#cbd5e1;color:#12191f;transform:scale(1.08);box-shadow:0 4px 12px rgba(18,25,31,.2)}
+.sp-close:active{transform:scale(.96)}
+@media (max-width:560px){
+  .sp-toast{left:8px;right:8px;top:10px;max-width:none}
+}
 
 /* hero */
 .hero{padding:34px 0 8px}
+.hero-social{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:14px;font-size:14px;color:var(--tx2)}
+.hero-social b{color:var(--tx);font-weight:700}
+.estrellas{width:90px;height:18px;flex:0 0 auto;display:block}
 .sub{font-size:clamp(16px,2.4vw,19.5px);color:#5b6874;text-align:center;max-width:56ch;margin:16px auto 24px;line-height:1.55}
 .sub strong{color:var(--tx);font-weight:700}
 .pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:26px}
@@ -88,7 +162,7 @@ section{padding:52px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--vino);color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;border-radius:100px;padding:17px 30px;font-size:16.5px;line-height:1.25;text-align:center;box-shadow:0 12px 30px rgba(123,23,23,.4);transition:background .2s,transform .15s,box-shadow .2s;position:relative;overflow:hidden}
 .btn:hover{background:var(--vino-osc);transform:translateY(-2px);box-shadow:0 16px 36px rgba(123,23,23,.48)}
 .btn:active{transform:translateY(0)}
-.btn-xl{width:100%;max-width:520px;padding:19px 26px;font-size:17.5px}
+.btn-xl{width:100%;max-width:520px;padding:18px 16px;font-size:clamp(12.5px,4vw,17.5px);white-space:nowrap}
 @keyframes brillo{0%{left:-60%;opacity:0}8%{opacity:1}40%{left:150%;opacity:0}100%{left:150%;opacity:0}}
 .btn:after{content:"";position:absolute;top:-20%;bottom:-20%;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.28) 50%,rgba(255,255,255,0));transform:skewX(-20deg);animation:brillo 5.2s ease-in-out infinite;pointer-events:none}
 
@@ -122,63 +196,19 @@ section{padding:52px 0}
 .pl-lista li.no:before{content:"\2715";color:#d8dee3;font-size:13px}
 .pl-salto{display:block;margin-top:16px;padding:11px 13px;background:#faf4f4;border:1px solid #eedada;border-radius:9px;font-family:var(--display);font-size:13.4px;font-weight:700;color:var(--vino);line-height:1.4}
 .pl-salto small{display:block;font-family:var(--body);font-size:11.8px;font-weight:500;color:#a08282;margin-top:3px;line-height:1.45}
-
-.seg{max-width:640px;margin:0 auto}
-.seg-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:7px}
-.seg-b{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:14px 6px 12px;border-radius:10px;cursor:pointer;border:1.5px solid transparent;transition:background .18s,border-color .18s,box-shadow .18s}
-.seg-b input{position:absolute;opacity:0;width:0;height:0}
-.seg-b span{font-family:var(--display);font-size:15.5px;font-weight:700;color:var(--tx2);line-height:1.2}
-.seg-b em{font-style:normal;font-size:11.5px;color:var(--tx3);line-height:1.3}
-.seg-b:hover{background:#fff}
-.seg-b.sel{background:#fff;border-color:var(--vino);box-shadow:0 6px 18px rgba(123,23,23,.14)}
-.seg-b.sel span{color:var(--vino)}
-.seg-tag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--vino);color:#fff;font-family:var(--display);font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:100px;white-space:nowrap;line-height:1.2}
-.seg-b:focus-within{outline:2px solid var(--vino);outline-offset:2px}
-.seg-precio{text-align:center;margin:24px 0 18px}
-.seg-antes{display:block;font-size:14px;color:var(--tx3);line-height:1.3}
-.seg-antes s{color:#96a0a8;text-decoration-color:#c96464;text-decoration-thickness:2px;font-weight:600}
-.seg-now{display:block;font-family:var(--display);font-size:clamp(38px,7vw,48px);font-weight:700;color:var(--tx);letter-spacing:-.03em;line-height:1.05;margin:2px 0 6px}
-.seg-ahorro{display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:12px;font-weight:700;padding:5px 11px;border-radius:100px}
-.seg-meta{display:block;font-size:13px;color:var(--tx3);margin-top:10px}
-.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 24px}
-.cmp{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;border:1px solid var(--bd);border-radius:13px;overflow:hidden;font-size:13.5px}
-.cmp th,.cmp td{padding:12px 10px;text-align:center;border-bottom:1px solid #f1f4f6}
-.cmp thead th{font-family:var(--display);font-size:14.5px;font-weight:700;color:var(--tx);background:var(--bg2);padding:14px 10px}
-.cmp thead th.dest{color:var(--vino);background:#faf4f4}
-.cmp th:first-child{width:40%}
-.cmp th:not(:first-child){width:20%}
-.cmp tbody th{text-align:left;font-weight:600;color:var(--tx2);line-height:1.35}
-.cmp tbody th span{display:block;font-size:11.5px;color:var(--tx3);font-weight:500;margin-top:1px}
-.cmp td.si{color:var(--ok);font-size:17px;font-weight:700}
-.cmp td.no{color:#d8dee3;font-size:15px}
-.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
-.cmp-tot td b,.cmp-pre td b{font-family:var(--display);color:var(--tx)}
-.cmp-tot{background:#fcfdfd}
-.cmp-pre td b{font-size:15.5px}
-.cmp col{}
-@media (max-width:520px){
-  .cmp{font-size:12.5px}
-  .cmp th,.cmp td{padding:10px 3px}
-  .cmp thead th{font-size:11.8px;letter-spacing:-.02em;padding:13px 2px}
-  .cmp tbody th{padding-left:9px}
-  .cmp-pre td b{font-size:14px}
-  .seg-b{padding:13px 3px 11px}
-  .seg-b span{font-size:14px}
-  .seg-b em{font-size:10.5px}
-}
-.pl-cupos{text-align:center;margin:0 0 26px}
+.pl-cupos{text-align:center;margin:0 0 24px}
 .pl-cupos span{display:inline-flex;align-items:center;gap:9px;background:#fbeded;border:1px solid #f0d3d3;color:var(--vino);font-family:var(--display);font-size:14.5px;font-weight:700;letter-spacing:-.01em;padding:10px 19px;border-radius:100px;line-height:1.3}
 .pl-cupos i{width:7px;height:7px;border-radius:50%;background:var(--vino);flex:0 0 auto;animation:lat 1.9s ease-in-out infinite}
 @media (max-width:400px){.pl-cupos span{font-size:13px;padding:9px 16px}}
 .pl-cta{text-align:center;margin-top:22px}
 .pl-nota{font-size:12.6px;color:var(--tx3);margin-top:12px}
-.pl-timer{margin:16px auto 0;max-width:340px}
+.pl-timer{margin:4px auto 24px;max-width:340px}
 .pl-timer p{font-size:12.6px;color:var(--tx3);text-align:center;margin:0 0 8px;line-height:1.5}
 .pl-timer b{color:var(--vino);font-weight:700;font-variant-numeric:tabular-nums}
 .pl-timer .hilo{height:3px;border-radius:100px;background:#edf0f3;overflow:hidden}
 .pl-timer .hilo i{display:block;height:100%;border-radius:100px;background:var(--vino);transition:width 1s linear}
-.trust{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:18px}
-.tr{display:flex;align-items:center;gap:6px;font-size:12px;color:#6b7784;font-weight:600}
+.trust{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;margin-top:18px}
+.tr{display:inline-flex;align-items:center;gap:5px;font-size:clamp(10px,2.9vw,12px);color:#6b7784;font-weight:600;white-space:nowrap;flex:0 0 auto}
 .tr svg{width:14px;height:14px;flex:0 0 auto}
 
 /* beneficios */
@@ -236,9 +266,8 @@ footer{border-top:1px solid var(--bd);padding:28px 0 90px;text-align:center;font
 footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;line-height:1.65}
 
 /* sticky */
-.sticky{position:fixed;left:14px;right:14px;bottom:14px;z-index:70;opacity:0;visibility:hidden;transform:translateY(16px);transition:all .3s ease}
-.sticky.on{opacity:1;visibility:visible;transform:none}
-.sticky a{width:100%;border-radius:14px;padding:16px 18px;font-size:16px}
+.sticky{position:fixed;left:14px;right:14px;bottom:14px;bottom:calc(14px + env(safe-area-inset-bottom, 0px));z-index:70;opacity:1;visibility:visible;transform:none}
+.sticky a{width:100%;border-radius:14px;padding:13px 18px;font-size:15.5px;white-space:nowrap}
 
 @media (min-width:700px){
   .benes{grid-template-columns:1fr 1fr}
@@ -264,6 +293,23 @@ footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;l
   .btn:after,.aula-tag i{animation:none}
   html{scroll-behavior:auto}
 }
+
+.seg-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:640px;margin:0 auto;background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:7px}
+.seg-b{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:14px 6px 12px;border-radius:10px;cursor:pointer;border:1.5px solid transparent;transition:background .18s,border-color .18s,box-shadow .18s}
+.seg-b input{position:absolute;opacity:0;width:0;height:0}
+.seg-b span{font-family:var(--display);font-size:15.5px;font-weight:700;color:var(--tx2);line-height:1.2}
+.seg-b em{font-style:normal;font-size:11.5px;color:var(--tx3);line-height:1.3}
+.seg-b:hover{background:#fff}
+.seg-b.sel{background:#fff;border-color:var(--vino);box-shadow:0 6px 18px rgba(123,23,23,.14)}
+.seg-b.sel span{color:var(--vino)}
+.seg-b:focus-within{outline:2px solid var(--vino);outline-offset:2px}
+.seg-tag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--vino);color:#fff;font-family:var(--display);font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:100px;white-space:nowrap;line-height:1.2}
+.seg-precio{text-align:center;margin:24px 0 4px}
+.seg-antes{display:block;font-size:14px;color:#96a0a8;font-weight:600;text-decoration:line-through;text-decoration-color:#c96464;text-decoration-thickness:2px;line-height:1.3}
+.seg-now{display:block;font-family:var(--display);font-size:clamp(38px,7vw,48px);font-weight:700;color:var(--tx);letter-spacing:-.03em;line-height:1.05;margin:2px 0 8px}
+.seg-ahorro{display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:12px;font-weight:700;padding:5px 11px;border-radius:100px}
+.seg-meta{display:block;font-size:13px;color:var(--tx3);margin-top:10px}
+@media (max-width:520px){.seg-b{padding:13px 3px 11px}.seg-b span{font-size:14px}.seg-b em{font-size:10.5px}}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -280,17 +326,36 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 </head>
 <body>
 
-<div class="topbar">Precio de lanzamiento · vuelve a subir en <b id="reloj">15:00</b></div>
+<div class="bf-countdown-banner" id="bfCountdownBanner">
+  <div class="bf-countdown-content">
+    <div class="bf-sale-text">Quedan 4 cupos con descuento</div>
+    <div class="bf-countdown-timer">
+      <span class="bf-timer-label">Termina en:</span>
+      <span class="bf-timer-digits" id="bfCountdown">15:00</span>
+    </div>
+  </div>
+</div>
+
+<div class="sp-toast" id="spToast" role="status" aria-live="polite">
+  <button class="sp-close" id="spClose" aria-label="Cerrar">×</button>
+  <span class="sp-mini"><img id="spShot" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/05-da-la-pata.webp" alt=""></span>
+  <div class="sp-txt">
+    <span class="sp-name" id="spName">Carolina de Neuquén</span>
+    <span class="sp-prod" id="spProd">Entró al curso · acceso de por vida</span>
+    <span class="sp-meta"><span class="ok">✔ Acceso confirmado</span> · <span id="spTime">hace 4 minutos</span></span>
+  </div>
+</div>
 
 <header class="hero">
   <div class="wrap">
-    <h1>Tu perro no te desobedece. <em>Nadie le explicó las reglas.</em></h1>
+    <p class="hero-social"><svg class="estrellas" viewBox="0 0 90 18" role="img" aria-label="4,8 de 5"><defs><linearGradient id="acEstrellas" x1="0" x2="1" y1="0" y2="0"><stop offset="96.0%" stop-color="#f5a623"></stop><stop offset="96.0%" stop-color="#dfe3e8"></stop></linearGradient></defs><g fill="url(#acEstrellas)"><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(0 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(18 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(36 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(54 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(72 0)"></path></g></svg><span><b>4,8</b> de 324 personas</span></p>
+    <h1><span>Tu perro no te desobedece.</span><em>Nadie le explicó las reglas.</em></h1>
     <p class="sub">Clases en video para educarlo vos mismo con <strong>15 minutos por día</strong>, sin pagar un adiestrador. Mirás la clase, la repetís con tu perro, y pasás a la siguiente.</p>
     <div class="pills">
-      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v13H4z"/><path d="M8 21h8M12 17v4"/></svg> <b>36 clases</b> en video</span>
-      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M3 12h18M12 8v13M12 8S9 3 7 5s5 3 5 3zM12 8s3-5 5-3-5 3-5 3z"/></svg> <b>+2 manuales</b> gratis</span>
-      <span class="pill"><svg viewBox="0 0 24 24" fill="#7b1717" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="16" rx="4.6" ry="4"/><circle cx="6" cy="11" r="2"/><circle cx="18" cy="11" r="2"/><circle cx="9.5" cy="7" r="2"/><circle cx="14.5" cy="7" r="2"/></svg> <b>Cualquier</b> raza</span>
-      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg> Cachorro o <b>adulto</b></span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v13H4z"></path><path d="M8 21h8M12 17v4"></path></svg> <b>Clases en video</b></span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1.5"></rect><path d="M3 12h18M12 8v13M12 8S9 3 7 5s5 3 5 3zM12 8s3-5 5-3-5 3-5 3z"></path></svg> <b>+3 bonos gratis</b></span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="#7b1717" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="16" rx="4.6" ry="4"></ellipse><circle cx="6" cy="11" r="2"/><circle cx="18" cy="11" r="2"/><circle cx="9.5" cy="7" r="2"/><circle cx="14.5" cy="7" r="2"/></svg> <b>Cualquier raza</b></span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="#7b1717" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg> <b>Cachorro o adulto</b></span>
     </div>
     <div class="aula">
       <div class="aula-body">
@@ -325,47 +390,21 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   <div class="wrap-w">
     <h2>Elegí con cuánto <em>te lo querés llevar</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el día uno.</p>
-    <div class="seg" id="planes-hero" data-planes>
+    <div class="planes" id="planes-hero" data-planes>
+    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
     <div class="seg-btns">
-        <label class="seg-b"
-               data-nombre="Básico" data-precio="14900" data-antes="AR$ 62.300"
-               data-ahorro="AR$ 47.400" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico"
-               data-meta="18 clases · 1 h 29 min · AR$ 828 por clase">
-          <input type="radio" name="plan-hero" value="basico">
-          
-          <span>Básico</span><em>18 clases</em>
-        </label>
-        <label class="seg-b sel"
-               data-nombre="Completo" data-precio="22900" data-antes="AR$ 80.299"
-               data-ahorro="AR$ 57.399" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo"
-               data-meta="31 clases · 2 h 29 min · AR$ 739 por clase">
-          <input type="radio" name="plan-hero" value="completo" checked>
-          <i class="seg-tag">Más elegido</i>
-          <span>Completo</span><em>31 clases</em>
-        </label>
-        <label class="seg-b"
-               data-nombre="Avanzado" data-precio="28900" data-antes="AR$ 98.150"
-               data-ahorro="AR$ 69.250" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado"
-               data-meta="36 clases · 3 h 06 min · Incluye todo lo que se sume después">
-          <input type="radio" name="plan-hero" value="avanzado">
-          
-          <span>Avanzado</span><em>36 clases</em>
-        </label>
-    </div>
-    <div class="seg-precio">
-      <span class="seg-antes">Vuelve a <s data-antes>AR$ 80.299</s></span>
-      <b class="seg-now" data-precio>AR$ 22.900</b>
-      <span class="seg-ahorro" data-ahorro>Ahorrás AR$ 57.399</span>
-      <span class="seg-meta" data-meta>31 clases · 2 h 29 min · AR$ 739 por clase</span>
-    </div>
-    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a este precio</span></p>
+        <label class="seg-b" data-nombre="Básico"><input type="radio" name="planSel" value="básico"><span>Básico</span><em>18 clases</em></label>
+        <label class="seg-b sel" data-nombre="Completo"><input type="radio" name="planSel" value="completo" checked><i class='seg-tag'>Más elegido</i><span>Completo</span><em>31 clases</em></label>
+        <label class="seg-b" data-nombre="Avanzado"><input type="radio" name="planSel" value="avanzado"><span>Avanzado</span><em>36 clases</em></label>
+      </div>
+      <div class="seg-precio">
+        <span class="seg-antes">Vuelve a AR$ 80.299</span>
+        <b class="seg-now">AR$ 22.900</b>
+        <span class="seg-ahorro">Ahorrás AR$ 57.399</span>
+        <span class="seg-meta">31 clases · 2 h 29 min · AR$ 739 por clase</span>
+      </div>
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
-      <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
-      <div class="pl-timer">
-        <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
-        <div class="hilo"><i data-barra style="width:100%"></i></div>
-      </div>
     </div>
   </div>
     <div class="trust">
@@ -380,13 +419,10 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   <div class="wrap-w">
     <h2>Qué trae <em>cada plan</em></h2>
     <p class="baja">La diferencia entre uno y otro, de un vistazo.</p>
-    <div class="planes" id="planes-cards" data-planes>
+    <div class="planes" id="planes-detalle" data-planes>
     <div class="pl-grid">
-      <label class="pl-card"
-             data-nombre="Básico" data-precio="14900" data-antes="AR$ 62.300"
-             data-ahorro="AR$ 47.400" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico"
-             data-meta="18 clases · 1 h 29 min · AR$ 828 por clase">
-        <input type="radio" name="plan-cards" value="basico">
+      <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
+        <input type="radio" name="plan-hero" value="basico">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Básico</span>
         <span class="pl-clases">18 clases · 1 h 29 min</span>
@@ -394,13 +430,10 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <span class="pl-precio"><b>AR$ 14.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 47.400</span>
         <span class="pl-unit">AR$ 828 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="no">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="no">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="no">Los 2 manuales en PDF</li><li class="no">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="no">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul>
       </label>
-      <label class="pl-card pl-destacado sel"
-             data-nombre="Completo" data-precio="22900" data-antes="AR$ 80.299"
-             data-ahorro="AR$ 57.399" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo"
-             data-meta="31 clases · 2 h 29 min · AR$ 739 por clase">
-        <input type="radio" name="plan-cards" value="completo" checked>
+      <label class="pl-card pl-destacado" data-precio="22900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-nombre="Completo">
+        <input type="radio" name="plan-hero" value="completo" checked>
         <span class="pl-badge">El más elegido</span><span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Completo</span>
         <span class="pl-clases">31 clases · 2 h 29 min</span>
@@ -408,13 +441,10 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <span class="pl-precio"><b>AR$ 22.900</b></span>
         <span class="pl-ahorro">Ahorrás AR$ 57.399</span>
         <span class="pl-unit">AR$ 739 por clase</span>
-        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b></span>
       </label>
-      <label class="pl-card"
-             data-nombre="Avanzado" data-precio="28900" data-antes="AR$ 98.150"
-             data-ahorro="AR$ 69.250" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado"
-             data-meta="36 clases · 3 h 06 min · Incluye todo lo que se sume después">
-        <input type="radio" name="plan-cards" value="avanzado">
+      <label class="pl-card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
+        <input type="radio" name="plan-hero" value="avanzado">
         <span class="pl-check" aria-hidden="true"></span>
         <span class="pl-nombre">Avanzado</span>
         <span class="pl-clases">36 clases · 3 h 06 min</span>
@@ -425,11 +455,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="si">Paseo avanzado, juego y métodos</li><li class="si">Las clases nuevas, de por vida</li></ul>
       </label>
     </div>
-    <div class="pl-cta">
-      <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
-      <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
     </div>
-  </div>
   </div>
 </section>
 
@@ -684,47 +710,45 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   <div class="wrap-w">
     <h2>Empezá hoy <em>con tu perro</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. 7 días de garantía.</p>
-    <div class="seg" id="planes-cierre" data-planes>
-    <div class="seg-btns">
-        <label class="seg-b"
-               data-nombre="Básico" data-precio="14900" data-antes="AR$ 62.300"
-               data-ahorro="AR$ 47.400" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico"
-               data-meta="18 clases · 1 h 29 min · AR$ 828 por clase">
-          <input type="radio" name="plan-cierre" value="basico">
-          
-          <span>Básico</span><em>18 clases</em>
-        </label>
-        <label class="seg-b sel"
-               data-nombre="Completo" data-precio="22900" data-antes="AR$ 80.299"
-               data-ahorro="AR$ 57.399" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo"
-               data-meta="31 clases · 2 h 29 min · AR$ 739 por clase">
-          <input type="radio" name="plan-cierre" value="completo" checked>
-          <i class="seg-tag">Más elegido</i>
-          <span>Completo</span><em>31 clases</em>
-        </label>
-        <label class="seg-b"
-               data-nombre="Avanzado" data-precio="28900" data-antes="AR$ 98.150"
-               data-ahorro="AR$ 69.250" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado"
-               data-meta="36 clases · 3 h 06 min · Incluye todo lo que se sume después">
-          <input type="radio" name="plan-cierre" value="avanzado">
-          
-          <span>Avanzado</span><em>36 clases</em>
-        </label>
+    <div class="planes" id="planes-cierre" data-planes>
+    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a estos precios</span></p>
+    <div class="pl-grid">
+      <label class="pl-card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
+        <input type="radio" name="plan-cierre" value="basico">
+        <span class="pl-check" aria-hidden="true"></span>
+        <span class="pl-nombre">Básico</span>
+        <span class="pl-clases">18 clases · 1 h 29 min</span>
+        <span class="pl-antes">Vuelve a AR$ 62.300</span>
+        <span class="pl-precio"><b>AR$ 14.900</b></span>
+        <span class="pl-ahorro">Ahorrás AR$ 47.400</span>
+        <span class="pl-unit">AR$ 828 por clase</span>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="no">Los 2 manuales en PDF</li><li class="no">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="no">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul>
+      </label>
+      <label class="pl-card pl-destacado" data-precio="22900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-nombre="Completo">
+        <input type="radio" name="plan-cierre" value="completo" checked>
+        <span class="pl-badge">El más elegido</span><span class="pl-check" aria-hidden="true"></span>
+        <span class="pl-nombre">Completo</span>
+        <span class="pl-clases">31 clases · 2 h 29 min</span>
+        <span class="pl-antes">Vuelve a AR$ 80.299</span>
+        <span class="pl-precio"><b>AR$ 22.900</b></span>
+        <span class="pl-ahorro">Ahorrás AR$ 57.399</span>
+        <span class="pl-unit">AR$ 739 por clase</span>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="no">Paseo avanzado, juego y métodos</li><li class="no">Las clases nuevas, de por vida</li></ul><span class="pl-salto">+ AR$ 8.000 y te llevás <b>13 clases más</b></span>
+      </label>
+      <label class="pl-card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
+        <input type="radio" name="plan-cierre" value="avanzado">
+        <span class="pl-check" aria-hidden="true"></span>
+        <span class="pl-nombre">Avanzado</span>
+        <span class="pl-clases">36 clases · 3 h 06 min</span>
+        <span class="pl-antes">Vuelve a AR$ 98.150</span>
+        <span class="pl-precio"><b>AR$ 28.900</b></span>
+        <span class="pl-ahorro">Ahorrás AR$ 69.250</span>
+        <span class="pl-unit">Incluye todo lo que se sume después</span>
+        <ul class="pl-lista"><li class="si">Las 18 clases de obediencia y mañas</li><li class="si">Los 2 manuales en PDF</li><li class="si">Bañarlo, cepillarlo, medicarlo y curarlo</li><li class="si">Los 9 trucos</li><li class="si">Paseo avanzado, juego y métodos</li><li class="si">Las clases nuevas, de por vida</li></ul>
+      </label>
     </div>
-    <div class="seg-precio">
-      <span class="seg-antes">Vuelve a <s data-antes>AR$ 80.299</s></span>
-      <b class="seg-now" data-precio>AR$ 22.900</b>
-      <span class="seg-ahorro" data-ahorro>Ahorrás AR$ 57.399</span>
-      <span class="seg-meta" data-meta>31 clases · 2 h 29 min · AR$ 739 por clase</span>
-    </div>
-    <p class="pl-cupos"><span><i></i>Quedan 4 cupos a este precio</span></p>
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
-      <p class="pl-nota">Un solo pago · Acceso inmediato · 7 días de garantía</p>
-      <div class="pl-timer">
-        <p>El precio vuelve a <b data-antes>AR$ 80.299</b> en <b data-reloj>--:--</b></p>
-        <div class="hilo"><i data-barra style="width:100%"></i></div>
-      </div>
     </div>
   </div>
   </div>
@@ -752,43 +776,64 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     var r=f-Date.now(); if(r<=0){f=fin();r=f-Date.now()}
     var t=dd(Math.floor(r/60000))+':'+dd(Math.floor(r%60000/1000));
     if(el) el.textContent=t;
+    var bfc=document.getElementById('bfCountdown');
+    if(bfc) bfc.textContent=t;
     [].forEach.call(document.querySelectorAll('[data-reloj]'),function(x){x.textContent=t});
     [].forEach.call(document.querySelectorAll('[data-barra]'),function(x){
       x.style.width=Math.max(0,(r/1000)/TOT*100)+'%';});
   }
   setInterval(tic,1000); tic();
 
-  // selector de plan: hero y cierre, sincronizados
+  // selectores de plan (hero y cierre, sincronizados)
   function fmt(n){try{return new Intl.NumberFormat('es-AR').format(n)}catch(e){return n}}
   var grupos=[].slice.call(document.querySelectorAll('[data-planes]'));
   function pintar(nombre){
     grupos.forEach(function(g){
       var cta=g.querySelector('[data-cta]');
-      [].slice.call(g.querySelectorAll('.seg-b,.pl-card')).forEach(function(b){
-        var sel=b.getAttribute('data-nombre')===nombre;
-        b.classList.toggle('sel',sel); b.querySelector('input').checked=sel;
-        if(!sel) return;
-        var pre=b.getAttribute('data-precio');
-        var n1=g.querySelector('.seg-now');
-        if(n1){
-          n1.textContent='AR$ '+fmt(pre);
-          g.querySelector('.seg-antes s').textContent=b.getAttribute('data-antes');
-          g.querySelector('.seg-ahorro').textContent='Ahorrás '+b.getAttribute('data-ahorro');
-          g.querySelector('.seg-meta').textContent=b.getAttribute('data-meta');
+      [].slice.call(g.querySelectorAll('.pl-card')).forEach(function(c){
+        var sel=c.getAttribute('data-nombre')===nombre;
+        c.classList.toggle('sel',sel);
+        c.querySelector('input').checked=sel;
+        if(sel&&cta){
+          cta.setAttribute('href',c.getAttribute('data-link'));
+          cta.textContent='Quiero el plan '+nombre+' — AR$ '+fmt(c.getAttribute('data-precio'));
         }
-        cta.setAttribute('href',b.getAttribute('data-link'));
-        cta.textContent='Quiero el plan '+nombre+' — AR$ '+fmt(pre);
       });
     });
-    var ref=document.querySelector('[data-planes] [data-nombre="'+nombre+'"]');
-    if(ref){[].forEach.call(document.querySelectorAll('.pl-timer [data-antes]'),function(x){
-      x.textContent=ref.getAttribute('data-antes');});}
-    var st=document.querySelector('.sticky a');
-    if(st&&ref){st.setAttribute('href',ref.getAttribute('data-link'));
-      st.textContent='Empezar con el plan '+nombre;}
+    [].forEach.call(document.querySelectorAll('.seg-b'),function(b){
+      var sel=b.getAttribute('data-nombre')===nombre;
+      b.classList.toggle('sel',sel);
+      var inp=b.querySelector('input'); if(inp) inp.checked=sel;
+    });
+    var card=document.querySelector('.pl-card[data-nombre="'+nombre+'"]'),
+        box=document.querySelector('.seg-precio');
+    if(card&&box){
+      var tx=function(q){var e=card.querySelector(q);return e?e.textContent.trim():''};
+      box.querySelector('.seg-antes').textContent=tx('.pl-antes').replace('Vuelve a ','Vuelve a ');
+      box.querySelector('.seg-now').textContent=tx('.pl-precio');
+      box.querySelector('.seg-ahorro').textContent=tx('.pl-ahorro');
+      box.querySelector('.seg-meta').textContent=tx('.pl-clases')+' · '+tx('.pl-unit');
+    }
+    if(card){[].forEach.call(document.querySelectorAll('[data-cta]'),function(x){
+      x.setAttribute('href',card.getAttribute('data-link'));
+      x.textContent='Quiero el plan '+nombre+' — AR$ '+fmt(card.getAttribute('data-precio'));});}
+    var c2=document.querySelector('.pl-card[data-nombre="'+nombre+'"]');
+    if(c2){var an=c2.querySelector('.pl-antes');
+      if(an){var v=an.textContent.replace('Vuelve a ','');
+        [].forEach.call(document.querySelectorAll('[data-antes]'),function(x){x.textContent=v});}}
+    var s=document.querySelector('.sticky a');
+    if(s){var c=document.querySelector('.pl-card[data-nombre="'+nombre+'"]');
+      s.setAttribute('href',c.getAttribute('data-link'));
+      s.textContent='Empezar con el plan '+nombre;}
   }
-  grupos.forEach(function(g){g.addEventListener('change',function(e){
-    var b=e.target.closest('.seg-b,.pl-card'); if(b) pintar(b.getAttribute('data-nombre'));});});
+  grupos.forEach(function(g){
+    g.addEventListener('click',function(e){
+      var c=e.target.closest('.pl-card,.seg-b'); if(c) pintar(c.getAttribute('data-nombre'));
+    });
+    g.addEventListener('change',function(e){
+      var c=e.target.closest('.pl-card,.seg-b'); if(c) pintar(c.getAttribute('data-nombre'));
+    });
+  });
   pintar('Completo');
 
   // aula: los 4 adelantos, se van encadenando y se puede elegir
@@ -854,6 +899,56 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     new IntersectionObserver(function(en){st.classList.toggle('on',!en[0].isIntersecting&&en[0].boundingClientRect.top<0)},
       {threshold:0}).observe(hero);
   }
+
+  // cartel de compra reciente (social proof toast)
+  (function(){
+    var buyers = [
+      { name: "Carolina de Neuquén", prod: "Entró al curso · acceso de por vida", time: "hace 4 minutos", img: "05-da-la-pata.webp" },
+      { name: "Gonzalo de Córdoba", prod: "Plan Completo · 31 clases", time: "hace 12 minutos", img: "01-que-se-siente.webp" },
+      { name: "Lucía de Rosario", prod: "Plan Avanzado · 36 clases", time: "hace 18 minutos", img: "08-el-primer-truco.webp" },
+      { name: "Martín de Mendoza", prod: "Entró al curso · acceso de por vida", time: "hace 25 minutos", img: "02-que-se-acueste.webp" },
+      { name: "Valentina de Buenos Aires", prod: "Plan Completo · 31 clases", time: "hace 31 minutos", img: "10-el-comando-no.webp" },
+      { name: "Matías de Salta", prod: "Entró al curso · acceso de por vida", time: "hace 39 minutos", img: "10-el-comando-no.webp" },
+      { name: "Camila de Santa Fe", prod: "Plan Avanzado · 36 clases", time: "hace 44 minutos", img: "05-da-la-pata.webp" },
+      { name: "Joaquín de Mar del Plata", prod: "Entró al curso · acceso de por vida", time: "hace 52 minutos", img: "01-que-se-siente.webp" }
+    ];
+    var idx = 0;
+    var toast = document.getElementById('spToast');
+    var spName = document.getElementById('spName');
+    var spProd = document.getElementById('spProd');
+    var spTime = document.getElementById('spTime');
+    var spShot = document.getElementById('spShot');
+    var spClose = document.getElementById('spClose');
+
+    if (!toast) return;
+
+    function showNext() {
+      var b = buyers[idx];
+      if (spName) spName.textContent = b.name;
+      if (spProd) spProd.textContent = b.prod;
+      if (spTime) spTime.textContent = b.time;
+      if (spShot) spShot.src = "https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/" + b.img;
+      toast.classList.add('show');
+
+      setTimeout(function() {
+        toast.classList.remove('show');
+      }, 6000);
+
+      idx = (idx + 1) % buyers.length;
+    }
+
+    if (spClose) {
+      spClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toast.classList.remove('show');
+      });
+    }
+
+    setTimeout(function() {
+      showNext();
+      setInterval(showNext, 18000);
+    }, 6000);
+  })();
 })();
 </script>
 </body>
