@@ -415,16 +415,17 @@ footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;l
 .story-sec .story-trans .baja{text-align:center;color:var(--tx3);font-size:15px;margin-bottom:24px;line-height:1.6;max-width:680px;margin-left:auto;margin-right:auto}
 
 /* capturas whatsapp */
-.wa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
+.wa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}
+.wa-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
 .wa-card{display:flex;flex-direction:column;gap:8px}
 .wa-card img{width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(18,25,31,.10);border:1px solid var(--bd)}
 .wa-cap{font-size:13px;color:var(--tx2);line-height:1.45}
 .wa-cap b{color:var(--tx);font-weight:700}
 @media (max-width:960px){
-  .wa-grid{grid-template-columns:repeat(2,1fr);max-width:680px;margin:20px auto 0;gap:16px}
+  .wa-grid, .wa-grid-3{grid-template-columns:repeat(2,1fr);max-width:680px;margin:20px auto 0;gap:16px}
 }
-@media (max-width:520px){
-  .wa-grid{grid-template-columns:1fr;max-width:340px;margin:18px auto 0;gap:18px}
+@media (max-width:560px){
+  .wa-grid, .wa-grid-3{grid-template-columns:1fr;max-width:340px;margin:18px auto 0;gap:18px}
 }
 </style>
 <!-- Meta Pixel -->
@@ -464,7 +465,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 
 <header class="hero">
   <div class="wrap">
-    <p class="hero-social"><svg class="estrellas" viewBox="0 0 90 18" role="img" aria-label="4,8 de 5"><defs><linearGradient id="acEstrellas" x1="0" x2="1" y1="0" y2="0"><stop offset="96.0%" stop-color="#f5a623"></stop><stop offset="96.0%" stop-color="#dfe3e8"></stop></linearGradient></defs><g fill="url(#acEstrellas)"><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(0 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(18 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(36 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(54 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(72 0)"></path></g></svg><span><b>4,8</b> de 324 personas</span></p>
+    <p class="hero-social"><svg class="estrellas" viewBox="0 0 90 18" role="img" aria-label="4,8 de 5"><defs><linearGradient id="acEstrellas" x1="0" x2="1" y1="0" y2="0"><stop offset="96.0%" stop-color="#f5a623"></stop><stop offset="96.0%" stop-color="#dfe3e8"></stop></linearGradient></defs><g fill="url(#acEstrellas)"><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(0 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(18 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(36 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(54 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(72 0)"></path></g></svg><span><b>4,8</b> de 367 personas</span></p>
     <h1><span>Tu perro no te desobedece.</span><em>Nadie le explicó las reglas.</em></h1>
     <p class="sub">Clases en video para educarlo vos mismo con <strong>15 minutos por día</strong>, sin pagar un adiestrador. Mirás la clase, la repetís con tu perro, y pasás a la siguiente.</p>
     <div class="aula">
@@ -523,7 +524,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 
   <div class="wrap-w">
-    <div class="wa-grid">
+    <div class="wa-grid-3">
       <div class="wa-card">
         <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-2.webp" alt="Mensaje de Esteban" loading="lazy" decoding="async">
         <p class="wa-cap"><b>Esteban.</b> Le estaba dando el premio tarde. Cambió una sola cosa y en tres días tenía el sentado.</p>
@@ -535,26 +536,6 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       <div class="wa-card">
         <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-6.webp" alt="Mensaje de Diego" loading="lazy" decoding="async">
         <p class="wa-cap"><b>Diego.</b> Diez días, cinco minutos por día antes de cenar. Vinieron las visitas y no saltó ni una vez.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-7-new.webp" alt="Mensaje de Carolina" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Carolina.</b> Su perra lloraba desde que cerraba la puerta hasta que volvía. Seis horas sola y la vecina no le dijo nada.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-4.webp" alt="Mensaje de Martín" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Martín.</b> Tres años peleándose con la correa. A la semana ya caminaban con la correa floja.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-3-new.webp" alt="Mensaje de Rosana" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Rosana.</b> Le curó una pata un domingo a la noche, con todo cerrado. Sin bozal y sin que la mordiera.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-5.webp" alt="Mensaje de Vanina" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Vanina.</b> Tres semanas: se sienta a la primera sin mostrarle comida.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-8.webp" alt="Mensaje de Lucas" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Lucas.</b> Lo suelta en el parque y se queda con él. Sin correa y sin premios en la mano.</p>
       </div>
     </div>
   </div>
@@ -622,6 +603,39 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     </ul>
 
     <p class="no-es-cierre">Para todo el resto —que es la enorme mayoría— esto funciona, y tenés <b>treinta días</b> para comprobarlo sin riesgo.</p>
+  </div>
+</section>
+
+<section class="story-sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="story-trans" style="margin-top:0;border-top:none;padding-top:0">
+      <h2>Más historias de <em>gente que empezó de cero</em></h2>
+      <p class="baja">Resultados reales con 15 minutos por día, sin importar la edad ni la raza del perro.</p>
+    </div>
+  </div>
+  <div class="wrap-w">
+    <div class="wa-grid">
+      <div class="wa-card">
+        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-7-new.webp" alt="Mensaje de Carolina" loading="lazy" decoding="async">
+        <p class="wa-cap"><b>Carolina.</b> Su perra lloraba desde que cerraba la puerta hasta que volvía. Seis horas sola y la vecina no le dijo nada.</p>
+      </div>
+      <div class="wa-card">
+        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-4.webp" alt="Mensaje de Martín" loading="lazy" decoding="async">
+        <p class="wa-cap"><b>Martín.</b> Tres años peleándose con la correa. A la semana ya caminaban con la correa floja.</p>
+      </div>
+      <div class="wa-card">
+        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-3-new.webp" alt="Mensaje de Rosana" loading="lazy" decoding="async">
+        <p class="wa-cap"><b>Rosana.</b> Le curó una pata un domingo a la noche, con todo cerrado. Sin bozal y sin que la mordiera.</p>
+      </div>
+      <div class="wa-card">
+        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-5.webp" alt="Mensaje de Vanina" loading="lazy" decoding="async">
+        <p class="wa-cap"><b>Vanina.</b> Tres semanas: se sienta a la primera sin mostrarle comida.</p>
+      </div>
+      <div class="wa-card">
+        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-8.webp" alt="Mensaje de Lucas" loading="lazy" decoding="async">
+        <p class="wa-cap"><b>Lucas.</b> Lo suelta en el parque y se queda con él. Sin correa y sin premios en la mano.</p>
+      </div>
+    </div>
   </div>
 </section>
 
