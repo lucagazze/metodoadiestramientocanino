@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Método Adiestramiento Canino — Por qué armé este curso</title>
+<meta name="description" content="No te falta mano dura, te falta orden. 36 clases en video para que eduques a tu perro vos mismo con 15 minutos por día. Acceso de por vida y 30 días de garantía.">
+<meta name="theme-color" content="#7b1717">
+<meta property="og:title" content="Método Adiestramiento Canino">
+<meta property="og:description" content="No te falta mano dura. Te falta orden. 36 clases en video para educar a tu perro con 15 minutos por día.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&family=Noto+Sans:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%237b1717'/><circle cx='30' cy='33' r='11' fill='white'/><circle cx='70' cy='33' r='11' fill='white'/><circle cx='16' cy='55' r='10' fill='white'/><circle cx='84' cy='55' r='10' fill='white'/><ellipse cx='50' cy='72' rx='23' ry='20' fill='white'/></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --serif:'Noto Serif',Georgia,'Times New Roman',serif;
+  --sans:'Noto Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --rojo:#b8000e;          /* subheads y links, igual que la referencia */
+  --btn:#df3129;           /* boton */
+  --btn-h:#f03129; --btn-a:#9c1c17;
+  --verde:#008001;         /* el bold verde arriba de los botones */
+  --negro:#000; --gris:#38393b; --gris2:#60606b; --gris3:#a8a8a8;
+  --bd:#ebebeb; --bd2:#bbb;
+  --crema:#fff9f0; --blanco:#fff; --casi:#fcfcfc;
+}
+html{font-size:20px;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:clip}
+body{font-family:var(--sans);font-weight:400;font-size:1rem;line-height:140%;
+  color:var(--negro);background:var(--blanco)}
+img{max-width:100%;height:auto;display:block}
+
+/* ====== filas, igual criterio que la referencia ====== */
+.row{width:100%;padding:0 20px}
+.in{max-width:1170px;margin:0 auto}      /* 1170 como la referencia */
+.in-w{max-width:1170px;margin:0 auto}    /* planes y tabla */
+section{padding:34px 0}
+.light{background:var(--crema)}
+.lightest{background:var(--blanco)}
+.dark{background:var(--gris);color:#fff}
+.dark h2,.dark h3{color:#fff}
+
+/* ====== tipografia, calcada de la referencia ====== */
+h1,h2{font-family:var(--serif);font-weight:700;line-height:120%;letter-spacing:0;color:var(--negro)}
+h1{font-size:2rem;margin-bottom:14px}
+h2{font-size:1.75rem;margin-bottom:12px}
+h3{font-family:var(--serif);font-weight:700;line-height:120%;font-size:1.25rem;
+   color:var(--rojo);margin:26px 0 8px}
+p{padding:10px 0;margin:0}
+a{color:var(--rojo)}
+b,strong{font-weight:700}
+.xl{font-size:1.125rem}
+.sub{font-family:var(--serif);font-weight:500;font-size:1.25rem;line-height:120%;margin-bottom:10px}
+.kick{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--rojo);padding:0 0 6px}
+.gris{color:var(--gris2)}
+.s{font-size:.875rem}
+.verde{color:var(--verde);font-weight:700;padding-bottom:0}
+
+/* divisor 25% centrado, como el elDivider de la referencia */
+.div25{width:25%;margin:26px auto;border:0;border-top:2px solid var(--bd2)}
+
+/* imagenes: 350px alineadas a la izquierda, o 100% */
+.img350{width:350px;max-width:100%;margin:14px 0}
+.wa350{width:350px;max-width:100%;margin:16px 0 0;border:1px solid var(--bd);border-radius:6px;
+  box-shadow:0 1px 6px rgba(0,0,0,.10)}
+.img100{width:100%;margin:14px 0}
+.cap{font-size:.75rem;color:var(--gris3);line-height:140%;padding-top:6px}
+
+ul.b{list-style:none;padding:8px 0}
+ul.b li{position:relative;padding:5px 0 5px 28px}
+ul.b li::before{content:"\2713";position:absolute;left:2px;top:5px;color:var(--rojo);font-weight:700}
+
+/* firma de autor arriba */
+.autor{display:flex;gap:14px;align-items:center;padding:16px 0 4px}
+.autor img{width:60px;height:60px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.autor b{font-family:var(--serif);font-size:1rem;display:block;line-height:1.2}
+.autor span{font-size:.8rem;color:var(--gris2)}
+
+/* ====== boton, igual que style2 de la referencia ====== */
+.btn{display:inline-block;background:var(--btn);border:1px solid #bd3129;border-radius:4px;
+  padding:16px 30px;text-decoration:none;text-align:center;transition:background .12s}
+.btn:hover{background:var(--btn-h)}
+.btn:active{background:var(--btn-a)}
+.btn .t{display:block;color:#fff;font-family:var(--sans);font-weight:700;font-size:1.25rem;line-height:100%}
+.btn .s2{display:block;color:#fff;font-size:.875rem;line-height:100%;margin-top:7px;opacity:.9}
+.btn-w{width:auto}
+.cta-bloq{padding:5px 0 4px;text-align:left}
+
+/* ====== planes ====== */
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch;padding-top:6px}
+.card{position:relative;display:flex;flex-direction:column;align-items:flex-start;
+  background:#fff;border:1px solid var(--bd);border-radius:4px;
+  padding:26px 22px 22px;cursor:pointer;transition:border-color .12s,box-shadow .12s}
+.card > span{display:block;width:100%}
+.card:hover{border-color:var(--bd2)}
+.card input{position:absolute;opacity:0;pointer-events:none}
+.card.sel{border:2px solid var(--rojo);padding:25px 21px 21px;
+  box-shadow:0 0 16px 2px rgba(0,0,0,.08)}
+.card .tag{position:absolute;top:-13px;left:20px;background:var(--rojo);color:#fff;
+  font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 12px;border-radius:4px}
+.card .nivel{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gris3)}
+.card.sel .nivel,.card.dest .nivel{color:var(--rojo)}
+.card .nom{font-family:var(--serif);font-weight:700;font-size:1.5rem;line-height:1.15;margin-top:3px}
+.card .cl{font-family:var(--serif);font-weight:700;font-size:1rem;color:var(--rojo);margin-top:2px}
+.card .txt{font-size:.8rem;line-height:148%;color:var(--gris2);
+  padding:12px 0 14px;margin-bottom:12px;border-bottom:1px solid var(--bd);min-height:118px}
+.card .txt b{color:var(--negro);display:block;margin-bottom:5px}
+.card .antes{font-size:.7rem;color:var(--gris3);margin-top:auto}
+.card .pre{font-family:var(--serif);font-weight:700;font-size:1.75rem;line-height:1.15}
+.card .aho{width:auto!important;align-self:flex-start;background:#eaf6ec;color:var(--verde);
+  font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:3px;margin-top:6px}
+.card .tag{width:auto!important}
+.pl-pie{text-align:center;padding-top:22px}
+.trust{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding-top:14px;
+  font-size:.75rem;color:var(--gris2)}
+.trust span{display:flex;align-items:center;gap:6px}
+.trust svg{width:15px;height:15px;flex:0 0 auto}
+
+/* ====== tabla, mismo criterio que el index: fixed, entra sin scroll ====== */
+.cmp-wrap{max-width:1170px;margin:0 auto}
+.cmp{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;
+  border:1px solid var(--bd);border-radius:4px;overflow:hidden;font-size:.7rem}
+.cmp th,.cmp td{padding:11px 7px;text-align:center;border-bottom:1px solid #f3f3f3}
+.cmp th:first-child{width:40%}
+.cmp th:not(:first-child){width:20%}
+.cmp thead th{font-family:var(--serif);font-weight:700;font-size:.8rem;color:var(--negro);
+  background:var(--casi);padding:13px 7px}
+.cmp thead th.dest{color:var(--rojo);background:#fdf5f5}
+.cmp tbody th{text-align:left;font-family:var(--sans);font-weight:600;color:var(--gris);
+  line-height:1.3;padding-left:13px}
+.cmp tbody th span{display:block;font-size:.58rem;color:var(--gris3);font-weight:400}
+.cmp td.si{color:var(--verde);font-size:.9rem;font-weight:700}
+.cmp td.no{color:#dcdcdc;font-size:.8rem}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmp .tot{background:#fcfdfd}
+.cmp .tot td b,.cmp .pre td b{font-family:var(--serif)}
+.cmp .pre td b{font-size:.85rem}
+
+/* ====== bonos ====== */
+.bono{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--bd);
+  border-radius:4px;padding:14px 16px;margin-bottom:10px}
+.bono img{width:70px;flex:0 0 auto;border-radius:3px}
+.bono b{display:block;font-family:var(--serif);font-size:.9rem;margin-bottom:2px}
+.bono span{font-size:.75rem;line-height:145%;color:var(--gris2)}
+.bono em{margin-left:auto;font-style:normal;font-weight:700;font-size:.62rem;color:var(--verde);
+  background:#eaf6ec;padding:3px 9px;border-radius:3px;white-space:nowrap;flex:0 0 auto}
+.bono em.add{color:var(--rojo);background:#fbeced}
+
+
+
+/* franja de credibilidad del hero */
+.credo{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding:14px 0 2px;
+  border-top:1px solid #e8ded0;margin-top:18px}
+.credo .est{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--gris)}
+.credo .est b{font-family:var(--serif);font-size:.9rem;color:var(--negro)}
+.credo .stars{color:#e8a317;letter-spacing:1.5px;font-size:.8rem}
+.credo .dato{font-size:.78rem;color:var(--gris2);display:flex;align-items:center;gap:6px}
+.credo .dato::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--rojo);flex:0 0 auto}
+.quees{font-size:.85rem;line-height:150%;color:var(--gris);background:#fff;
+  border:1px solid var(--bd);border-radius:4px;padding:13px 16px;margin-top:16px}
+.quees b{color:var(--negro)}
+@media (max-width:600px){.credo{gap:8px 16px}}
+
+/* bloque de identificacion por tramo */
+.paravos{background:#fff;border:1px solid var(--bd);border-left:4px solid var(--rojo);
+  border-radius:4px;padding:16px 20px 14px;margin:18px 0 6px}
+.paravos p{padding:0 0 8px;font-family:var(--serif);font-weight:700;font-size:.95rem;color:var(--negro)}
+.paravos ul{list-style:none;padding:0;margin:0}
+.paravos li{position:relative;padding:4px 0 4px 24px;font-size:.85rem;line-height:145%;color:var(--gris)}
+.paravos li::before{content:"";position:absolute;left:4px;top:12px;width:6px;height:6px;
+  border-radius:50%;background:var(--rojo)}
+
+/* ====== capturas de whatsapp ====== */
+.wa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:10px}
+.wa-grid img{width:100%;border-radius:9px;box-shadow:0 2px 14px rgba(0,0,0,.14)}
+.wa-pie{text-align:center;font-size:.7rem;color:var(--gris3);padding-top:14px}
+
+/* ====== testimonios ====== */
+.tst{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:6px}
+.tst > div{background:#fff;border:1px solid var(--bd);border-radius:4px;padding:18px}
+.tst .st{color:#e8a317;font-size:.75rem;letter-spacing:2px}
+.tst p{font-size:.8rem;line-height:150%;padding:8px 0 10px}
+.tst .a{display:flex;gap:10px;align-items:center}
+.tst .a img{width:34px;height:34px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.tst .a b{font-family:var(--serif);font-size:.78rem;display:block;line-height:1.2}
+.tst .a span{font-size:.65rem;color:var(--gris3)}
+
+/* ====== garantia ====== */
+.gar{background:var(--rojo);color:#fff;border-radius:4px;padding:26px 28px;display:flex;gap:18px}
+.gar i{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.16);
+  display:flex;align-items:center;justify-content:center}
+.gar svg{width:25px;height:25px}
+.gar b{display:block;font-family:var(--serif);font-size:1.15rem;margin-bottom:5px}
+.gar span{font-size:.85rem;line-height:150%;opacity:.94}
+
+/* ====== faq ====== */
+details{border-bottom:1px solid var(--bd)}
+summary{cursor:pointer;padding:15px 32px 15px 0;font-family:var(--serif);font-weight:500;
+  font-size:.95rem;position:relative;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:1.2rem;
+  color:var(--rojo);font-family:var(--sans);line-height:1}
+details[open] summary::after{content:"\2013"}
+details p{padding:0 0 16px;font-size:.85rem;color:var(--gris2)}
+
+/* ====== firma ====== */
+.firma{display:flex;gap:14px;align-items:center;padding:22px 0 0;margin-top:20px;
+  border-top:1px solid var(--bd)}
+.firma img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.firma .n{font-family:var(--serif);font-weight:700;font-size:1.25rem;line-height:1.2}
+.firma .r{font-size:.75rem;color:var(--gris2)}
+
+footer{background:var(--negro);color:var(--gris3);padding:28px 0;font-size:.7rem;
+  text-align:center;line-height:160%}
+footer a{color:#ddd}
+
+@media (max-width:1100px){
+  .wa-grid{grid-template-columns:1fr 1fr;max-width:900px;margin:0 auto}
+}
+@media (max-width:900px){
+  .pl{grid-template-columns:1fr;gap:22px}
+  .card .txt{min-height:0}
+  .tst{grid-template-columns:1fr}
+  .wa-grid{grid-template-columns:1fr;max-width:430px;margin:0 auto;gap:18px}
+}
+@media (max-width:600px){
+  html{font-size:18px}
+  section{padding:26px 0}
+  .row{padding:0 16px}
+  h1{font-size:1.65rem}
+  h2{font-size:1.4rem}
+  h3{font-size:1.1rem}
+  .img350{width:100%}
+  .cmp{font-size:.62rem}
+  .cmp th,.cmp td{padding:9px 3px}
+  .cmp tbody th{padding-left:8px}
+  .cmp thead th{font-size:.68rem;padding:11px 2px}
+  .cmp td.si{font-size:.8rem}
+  .cmp .pre td b{font-size:.75rem}
+  .gar{flex-direction:column;gap:12px;padding:22px 20px}
+  .bono{flex-wrap:wrap}
+  .bono em{margin-left:0}
+  .btn .t{font-size:1.05rem}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,
+'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2504143436724225');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></noscript>
+</head>
+<body>
+
+<!-- ===================== 1 · GANCHO ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+    <p class="kick">Una carta de Andrés Vidal</p>
+    <h1>No te falta mano dura. Te falta orden.</h1>
+    <p class="sub">Tu perro no te está desafiando: está haciendo lo único que aprendió que le funciona. Eso se cambia con quince minutos por día, y es más fácil de lo que creés.</p>
+    <div class="autor">
+      <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/andres/retrato.webp" alt="Andrés Vidal">
+      <div><b>Andrés Vidal</b><span>Adiestrador canino · Rosario · dueño de Rulo</span></div>
+    </div>
+    <div class="credo">
+      <span class="est"><span class="stars">★★★★★</span><b>4,8</b> de 324 personas</span>
+      <span class="dato">Acceso de por vida</span>
+      <span class="dato">30 días de garantía</span>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== 2 · EL PROBLEMA ===================== -->
+<section>
+  <div class="row"><div class="in">
+
+    <p class="xl">Si estás leyendo esto, hay tres cosas que casi seguro te están pasando ahora mismo.</p>
+
+    <h3>Primero: te hace caso cuando quiere</h3>
+
+    <p>A veces se sienta. A veces te mira, procesa, y sigue en la suya. Nunca sabés cuál de las dos va a ser, así que ya ni le pedís nada delante de gente, porque quedar en ridículo dos veces alcanza. Le repetís el nombre cuatro veces, subís el tono en la tercera, y en la cuarta ya estás gritando en tu propia casa.</p>
+
+    <h3>Segundo: el paseo dejó de ser un paseo</h3>
+
+    <p>Salís tensando el brazo desde la puerta. Cruzás de vereda cuando ves a alguien con perro. Cambiaste el horario para no encontrarte con nadie. Volvés con el hombro dolorido y con la cabeza en que mañana hay que hacerlo de nuevo. Y en algún momento empezaste a sacarlo menos, que es justo lo que lo empeora.</p>
+
+    <h3>Tercero: probaste, y no duró</h3>
+
+    <p>Videos de YouTube, cuentas de Instagram, el consejo del vecino que tuvo ovejeros toda la vida. Capaz hasta pagaste un adiestrador. Tres semanas de constancia, algo mejoró, y después se te cayó todo y volviste al punto de partida sintiéndote un poco más tonto que antes.</p>
+
+    <p>Y arriba de las tres está la que nadie dice en voz alta: <b>ya te escuchaste gritándole.</b> Y después te quedaste con esa sensación fea de haberla embarrado con un animal que no entiende una sola palabra de lo que le estás diciendo.</p>
+
+    <h3>Lo peor es que esto no se arregla solo</h3>
+
+    <p>Va para el otro lado. Cada día que tu perro tira de la correa, la practica una vez más. Cada vez que salta a una visita y alguien lo acaricia para calmarlo, se le refuerza. <b>Las mañas no se van con la edad: se consolidan.</b> Un perro de cinco años con dos años de tirón encima es mucho más difícil que ese mismo perro hace dos años.</p>
+
+    <p>Yo perdí dos años esperando que se le pasara. No se le pasó.</p>
+  </div></div>
+</section>
+
+<!-- ===================== 3 · ADELANTO DE LA SOLUCIÓN ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+
+    <h3>Pero cuando ordenás las cosas, pasa esto</h3>
+
+    <p>No hace falta mano dura, ni collares raros, ni una hora por día. Hace falta un orden: qué se enseña primero, qué después, y qué error hay que evitar en cada paso. Cuando eso está puesto, el cambio no tarda meses.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-1.webp" alt="Mensaje de Mónica" loading="lazy" decoding="async">
+    <p class="cap">Mónica. Dos años sin poder soltarlo, y un domingo volvió a la primera.</p>
+
+    <p>Este mensaje me llegó un domingo a las once de la mañana. Y no es un caso especial: es lo que pasa cuando alguien deja de improvisar y sigue un orden. Te voy a contar cómo llegué a ese orden, porque no fue por estudiar. Fue porque no me quedó otra.</p>
+  </div></div>
+</section>
+
+<!-- ===================== 4 · LA HISTORIA ===================== -->
+<section>
+  <div class="row"><div class="in">
+
+    <h3>Un martes a las once y media de la noche</h3>
+
+    <p>Llegaba del taller con doce horas encima. En el pasillo estaba el tercer par de zapatillas del mes hecho pedazos, con la espuma de la plantilla desparramada por toda la alfombra.</p>
+
+    <p>Le grité. Fuerte. Con el zapato en la mano.</p>
+
+    <p>Y Rulo se hizo pis ahí mismo, temblando, mirándome desde abajo de la mesa.</p>
+
+    <p>Me quedé sentado en el piso del living con la espalda contra el sillón, veinte minutos sin moverme. No por el zapato. Por la cara del perro. <b>Ese día entendí que le había enseñado una sola cosa en dos años: que yo era impredecible y que lo mejor era esconderse.</b></p>
+
+    <p>Rulo había llegado porque mi hija Cata, que tenía nueve, pidió un perro durante un año entero. Con carpetas hechas a mano y todo. Yo dije que no ochenta veces y a la ochenta y uno dije que bueno. A los dos meses ella seguía queriéndolo, pero el que lo sacaba a las siete de la mañana era yo, el que juntaba lo que rompía era yo, y el perro que era un regalo se había convertido en un problema mío. Lo peor es que yo lo quería: no estaba enojado con él, estaba enojado conmigo.</p>
+
+    <hr class="div25">
+
+    <h3>Primero probé gratis. Fue peor.</h3>
+
+    <p>Junté cuarenta videos de cuarenta personas distintas. Cada una con su método, cada una empezando por un lado diferente. Uno decía premio, otro decía correa, otro decía mano dura. Probaba tres días con uno, no veía nada, y saltaba al siguiente. Rulo, del otro lado, recibía tres sistemas contradictorios por semana.</p>
+
+    <p class="sub" style="color:var(--rojo)">No me faltaba información. Me faltaba el orden.</p>
+
+    <h3>Después pagué. Y funcionó… con él.</h3>
+
+    <p>Un adiestrador que venía a casa. Cuarenta minutos, cuatro sesiones, la mitad de un sueldo. El tipo entraba, hacía cosas que a mí me parecían magia, y se iba. El sábado siguiente yo intentaba repetirlo y no me salía nada. Porque el que había aprendido algo en esos cuarenta minutos era el perro; yo miraba de costado, como el que mira a un mecánico arreglar el auto.</p>
+
+    <hr class="div25">
+
+    <h3>Las nueve palabras que me cambiaron todo</h3>
+
+    <p>En la cuarta sesión, mientras guardaba las cosas y ya se iba, me dijo algo al pasar:</p>
+
+    <p class="sub" style="color:var(--rojo)">“El problema no es Rulo. Vos le pagás todos los días por hacer justo lo que no querés.”</p>
+
+    <p>Me lo explicó en dos minutos, parado en la puerta. <b>Un perro repite lo que le funciona y abandona lo que no.</b> Salta a la visita y la visita lo acaricia: saltar funcionó. Ladra en el balcón y el que pasaba se aleja: ladrar funcionó. Tira de la correa y vos das un paso para no ahorcarlo: tirar funcionó. Rompe una zapatilla y entrás gritando: para un perro que estuvo nueve horas solo, hasta el grito es atención.</p>
+
+    <p>Yo llevaba dos años pagándole todos los días, sin darme cuenta, por hacer exactamente lo que no quería que hiciera.</p>
+
+    <hr class="div25">
+
+    <h3>Quince minutos por día, en la cocina</h3>
+
+    <p>Empecé de nuevo, pero con un orden y con el reloj del microondas. Cinco minutos antes de irme al taller, cinco cuando volvía, cinco después de comer. Siempre con premios del tamaño de una arveja en un frasco arriba de la heladera.</p>
+
+    <p><b>A las tres semanas se sentaba a la primera</b>, sin que le mostrara la comida.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-5.webp" alt="Mensaje de Vanina" loading="lazy" decoding="async">
+    <p class="cap">Vanina, con el mismo plazo. Tres semanas es lo que suele tardar.</p>
+
+    <p>A las cinco se quedaba quieto aunque yo saliera de la cocina. Y a las seis salimos a la vuelta de la manzana y caminó todo el trayecto al lado de mi pierna, con la correa colgando floja. Me acuerdo perfecto de esa vuelta. Me quería poner a llorar en la vereda como un tarado.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-4.webp" alt="Mensaje de Martín" loading="lazy" decoding="async">
+    <p class="cap">Martín, tres años peleándose con la correa. Una semana.</p>
+
+    <hr class="div25">
+
+    <h3>Lo que pasó después</h3>
+
+    <p>Me quedó una cosa dando vueltas: si a mí, que no tenía la menor idea, me había alcanzado con quince minutos por día y un orden, ¿por qué había tanta gente sufriendo lo mismo?</p>
+
+    <p>Empecé ayudando gratis. Primero a mi hermana, después a dos vecinos, después a los amigos de esos vecinos. Me metí a estudiar en serio porque me daba vergüenza andar dando consejos sin saber, y en algún momento la cosa dejó de ser un hobby. <b>Hoy vivo de esto:</b> adiestro perros en Rosario y alrededores, casa por casa, con la cabeza del que estuvo del otro lado.</p>
+  </div></div>
+</section>
+
+<!-- ===================== 5 · EL MÉTODO Y LOS CASOS ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+
+    <h2>Por qué terminé armando el curso</h2>
+
+    <p>El problema de trabajar a domicilio es simple: no puedo estar en la casa de todo el mundo. Y aunque pudiera, ya sabemos cómo termina, porque me pasó a mí del otro lado: el adiestrador se va y vos te quedás sin saber cómo seguir.</p>
+
+    <p>Así que filmamos el método completo, clase por clase, con perros reales en casas reales. Ordenado de la primera a la última, en el orden exacto en que hay que verlo. <b>Sin teoría y sin nada que memorizar:</b> mirás qué hace el tipo con las manos, con la voz y con el cuerpo, y lo copiás igual. El adiestramiento no se lee, se copia.</p>
+
+    <p>Esto es lo que empezó a llegarme por WhatsApp:</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-2.webp" alt="Mensaje de Esteban" loading="lazy" decoding="async">
+    <p class="cap"><b>Esteban.</b> Le estaba dando el premio tarde. Cambió una sola cosa y en tres días tenía el sentado.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-6.webp" alt="Mensaje de Diego" loading="lazy" decoding="async">
+    <p class="cap"><b>Diego.</b> Diez días, cinco minutos por día antes de cenar. Vinieron las visitas y no saltó ni una vez.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-7.webp" alt="Mensaje de Carolina" loading="lazy" decoding="async">
+    <p class="cap"><b>Carolina.</b> Su perra lloraba desde que cerraba la puerta hasta que volvía. Seis horas sola y la vecina no le dijo nada.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-3.webp" alt="Mensaje de Rosana" loading="lazy" decoding="async">
+    <p class="cap"><b>Rosana.</b> Le curó una pata un domingo a la noche, con todo cerrado. Sin bozal y sin que la mordiera.</p>
+
+    <p>Ninguno de ellos me contrató. Ninguno tenía experiencia. Todos hicieron lo mismo: mirar la clase del día y repetirla quince minutos.</p>
+
+    <p class="verde">Si querés hacer exactamente eso con tu perro</p>
+    <div class="cta-bloq">
+      <a class="btn" href="#planes"><span class="t">Mostrame los planes</span><span class="s2">Un solo pago · acceso de por vida · 30 días de garantía</span></a>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== 6 · QUÉ INCLUYE ===================== -->
+<section>
+  <div class="row"><div class="in">
+
+    <h2>Qué es exactamente lo que te llevás</h2>
+
+    <p><b>36 clases en video</b>, de entre dos y doce minutos cada una. Filmadas de cerca, donde importa: las manos. Todas desbloqueadas desde el primer día, sin goteo semanal, para ver en el celular, la tablet o la compu las veces que quieras.</p>
+
+    <p>Cada clase tiene la misma estructura: <b>qué hacer, cómo se hace, y el error que casi todos cometen.</b> Ese último punto es el que más me hubiera servido a mí, porque el error casi nunca está en lo que hacés: está en cuándo lo hacés.</p>
+
+    <p>Y se usa en tres pasos, sin decidir nada:</p>
+
+    <ul class="b">
+      <li>Mirás la clase del día.</li>
+      <li>La repetís con tu perro, cinco minutos, donde estés.</li>
+      <li>Pasás a la siguiente. El orden ya está resuelto.</li>
+    </ul>
+
+    <p>Si un día no te salió, volvés a mirar la clase. Eso es exactamente lo que no podés hacer con un adiestrador que ya se fue de tu casa.</p>
+  </div></div>
+</section>
+
+<!-- ===================== 7 · LOS TRES TRAMOS ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+    <h2>De un perro que no te escucha a uno con el que se puede hacer cualquier cosa</h2>
+    <p>Las clases están ordenadas en tres tramos. Cada uno arranca donde termina el anterior, y vos elegís hasta dónde querés llegar.</p>
+
+    <h3>Tramo 1 · Los cimientos</h3>
+
+    <p>Acá se resuelve lo que te está arruinando el día. Que se siente, que se eche, que se quede donde lo dejaste y que venga cuando lo llamás. Que no te tire de la correa, que no salte a las visitas, que no te muerda las manos, que haga sus necesidades donde vos querés, que deje de llorar cuando cerrás la puerta y que respete su cama y su comida.</p>
+
+    <p>Es literalmente lo que yo hice en la cocina. <b>Son básicas en el sentido de que van primero, no en el sentido de que sean poco:</b> resuelven el noventa por ciento de los motivos por los que la gente llega a esta página.</p>
+
+    <div class="paravos">
+      <p>Este tramo es tuyo si…</p>
+      <ul>
+        <li>Tu perro no te hace caso y ya no sabés ni cómo pedírselo.</li>
+        <li>Antes de salir a pasear ya te da fiaca, porque sabés cómo termina.</li>
+        <li>Nunca entrenaste a un perro y no tenés idea por dónde se empieza.</li>
+        <li>Querés resolver lo que te molesta hoy y con eso estás hecho.</li>
+      </ul>
+    </div>
+
+    <h3>Tramo 2 · Donde deja de ser un problema y empieza a ser un buen perro</h3>
+
+    <p>Cuando lo básico ya está, te empieza a picar el resto.</p>
+
+    <p><b>Los cuidados.</b> Bañarlo sin que sea una pelea en el patio. Cepillarlo en minutos y sin forcejeo. Darle una pastilla el día que se enferma. Y curarle una herida con el perro quieto, sin bozal y sin que te muerda del susto. Es la parte que no parece nada hasta que tu perro se corta una pata un domingo a la noche, con todo cerrado, y sos vos o nadie.</p>
+
+    <p><b>Los trucos.</b> Que te dé la pata, que ladre a pedido, que dé vueltas, el muertito, que salte obstáculos. No son un adorno: enseñarle un truco nuevo es trabajo mental puro, y el trabajo mental es lo que te deja el perro tranquilo tirado en su cama. Además son los que te terminan de convencer <em>a vos</em> de que esto funciona.</p>
+
+    <div class="paravos">
+      <p>Este tramo es tuyo si…</p>
+      <ul>
+        <li>Arreglaste una cosa y apareció otra, y estás cansado de ir parchando de a uno.</li>
+        <li>Pensás en el día que se enferme o se lastime y te das cuenta de que no sabrías qué hacer.</li>
+        <li>Querés un perro que además sea divertido, no solamente obediente.</li>
+        <li>Preferís aprenderlo todo de una vez y no volver a buscar nunca más.</li>
+      </ul>
+    </div>
+
+    <h3>Tramo 3 · Sin techo</h3>
+
+    <p>Acá se termina la obediencia y empieza el entrenamiento. Un perro obediente hace lo que le pedís porque le conviene en ese momento. <b>Un perro entrenado trabaja con vos aunque no tengas nada en la mano.</b></p>
+
+    <p><b>Transferencia del refuerzo.</b> Pasar del premio de comida al premio de actividad: reemplazar un reforzador primario por uno de juego. Es lo que hace que la obediencia no se te caiga el día que salís sin la riñonera.</p>
+
+    <p><b>Canalización del instinto de presa.</b> El frisbee no es un juego: es la secuencia de caza completa —fijar, perseguir, atrapar, traer— dirigida a un objeto que vos controlás. Un perro que descarga esa secuencia con vos deja de descargarla con la bicicleta que pasa.</p>
+
+    <p><b>Control de impulsos, protocolo graduado de ausencias y generalización del paseo.</b> Traer y soltar como autocontrol puro; el perro que llora cuando cerrás la puerta, trabajado por aproximaciones sucesivas siempre por debajo del umbral de ansiedad; y el método de paseo completo arrancando de un perro que se escapa por la puerta.</p>
+
+    <img class="wa350" src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-8.webp" alt="Mensaje de Lucas" loading="lazy" decoding="async">
+    <p class="cap"><b>Lucas</b> hizo el Avanzado. Frisbee media hora, suelto, sin premios en la mano.</p>
+
+    <div class="paravos">
+      <p>Este tramo es tuyo si…</p>
+      <ul>
+        <li>Lo básico ya lo tenés, o sabés que lo vas a tener rápido.</li>
+        <li>Te imaginás soltándolo en un parque sin que se te acelere el pulso.</li>
+        <li>Querés entender el porqué de cada cosa, no solamente copiar la técnica.</li>
+        <li>Sos de los que si aprende algo, lo aprende completo.</li>
+      </ul>
+    </div>
+
+    <p>Y hay algo que solo está en este tramo: <b>todo curso nuevo que filmemos de acá en adelante te entra sin pagar un peso.</b></p>
+  </div></div>
+</section>
+
+<!-- ===================== 8 · LOS MANUALES ===================== -->
+<section>
+  <div class="row"><div class="in">
+    <h2>Además van los dos manuales</h2>
+    <p>Para cuando el video ya no alcanza y necesitás la respuesta escrita. Entran con el Completo y con el Avanzado.</p>
+    <div style="padding-top:10px">
+      <div class="bono">
+        <img src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/c4ce4e0f-8792-4520-bbe3-7a6692e5fc12/1786655386554_tapa-plana.webp" alt="El manual completo en PDF" loading="lazy" decoding="async">
+        <div><b>El manual completo · 56 páginas</b><span>Veintidós capítulos y un índice de síntomas: buscás lo que hace tu perro y está ahí.</span></div>
+        <em>INCLUIDO</em>
+      </div>
+      <div class="bono">
+        <img src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/c4ce4e0f-8792-4520-bbe3-7a6692e5fc12/1786655388812_bono-01.webp" alt="Plan de 15 minutos" loading="lazy" decoding="async">
+        <div><b>Plan de 15 minutos · 12 semanas para imprimir</b><span>Doce hojas para la heladera, cada semana ya planificada. Este es el que usé yo.</span></div>
+        <em>INCLUIDO</em>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== 9 · JUSTIFICACIÓN DE VALOR ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+    <h2>Cuánto vale que tu perro te haga caso</h2>
+
+    <p>Antes de que veas el precio quiero que hagas la misma cuenta que hice yo.</p>
+
+    <p>Yo trabajo a domicilio, así que sé perfectamente lo que sale. Una sesión de cuarenta minutos no es barata, y con una sola no alcanza: siempre son varias. Cuando el que contrataba era yo, hice cuatro y me salió la mitad de un sueldo. Y no es que el tipo fuera un chanta, era bueno. El problema es que <b>a las cuatro sesiones se terminó, y yo seguía sin saber cómo hacerlo solo.</b></p>
+
+    <p>Ahora pensá en lo que ya te costó no resolverlo: los pares de zapatillas, el sillón, los cables, el marco de la puerta. Los paseos que ya no hacés porque terminan mal, y el perro que se pone peor justamente por eso. La bronca de todos los días y esa sensación fea después de gritarle.</p>
+
+    <p>¿Cuánto vale poder abrir la puerta de tu casa sin miedo a lo que vas a encontrar? ¿Y salir a caminar un domingo a la mañana sin cruzar de vereda?</p>
+
+    <p>Varios colegas me dijeron que por esto cobrara lo mismo que salen tres sesiones a domicilio. Tenían razón en el número, y aun así no lo hice.</p>
+  </div></div>
+</section>
+
+<!-- ===================== 10 · REVELACIÓN DE PRECIO ===================== -->
+<section>
+  <div class="row"><div class="in">
+    <h2>Lo que vas a pagar</h2>
+
+    <p>Si contratás las sesiones que hacen falta para llegar a donde llega este curso, estás arriba de los <b>AR$ 98.000</b>. Ese fue el primer número que puse.</p>
+
+    <p>Después pensé que la idea era justamente que le llegara al que no puede pagar un adiestrador, y lo bajé a <b>AR$ 62.300</b>. Seguía siendo mucho.</p>
+
+    <p>Lo bajé otra vez, y otra. <b>Hoy el plan Completo sale AR$ 22.900</b>, un solo pago, con acceso de por vida y los dos manuales adentro. Y el Básico, para el que solo quiere resolver la obediencia y las mañas, arranca en <b>AR$ 14.900</b>.</p>
+
+    <p>Es menos de lo que sale una sola sesión a domicilio. Con la diferencia de que un adiestrador se va, y esto se queda con vos toda la vida de tu perro.</p>
+
+    <p class="verde">Elegí hasta dónde querés llegar</p>
+    <div class="cta-bloq">
+      <a class="btn" href="#planes"><span class="t">Ver los tres planes</span><span class="s2">Desde AR$ 14.900 · acceso inmediato</span></a>
+    </div>
+  </div></div>
+</section>
+<!-- ===================== PLANES ===================== -->
+<section id="planes">
+  <div class="row"><div class="in-w">
+    <div class="in" style="padding:0;margin:0 auto 4px">
+      <h2>Elegí tu camino</h2>
+      <p>Leé los tres y quedate con el que te describe a vos. No hay uno mejor que otro: hay uno que es el tuyo.</p>
+      <p class="s gris" style="padding-top:0">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el día uno, sin goteo semanal.</p>
+    </div>
+
+    <div class="pl" data-planes>
+      <label class="card" data-precio="14900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" data-nombre="Básico">
+        <input type="radio" name="plan" value="basico">
+        <span class="nivel">Los cimientos</span>
+        <span class="nom">Básico</span>
+        <span class="cl">18 clases</span>
+        <span class="txt"><b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza.</span>
+        <span class="antes">Vuelve a <s>AR$ 62.300</s></span>
+        <span class="pre">AR$ 14.900</span>
+        <span class="aho">Ahorrás AR$ 47.400</span>
+      </label>
+
+      <label class="card dest sel" data-precio="22900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-nombre="Completo">
+        <input type="radio" name="plan" value="completo" checked>
+        <span class="tag">El que yo haría</span>
+        <span class="nivel">De 0 a 100</span>
+        <span class="nom">Completo</span>
+        <span class="cl">31 clases</span>
+        <span class="txt"><b>Si ya te cansaste de arreglar una cosa por vez.</b> Querés cerrar el tema de una y quedarte tranquilo de que, pase lo que pase con tu perro, vas a saber qué hacer sin salir corriendo a buscar a alguien.</span>
+        <span class="antes">Vuelve a <s>AR$ 80.299</s></span>
+        <span class="pre">AR$ 22.900</span>
+        <span class="aho">Ahorrás AR$ 57.399</span>
+      </label>
+
+      <label class="card" data-precio="28900" data-link="https://adiestramiento-canino.impultienda.ar/checkout/3-plan-avanzado" data-nombre="Avanzado">
+        <input type="radio" name="plan" value="avanzado">
+        <span class="nivel">Sin techo</span>
+        <span class="nom">Avanzado</span>
+        <span class="cl">36 clases</span>
+        <span class="txt"><b>Si buscás entrenamiento de verdad, no obediencia básica.</b> Transferencia del refuerzo de comida a juguete, control de impulsos, trabajo a distancia y canalización del instinto de presa. El nivel donde el perro trabaja porque quiere.</span>
+        <span class="antes">Vuelve a <s>AR$ 98.150</s></span>
+        <span class="pre">AR$ 28.900</span>
+        <span class="aho">Ahorrás AR$ 69.250</span>
+      </label>
+    </div>
+
+    <div class="pl-pie">
+      <p class="verde">Tocá el plan que quieras y el botón se actualiza solo</p>
+      <div class="cta-bloq">
+        <a class="btn btn-w" href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-cta>
+          <span class="t">Quiero el plan Completo — AR$ 22.900</span>
+          <span class="s2">Acceso inmediato · 30 días de garantía</span>
+        </a>
+      </div>
+      <p class="s gris">Si después querés pasarte a otro plan, pagás solo la diferencia.</p>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#008001" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Garantía 30 días</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#008001" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg> Acceso inmediato</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#008001" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Pago seguro</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== GARANTIA ===================== -->
+<section>
+  <div class="row"><div class="in">
+    <div class="gar">
+      <i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i>
+      <div>
+        <b>30 días para probarlo con tu perro</b>
+        <span>Mirá las clases, aplicalas, y si a los 30 días te parece que no te sirvió, escribinos y te devolvemos todo. Sin formularios y sin que te preguntemos por qué. Prefiero devolverte la plata que tener a alguien pagando por algo que no usa.</span>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== TABLA ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+    <h2>La diferencia, de un vistazo</h2>
+  </div>
+  <div class="cmp-wrap" style="padding-top:12px">
+    <table class="cmp">
+      <thead><tr><th></th><th>Básico</th><th class="dest">Completo</th><th>Avanzado</th></tr></thead>
+      <tbody>
+        <tr><th>Obediencia y mañas</th><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+        <tr><th>Los 2 manuales en PDF</th><td class="no">✕</td><td class="si">✓</td><td class="si">✓</td></tr>
+        <tr><th>Bañarlo, cepillarlo y curarlo</th><td class="no">✕</td><td class="si">✓</td><td class="si">✓</td></tr>
+        <tr><th>Los trucos</th><td class="no">✕</td><td class="si">✓</td><td class="si">✓</td></tr>
+        <tr><th>Paseo avanzado, juego y frisbee</th><td class="no">✕</td><td class="no">✕</td><td class="si">✓</td></tr>
+        <tr><th>Cursos nuevos<span>gratis de por vida</span></th><td class="no">✕</td><td class="no">✕</td><td class="si">✓</td></tr>
+        <tr class="tot"><th>Clases en total</th><td><b>18</b></td><td><b>31</b></td><td><b>36</b></td></tr>
+        <tr class="pre"><th>Precio<span>un solo pago</span></th><td><b>14.900</b></td><td><b>22.900</b></td><td><b>28.900</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<!-- ===================== NO ES PARA VOS ===================== -->
+<section>
+  <div class="row"><div class="in">
+    <h2>Para quién no es</h2>
+
+    <p>Prefiero decírtelo yo antes de que lo descubras después de pagar.</p>
+
+    <ul class="b">
+      <li><b>Si buscás que alguien lo haga por vos</b>, esto no es lo tuyo. Acá el que trabaja quince minutos por día sos vos. Para eso está el adiestrador a domicilio, y es una opción válida.</li>
+      <li><b>Si tu perro mordió a una persona o a otro perro</b>, o se pone rígido y gruñe cuando te acercás a su comida, no compres esto: eso necesita evaluación presencial de un profesional. Te lo digo en serio.</li>
+      <li><b>Si esperás resultados en cinco minutos</b>, te vas a frustrar. La primera clase del curso es justamente sobre por qué ese es el error que arruina todo.</li>
+      <li><b>Si tu perro cambió de conducta de golpe</b>, andá primero al veterinario. El dolor cambia el comportamiento y ningún curso arregla eso.</li>
+    </ul>
+
+    <p>Para todo el resto —que es la enorme mayoría— esto funciona, y tenés treinta días para comprobarlo sin riesgo.</p>
+  </div></div>
+</section>
+<!-- ===================== FAQ ===================== -->
+<section class="light">
+  <div class="row"><div class="in">
+    <h2>Lo que me preguntan siempre</h2>
+    <div style="padding-top:8px">
+      <details><summary>¿Sirve para un perro adulto o solo para cachorros?</summary><p>Para los dos. Rulo tenía dos años cuando yo empecé. La clase 2 es específicamente cómo arrancar con un perro adulto que ya tiene mañas, que es distinto a empezar con un cachorro en blanco.</p></details>
+      <details><summary>¿Y si mi perro es de raza chica, grande o mestizo?</summary><p>El método no cambia con la raza ni con el tamaño. Lo que cambia es cuánto tarda cada perro, y eso se trabaja en la clase 1.</p></details>
+      <details><summary>¿Necesito comprar algo?</summary><p>Correa, collar y premios de comida. Nada más. Y hay una clase entera sobre cómo entrenar sin premios de comida si preferís ese camino.</p></details>
+      <details><summary>¿Cuánto tardo en ver resultados?</summary><p>Depende del perro y de tu constancia. A mí el sentado me salió a las tres semanas y la correa floja a las seis. La primera clase del curso es justamente sobre por qué esperar resultados en cinco minutos es el error que arruina todo.</p></details>
+      <details><summary>¿Las clases son en vivo o grabadas?</summary><p>Grabadas, y eso es una ventaja: están todas disponibles desde el primer día y las volvés a mirar las veces que quieras. Con una sesión a domicilio tenés cuarenta minutos y se terminó; acá, si algo no te salió, mirás la clase de nuevo el sábado a la mañana.</p></details>
+      <details><summary>¿Cómo accedo?</summary><p>Al pagar te llega un mail con el acceso. Están todas las clases desbloqueadas desde el primer día, para ver en el celular, la tablet o la compu, las veces que quieras.</p></details>
+      <details><summary>¿Cuál plan me conviene?</summary><p>Si lo único que te importa es que te haga caso y deje las mañas, con el Básico estás. Si querés cerrar el tema completo y no volver a quedarte sin respuesta, el Completo, que es el que haría yo. Y si ya tenés lo básico resuelto y lo que buscás es entrenamiento en serio —sacarle la dependencia de la comida, canalizarle el instinto de presa, trabajo a distancia—, ese es el Avanzado. De todas formas después podés pasarte pagando solo la diferencia.</p></details>
+      <details><summary>¿Y si no me sirve?</summary><p>Tenés 30 días para pedir el reembolso completo, sin explicar nada.</p></details>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== CIERRE ===================== -->
+<section>
+  <div class="row"><div class="in">
+    <h2>Una última cosa</h2>
+
+    <p>Dentro de un mes tu perro va a estar haciendo exactamente lo mismo que hace hoy, salvo que alguien le explique otra cosa.</p>
+
+    <p><b>No mejora solo con el tiempo.</b> Las mañas no se van con la edad: se consolidan, porque cada día que las hace las practica una vez más. Eso lo sé porque perdí dos años esperando que se le pasara.</p>
+
+    <p>Hoy Rulo tiene tres y duerme a los pies de la cama de Cata. Lo saco a las siete de la mañana con la correa colgando y vuelvo pensando en otra cosa, que es el lujo más grande que hay. No es un perro de exposición y no hace nada extraordinario. Simplemente sabe qué se espera de él, y yo sé cómo pedírselo.</p>
+
+    <p>Eso está a quince minutos por día de distancia. Empezá por la clase 1 hoy y hacé los quince minutos. Mañana la 2. No hay más truco que ese.</p>
+
+    <div class="firma">
+      <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/andres/retrato.webp" alt="Andrés Vidal">
+      <div>
+        <div class="n">Andrés Vidal</div>
+        <div class="r">Armé el Método Adiestramiento Canino · Rosario</div>
+      </div>
+    </div>
+
+    <p><b>P.D.</b> — Si estás dudando: el Básico alcanza si tu único problema es que no te hace caso. Pero los cuidados del Completo son los que te salvan el domingo a la noche que tu perro se corta una pata y tenés que curárselo solo. Yo tuve que aprender eso a la fuerza. Son AR$ 8.000 de diferencia y tenés 30 días para arrepentirte de cualquiera de los dos. Y si al leer el Avanzado te dijiste “eso es lo que yo quiero”, hacele caso a eso: no se te va a ir.</p>
+
+    <div style="padding-top:14px">
+      <p class="verde">Elegí tu plan y empezá hoy mismo</p>
+      <div class="cta-bloq">
+        <a class="btn btn-w" href="https://adiestramiento-canino.impultienda.ar/checkout/2-plan-completo" data-cta>
+          <span class="t">Quiero el plan Completo — AR$ 22.900</span>
+          <span class="s2">Acceso inmediato · 30 días de garantía</span>
+        </a>
+      </div>
+      <p class="s"><a href="#planes">Ver los tres planes de nuevo</a></p>
+    </div>
+  </div></div>
+</section>
+
+<footer>
+  <div class="row">
+    Método Adiestramiento Canino · <a href="mailto:hola@algoritmia.com.ar">Escribinos</a><br>
+    Este material es educativo y no reemplaza la consulta veterinaria.
+  </div>
+</footer>
+
+<script>
+(function(){
+  function fmt(n){ return 'AR$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+  var cards = [].slice.call(document.querySelectorAll('.card'));
+  var ctas  = [].slice.call(document.querySelectorAll('[data-cta]'));
+  cards.forEach(function(c){
+    c.addEventListener('click', function(){
+      cards.forEach(function(x){
+        var on = x === c;
+        x.classList.toggle('sel', on);
+        var r = x.querySelector('input'); if (r) r.checked = on;
+      });
+      var nom = c.getAttribute('data-nombre');
+      var pre = parseInt(c.getAttribute('data-precio'), 10);
+      var lnk = c.getAttribute('data-link');
+      ctas.forEach(function(a){
+        a.setAttribute('href', lnk);
+        a.querySelector('.t').textContent = 'Quiero el plan ' + nom + ' — ' + fmt(pre);
+      });
+    });
+  });
+})();
+
+  // Meta Pixel: ViewContent al cargar e InitiateCheckout al ir al checkout
+  (function(){
+    function datos(){
+      var c = document.querySelector('.card.sel') || document.querySelector('.card');
+      if (!c) return null;
+      return { content_name:'Metodo Adiestramiento Canino - ' + c.getAttribute('data-nombre'),
+               content_type:'product', currency:'ARS',
+               value: parseInt(c.getAttribute('data-precio'),10),
+               contents:[{id:c.getAttribute('data-nombre'), quantity:1}] };
+    }
+    if (typeof window.fbq === 'function') {
+      var d = datos();
+      if (d) try { fbq('track','ViewContent', d); } catch(x){}
+    }
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a.btn'); if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.charAt(0) === '#') return;              // los que solo bajan a los planes no cuentan
+      if (typeof window.fbq !== 'function') return;
+      var d = datos(); if (d) try { fbq('track','InitiateCheckout', d); } catch(x){}
+    }, true);
+  })();
+</script>
+
+</body>
+</html>
