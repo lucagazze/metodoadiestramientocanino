@@ -376,17 +376,28 @@ footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;l
 .seg-que{display:block;font-family:var(--display);font-size:14.8px;font-weight:600;color:var(--tx2);margin-top:14px;line-height:1.4}
 .seg-meta{margin-top:4px}
 
-/* capturas whatsapp */
-.wa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
-.wa-card{display:flex;flex-direction:column;gap:8px}
-.wa-card img{width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(18,25,31,.10);border:1px solid var(--bd)}
-.wa-cap{font-size:13px;color:var(--tx2);line-height:1.45}
-.wa-cap b{color:var(--tx);font-weight:700}
-@media (max-width:960px){
-  .wa-grid{grid-template-columns:repeat(2,1fr);max-width:680px;margin:20px auto 0;gap:16px}
-}
-@media (max-width:520px){
-  .wa-grid{grid-template-columns:1fr;max-width:340px;margin:18px auto 0;gap:18px}
+/* testimonios */
+.tst-zona{margin:44px 0 40px}
+.tst-zona h4{font-family:var(--display);text-align:center;color:#12191f;font-size:22px;font-weight:700;line-height:1.3;letter-spacing:-.015em;margin-bottom:6px}
+.tst-zona .bajada{text-align:center;color:#8a949e;font-size:14px;margin-bottom:20px}
+.tst-wrap{overflow:hidden;margin:0 0 14px;padding:2px 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 6%,#000 15%,#000 85%,rgba(0,0,0,.35) 94%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 6%,#000 15%,#000 85%,rgba(0,0,0,.35) 94%,transparent 100%)}
+.tst-row{display:flex;gap:14px;width:max-content;will-change:transform;transform:translate3d(0,0,0)}
+.tst{flex:0 0 auto;width:290px;background:#fff;border:1px solid #e9ecef;border-radius:12px;overflow:hidden;box-shadow:0 3px 14px rgba(18,25,31,.08)}
+.tst img{width:100%;aspect-ratio:4/3;object-fit:cover;margin:0;border-radius:0;display:block}
+.tst-txt{padding:12px 14px 14px}
+.tst-txt .stars{display:block;color:#f5a623;font-size:13px;letter-spacing:2px;margin-bottom:7px}
+.tst-txt p{font-size:13.5px;color:#556270;line-height:1.62;font-style:italic;margin-bottom:9px}
+.tst-txt p strong{color:#12191f;font-weight:700}
+.tst-txt .author{font-size:12.5px;color:#002425;font-weight:700;line-height:1.4}
+.tst-txt .author span{display:block;color:#a8b3bd;font-weight:400;font-size:11.5px;margin-top:2px}
+.tst-nota{text-align:center;color:#a8b3bd;font-size:12px;margin-top:10px}
+.tst{width:252px}
+.tst-wrap{margin:0 0 11px}
+.tst-txt p{font-size:13px}
+@media (max-width:560px){
+  .tst{width:252px}
+  .tst-wrap{margin:0 0 11px}
+  .tst-txt p{font-size:13px}
 }
 </style>
 <!-- Meta Pixel -->
@@ -429,6 +440,9 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <p class="hero-social"><svg class="estrellas" viewBox="0 0 90 18" role="img" aria-label="4,8 de 5"><defs><linearGradient id="acEstrellas" x1="0" x2="1" y1="0" y2="0"><stop offset="96.0%" stop-color="#f5a623"></stop><stop offset="96.0%" stop-color="#dfe3e8"></stop></linearGradient></defs><g fill="url(#acEstrellas)"><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(0 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(18 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(36 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(54 0)"></path><path d="M9 1.6l2.28 4.62 5.1.74-3.69 3.6.87 5.08L9 13.24l-4.56 2.4.87-5.08L1.62 6.96l5.1-.74z" transform="translate(72 0)"></path></g></svg><span><b>4,8</b> de 324 personas</span></p>
     <h1><span>Tu perro no te desobedece.</span><em>Nadie le explicó las reglas.</em></h1>
     <p class="sub">Clases en video para educarlo vos mismo con <strong>15 minutos por día</strong>, sin pagar un adiestrador. Mirás la clase, la repetís con tu perro, y pasás a la siguiente.</p>
+    <div class="hero-cta-wrap">
+      <a href="#planes-hero" class="btn btn-hero">Sí, quiero educar a mi perro</a>
+    </div>
     <div class="aula">
       <div class="aula-body">
         <div class="aula-v">
@@ -484,47 +498,6 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       <span class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg> Garantía 30 días</span>
       <span class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg> Acceso inmediato</span>
       <span class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Pago seguro</span>
-    </div>
-  </div>
-</section>
-
-<section class="gris">
-  <div class="wrap-w">
-    <h2>Una vez que armamos el curso, <em>esto es lo que nos empezó a llegar</em></h2>
-    <p class="baja">Resultados reales de personas que aplicaron las clases con sus perros.</p>
-    <div class="wa-grid">
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-2.webp" alt="Mensaje de Esteban" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Esteban.</b> Le estaba dando el premio tarde. Cambió una sola cosa y en tres días tenía el sentado.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-1.webp" alt="Mensaje de Mónica" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Mónica.</b> Dos años sin poder soltarlo, y un domingo volvió a la primera.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-6.webp" alt="Mensaje de Diego" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Diego.</b> Diez días, cinco minutos por día antes de cenar. Vinieron las visitas y no saltó ni una vez.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-7.webp" alt="Mensaje de Carolina" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Carolina.</b> Su perra lloraba desde que cerraba la puerta hasta que volvía. Seis horas sola y la vecina no le dijo nada.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-4.webp" alt="Mensaje de Martín" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Martín.</b> Tres años peleándose con la correa. A la semana ya caminaban con la correa floja.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-3.webp" alt="Mensaje de Rosana" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Rosana.</b> Le curó una pata un domingo a la noche, con todo cerrado. Sin bozal y sin que la mordiera.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-5.webp" alt="Mensaje de Vanina" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Vanina.</b> Tres semanas: se sienta a la primera sin mostrarle comida.</p>
-      </div>
-      <div class="wa-card">
-        <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/wa/wa-8.webp" alt="Mensaje de Lucas" loading="lazy" decoding="async">
-        <p class="wa-cap"><b>Lucas.</b> Lo suelta en el parque y se queda con él. Sin correa y sin premios en la mano.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -772,7 +745,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </section>
 
-<section>
+<section class="gris">
   <div class="wrap">
     <h2>Los 2 manuales <em>van con cualquier plan</em></h2>
     <p class="baja">Para cuando el video ya no alcanza y necesitás la respuesta escrita. El tercero es opcional.</p>
@@ -842,6 +815,215 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     </div>
     <div class="pl-cta">
       <a href="https://adiestramiento-canino.impultienda.ar/checkout/1-plan-basico" class="btn btn-xl" data-cta>Quiero el plan Básico — AR$ 14.900</a>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="gris">
+  <div class="wrap-w">
+    <div class="tst-zona">
+    <h4>Lo que cuentan los que ya lo aplicaron</h4>
+    <p class="bajada">Perros que antes no daban bola, y sus dueños</p>
+    <div class="tst-wrap">
+      <div class="tst-row der" data-set="6">
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-1.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Miré las primeras clases y entendí qué le faltaba: nadie le había explicado nada. Antes lo llevaba al adiestrador cada dos semanas; hoy <strong>no lo necesito</strong>.”</p>
+            <div class="author">Mónica R.<span>Rosario · mestizo de 4 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-2.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tengo una pila de libros de perros y ninguno me daba el orden. Acá me alcanza con mirar: me di cuenta de que le daba <strong>el premio tarde</strong>.”</p>
+            <div class="author">Esteban A.<span>La Plata · labrador de 6 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-3.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Copié exacto lo que hace en el video y <strong>en una semana</strong> ya me hacía caso y dejó de ladrarle a todo el que pasa.”</p>
+            <div class="author">Rosana P.<span>Mendoza · caniche de 2 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-4.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Pensaba que ladraba por malo. Le di el trabajo que pedía y <strong>en cuatro días</strong> el ladrido al portón bajó casi a cero.”</p>
+            <div class="author">Lucía<span>44 años · rottweiler de 3 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-5.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tres años peleándome con la correa. A la semana ya caminábamos con la <strong>correa floja</strong>. No me faltaba mano dura: me faltaba orden.”</p>
+            <div class="author">Martín<span>38 años · mestizo de 25 kg</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-6.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Gasté una fortuna en sesiones particulares. Con estas clases <strong>entendí el porqué</strong> y las puedo volver a mirar cuando me olvido.”</p>
+            <div class="author">Sebastián<span>51 años · labrador de 5 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-1.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Miré las primeras clases y entendí qué le faltaba: nadie le había explicado nada. Antes lo llevaba al adiestrador cada dos semanas; hoy <strong>no lo necesito</strong>.”</p>
+            <div class="author">Mónica R.<span>Rosario · mestizo de 4 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-2.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tengo una pila de libros de perros y ninguno me daba el orden. Acá me alcanza con mirar: me di cuenta de que le daba <strong>el premio tarde</strong>.”</p>
+            <div class="author">Esteban A.<span>La Plata · labrador de 6 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-3.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Copié exacto lo que hace en el video y <strong>en una semana</strong> ya me hacía caso y dejó de ladrarle a todo el que pasa.”</p>
+            <div class="author">Rosana P.<span>Mendoza · caniche de 2 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-4.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Pensaba que ladraba por malo. Le di el trabajo que pedía y <strong>en cuatro días</strong> el ladrido al portón bajó casi a cero.”</p>
+            <div class="author">Lucía<span>44 años · rottweiler de 3 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-5.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tres años peleándome con la correa. A la semana ya caminábamos con la <strong>correa floja</strong>. No me faltaba mano dura: me faltaba orden.”</p>
+            <div class="author">Martín<span>38 años · mestizo de 25 kg</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-6.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Gasté una fortuna en sesiones particulares. Con estas clases <strong>entendí el porqué</strong> y las puedo volver a mirar cuando me olvido.”</p>
+            <div class="author">Sebastián<span>51 años · labrador de 5 años</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tst-wrap">
+      <div class="tst-row izq" data-set="6">
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-5.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tres años peleándome con la correa. A la semana ya caminábamos con la <strong>correa floja</strong>. No me faltaba mano dura: me faltaba orden.”</p>
+            <div class="author">Martín<span>38 años · mestizo de 25 kg</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-3.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Copié exacto lo que hace en el video y <strong>en una semana</strong> ya me hacía caso y dejó de ladrarle a todo el que pasa.”</p>
+            <div class="author">Rosana P.<span>Mendoza · caniche de 2 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-6.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Gasté una fortuna en sesiones particulares. Con estas clases <strong>entendí el porqué</strong> y las puedo volver a mirar cuando me olvido.”</p>
+            <div class="author">Sebastián<span>51 años · labrador de 5 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-2.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tengo una pila de libros de perros y ninguno me daba el orden. Acá me alcanza con mirar: me di cuenta de que le daba <strong>el premio tarde</strong>.”</p>
+            <div class="author">Esteban A.<span>La Plata · labrador de 6 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-4.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Pensaba que ladraba por malo. Le di el trabajo que pedía y <strong>en cuatro días</strong> el ladrido al portón bajó casi a cero.”</p>
+            <div class="author">Lucía<span>44 años · rottweiler de 3 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-1.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Miré las primeras clases y entendí qué le faltaba: nadie le había explicado nada. Antes lo llevaba al adiestrador cada dos semanas; hoy <strong>no lo necesito</strong>.”</p>
+            <div class="author">Mónica R.<span>Rosario · mestizo de 4 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-5.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tres años peleándome con la correa. A la semana ya caminábamos con la <strong>correa floja</strong>. No me faltaba mano dura: me faltaba orden.”</p>
+            <div class="author">Martín<span>38 años · mestizo de 25 kg</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-3.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Copié exacto lo que hace en el video y <strong>en una semana</strong> ya me hacía caso y dejó de ladrarle a todo el que pasa.”</p>
+            <div class="author">Rosana P.<span>Mendoza · caniche de 2 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-6.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Gasté una fortuna en sesiones particulares. Con estas clases <strong>entendí el porqué</strong> y las puedo volver a mirar cuando me olvido.”</p>
+            <div class="author">Sebastián<span>51 años · labrador de 5 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-2.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Tengo una pila de libros de perros y ninguno me daba el orden. Acá me alcanza con mirar: me di cuenta de que le daba <strong>el premio tarde</strong>.”</p>
+            <div class="author">Esteban A.<span>La Plata · labrador de 6 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-4.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Pensaba que ladraba por malo. Le di el trabajo que pedía y <strong>en cuatro días</strong> el ladrido al portón bajó casi a cero.”</p>
+            <div class="author">Lucía<span>44 años · rottweiler de 3 años</span></div>
+          </div>
+        </div>
+        <div class="tst">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/testi/real-1.webp" alt="" loading="lazy" decoding="async">
+          <div class="tst-txt">
+            <span class="stars">★★★★★</span>
+            <p>“Miré las primeras clases y entendí qué le faltaba: nadie le había explicado nada. Antes lo llevaba al adiestrador cada dos semanas; hoy <strong>no lo necesito</strong>.”</p>
+            <div class="author">Mónica R.<span>Rosario · mestizo de 4 años</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>
@@ -1069,6 +1251,76 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   })();
 })();
 
+(function(){
+  // Carruseles de testimonios: los mueve JavaScript, no CSS, así andan igual
+  // aunque el sistema tenga las animaciones desactivadas.
+  var zona  = document.querySelector('.tst-zona');
+  var wraps = document.querySelectorAll('.tst-wrap');
+  if (!zona || !wraps.length) return;
+
+  // Las filas se estiran más que el texto, pero con un techo: en pantallas
+  // grandes quedan centradas y los costados se difuminan.
+  var ANCHO_MAX = 1080;
+  function aTodoElAncho(){
+    var vw = document.documentElement.clientWidth;
+    var ancho = Math.min(vw, ANCHO_MAX);
+    var borde = zona.getBoundingClientRect().left;
+    for (var i=0;i<wraps.length;i++){
+      wraps[i].style.width = ancho + 'px';
+      wraps[i].style.marginLeft = (-borde + (vw - ancho) / 2) + 'px';
+    }
+    return ancho;
+  }
+
+  function preparar(fila, vw){
+    // El set original viene repetido en el HTML. Se clona hasta que la fila
+    // sea más ancha que la pantalla más un set: así el salto no se ve.
+    var porSet = parseInt(fila.getAttribute('data-set'), 10) || 3;
+    var set = fila.scrollWidth / (fila.children.length / porSet), guarda = 0;
+    while (fila.scrollWidth < vw + set + 120 && guarda++ < 8){
+      for (var i=0;i<porSet;i++) fila.appendChild(fila.children[i].cloneNode(true));
+    }
+    return set;
+  }
+
+  var filas = [];
+  function medir(){
+    var vw = aTodoElAncho();
+    for (var i=0;i<wraps.length;i++){
+      var fila = wraps[i].querySelector('.tst-row');
+      if (!fila) continue;
+      var dir = fila.classList.contains('der') ? 1 : -1;   // der: las tarjetas van hacia la derecha
+      var set = preparar(fila, vw);
+      var ya = filas[i];
+      filas[i] = {el:fila, dir:dir, set:set, vel:(i===0 ? 42 : 36),
+                  x:(ya ? ya.x : (dir > 0 ? -set : 0))};
+    }
+  }
+  medir();
+
+  var previo = null;
+  function paso(t){
+    if (previo !== null){
+      var dt = Math.min((t - previo) / 1000, 0.05);   // si la pestaña estuvo quieta, no saltar
+      for (var i=0;i<filas.length;i++){
+        var f = filas[i];
+        f.x += f.dir * f.vel * dt;
+        if (f.x >= 0)      f.x -= f.set;
+        if (f.x <= -f.set) f.x += f.set;
+        f.el.style.transform = 'translate3d(' + f.x.toFixed(2) + 'px,0,0)';
+      }
+    }
+    previo = t;
+    requestAnimationFrame(paso);
+  }
+  requestAnimationFrame(paso);
+
+  var espera;
+  window.addEventListener('resize', function(){
+    clearTimeout(espera);
+    espera = setTimeout(medir, 200);
+  });
+})();
 </script>
 </body>
 </html>
