@@ -295,12 +295,20 @@ section{padding:52px 0}
 .tramo-card p b{color:var(--tx);font-weight:700}
 
 /* bonos */
-.bono{display:flex;align-items:flex-start;gap:15px;background:#fff;border:1px solid var(--bd);border-radius:11px;padding:15px;margin-bottom:11px}
-.bono img,.bono-img{flex:0 0 auto;width:62px;height:82px;object-fit:contain;background:#fff;border-radius:6px;box-shadow:0 4px 14px rgba(18,25,31,.16)}
+.bono{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(18,25,31,.04)}
+.bono img,.bono-img{flex:0 0 auto;width:68px;height:90px;object-fit:contain;background:#fff;border-radius:6px;box-shadow:0 4px 14px rgba(18,25,31,.14)}
 .bono div{flex:1;min-width:0}
-.bono b{display:block;font-size:14.6px;color:#2c3e50;line-height:1.35}
-.bono span{display:block;font-size:13.2px;color:var(--tx3);line-height:1.5;margin-top:2px}
-.bono em{flex:0 0 auto;align-self:center;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.06em;background:var(--ok);color:#fff;padding:5px 10px;border-radius:100px}
+.bono b{display:block;font-family:var(--display);font-size:15.5px;font-weight:700;color:var(--tx);line-height:1.3}
+.bono span{display:block;font-size:13.5px;color:var(--tx2);line-height:1.5;margin-top:4px}
+.bono em{display:inline-block;margin-top:8px;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.04em;background:#eaf7ee;border:1px solid #cce8d5;color:#1e7a37;padding:3.5px 9px;border-radius:6px}
+
+@media (max-width:480px){
+  .bono{gap:12px;padding:14px}
+  .bono img,.bono-img{width:56px;height:76px}
+  .bono b{font-size:14.5px}
+  .bono span{font-size:12.8px}
+  .bono em{font-size:10px;padding:3px 7px}
+}
 
 /* garantia */
 .gar{display:flex;gap:15px;align-items:flex-start;border:2px solid var(--ok);background:#f6fbf7;border-radius:14px;padding:22px}
@@ -352,31 +360,105 @@ footer .legal{max-width:62ch;margin:12px auto 0;font-size:11.4px;color:#a3abb3;l
   html{scroll-behavior:auto}
 }
 
-.seg-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:640px;margin:0 auto;background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:7px}
+.seg-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:680px;margin:0 auto;background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:7px}
 .seg-b{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;padding:14px 6px 12px;border-radius:10px;cursor:pointer;border:1.5px solid transparent;transition:background .18s,border-color .18s,box-shadow .18s;min-height:86px}
 .seg-b input{position:absolute;opacity:0;width:0;height:0}
 .seg-nivel{display:flex;align-items:center;justify-content:center;text-align:center;width:100%;min-height:24px;font-size:clamp(8.5px,2.4vw,10px);font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--tx3);line-height:1.15}
 .seg-b.sel .seg-nivel{color:var(--vino)}
 .seg-b span{display:block;font-family:var(--display);font-size:15px;font-weight:700;color:var(--tx2);line-height:1.2;text-align:center;width:100%}
-.seg-b em{display:block;font-style:normal;font-size:11.5px;color:var(--tx3);line-height:1.3;text-align:center;width:100%}
+.seg-b em{display:block;font-style:normal;font-size:11px;color:var(--tx3);line-height:1.3;text-align:center;width:100%;font-weight:600}
 .seg-b:hover{background:#fff}
 .seg-b.sel{background:#fff;border-color:var(--vino);box-shadow:0 6px 18px rgba(123,23,23,.14)}
 .seg-b.sel span{color:var(--vino)}
 .seg-b:focus-within{outline:2px solid var(--vino);outline-offset:2px}
-.seg-tag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--vino);color:#fff;font-family:var(--display);font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:100px;white-space:nowrap;line-height:1.2}
+.seg-tag{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#7b1717 0%,#9e2222 100%);color:#fff;font-family:var(--display);font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3.5px 10px;border-radius:100px;white-space:nowrap;line-height:1.2;box-shadow:0 3px 8px rgba(123,23,23,.3)}
 .seg-precio{text-align:center;margin:24px 0 4px}
 .seg-antes{display:block;font-size:14px;color:#96a0a8;font-weight:600;line-height:1.3}
 .seg-now{display:block;font-family:var(--display);font-size:clamp(38px,7vw,48px);font-weight:700;color:var(--tx);letter-spacing:-.03em;line-height:1.05;margin:2px 0 8px}
-.seg-ahorro{display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:12px;font-weight:700;padding:5px 11px;border-radius:100px}
-.seg-que{display:block;max-width:540px;margin:14px auto 0;font-size:14px;color:var(--tx2);line-height:1.55;text-align:center}
-.seg-que b{color:var(--tx);font-weight:700;display:block;margin-bottom:3px}
-.seg-meta{display:block;font-size:14px;font-weight:700;color:var(--tx);margin-top:10px;letter-spacing:-.01em}
+.seg-ahorro{display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:12px;font-weight:700;padding:5px 12px;border-radius:100px}
+.seg-meta{display:block;font-size:14px;font-weight:700;color:var(--tx);margin-top:14px;letter-spacing:-.01em}
+
+/* checklist de cada plan */
+.seg-features{
+  max-width:520px;margin:16px auto 4px;text-align:left;
+  background:#fff;border:1px solid var(--bd);border-radius:12px;padding:16px 18px;
+  box-shadow:0 2px 10px rgba(18,25,31,.04);
+}
+.seg-features-title{
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--tx3);margin-bottom:11px;
+}
+.seg-features-list{
+  list-style:none;padding:0;margin:0;display:grid;gap:9px;
+}
+.seg-features-list li{
+  font-size:13.6px;line-height:1.45;display:flex;align-items:flex-start;gap:9px;color:var(--tx2);
+}
+.seg-features-list li.si{
+  color:var(--tx);
+}
+.seg-features-list li.si i{
+  color:var(--ok);font-style:normal;font-weight:700;font-size:15px;flex:0 0 16px;line-height:1.2;
+}
+.seg-features-list li.no{
+  color:#94a3b8;
+}
+.seg-features-list li.no i{
+  color:#cbd5e1;font-style:normal;font-weight:700;font-size:14px;flex:0 0 16px;line-height:1.2;
+}
+.seg-features-list li strong{
+  font-weight:700;color:var(--tx);
+}
+.pdf-tag{
+  background:#eaf7ee;color:#1e7a37;font-weight:700;font-size:11px;padding:2px 7px;border-radius:6px;border:1px solid #cce8d5;margin-left:4px;white-space:nowrap;display:inline-block;
+}
+.pdf-tag.no{
+  background:#fdf2f2;color:#dc2626;border-color:#fecaca;
+}
+
+.seg-upgrade-pill{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  background:#eaf7ee;border:1px solid #bbf7d0;color:#15803d;
+  font-size:12px;font-weight:700;padding:5px 12px;border-radius:100px;
+  margin:10px auto 4px;max-width:520px;line-height:1.35;text-align:center;
+}
+.seg-upgrade-pill.warn{
+  background:#fff7ed;border-color:#fed7aa;color:#c2410c;
+}
+.seg-upgrade-pill.pro{
+  background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8;
+}
+
 @media (max-width:520px){
   .seg-b{padding:12px 2px 10px;min-height:80px}
   .seg-b span{font-size:13.5px}
-  .seg-b em{font-size:10px}
+  .seg-b em{font-size:9.5px}
   .seg-nivel{font-size:8.5px;letter-spacing:0;min-height:22px}
   .seg-meta{font-size:13.5px}
+  .seg-features{padding:14px}
+  .seg-features-list li{font-size:12.8px}
+}
+
+/* badge mercado pago */
+.mp-pago-box{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;margin:12px auto 0;padding:10px 14px;
+  background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;
+  max-width:520px;text-align:center;
+}
+.mp-pago-header{
+  display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
+}
+.mp-pago-shield{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:12.5px;font-weight:700;color:#009ee3;letter-spacing:-.01em;
+}
+.mp-pago-sub{
+  margin:0;font-size:12px;color:var(--tx3);line-height:1.4;
+}
+@media (max-width:520px){
+  .mp-pago-box{padding:9px 10px;gap:3px}
+  .mp-pago-shield{font-size:11.8px}
+  .mp-pago-sub{font-size:11px}
 }
 
 /* para quien no es */
@@ -563,23 +645,42 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 <section id="planes-hero" style="padding-top:6px">
   <div class="wrap-w">
     <h2>Elegí <em>hasta dónde querés llegar</em></h2>
-    <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el día uno.</p>
-    <div class="planes" id="planes-hero" data-planes>
+    <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el primer día.</p>
+    <div class="planes" id="planes-hero-box" data-planes>
       <p class="pl-cupos"><span><i></i>Precio promocional por tiempo limitado</span></p>
       <div class="seg-btns">
-        <label class="seg-b sel" data-nombre="Básico" data-que="<b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza."><input type="radio" name="planSel" value="básico" checked><span class="seg-nivel">Los cimientos</span><span>Básico</span><em>18 clases</em></label>
-        <label class="seg-b" data-nombre="Completo" data-que="<b>Si ya te cansaste de arreglar una cosa por vez.</b> Querés cerrar el tema de una y quedarte tranquilo de que, pase lo que pase con tu perro, vas a saber qué hacer sin salir corriendo a buscar a alguien."><input type="radio" name="planSel" value="completo"><i class='seg-tag'>Más elegido</i><span class="seg-nivel">De 0 a 100</span><span>Completo</span><em>31 clases</em></label>
-        <label class="seg-b" data-nombre="Avanzado" data-que="<b>Si buscás entrenamiento de verdad, no obediencia básica.</b> Transferencia del refuerzo de comida a juguete, control de impulsos, trabajo a distancia y juegos de motivación con frisbee. El nivel donde el perro trabaja porque quiere."><input type="radio" name="planSel" value="avanzado"><span class="seg-nivel">Sin techo</span><span>Avanzado</span><em>36 clases</em></label>
+        <label class="seg-b" data-nombre="Básico"><input type="radio" name="planSel" value="básico"><span class="seg-nivel">Los cimientos</span><span>Básico</span><em>18 clases · Solo en casa</em></label>
+        <label class="seg-b sel" data-nombre="Completo"><input type="radio" name="planSel" value="completo" checked><i class='seg-tag'>Más elegido · Solución Total</i><span class="seg-nivel">Para que te haga caso</span><span>Completo</span><em>31 clases + 2 PDFs</em></label>
+        <label class="seg-b" data-nombre="Avanzado"><input type="radio" name="planSel" value="avanzado"><span class="seg-nivel">Para impresionar</span><span>Avanzado</span><em>36 clases + 2 PDFs</em></label>
       </div>
       <div class="seg-precio">
-        <span class="seg-antes">Vuelve a <s>AR$ 62.300</s> cuando termine el tiempo</span>
-        <b class="seg-now">AR$ 14.900</b>
-        <span class="seg-ahorro">Ahorrás AR$ 47.400</span>
-        <span class="seg-que"><b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza.</span>
-        <span class="seg-meta">18 clases · 1 h 29 min</span>
+        <span class="seg-antes">Vuelve a <s>AR$ 80.299</s> cuando termine el tiempo</span>
+        <b class="seg-now">AR$ 22.900</b>
+        <span class="seg-ahorro">Ahorrás AR$ 57.399 (71% OFF)</span>
+        <div class="seg-features-slot">
+          <div style="text-align:center"><span class="seg-upgrade-pill">🔥 Más elegido: Por solo AR$ 8.000 más lográs que te haga caso en TODO + 2 PDFs gratis</span></div>
+          <div class="seg-features">
+            <div class="seg-features-title">Qué incluye este plan (⭐ Recomendado):</div>
+            <ul class="seg-features-list">
+              <li class="si"><i>✓</i><span><strong>Te hace caso en todo a la primera:</strong> Chau ladridos molestos, tirones de correa y saltar a visitas</span></li>
+              <li class="si"><i>✓</i><span><strong>Control total con distracciones:</strong> Paseás con correa floja aunque cruces otros perros</span></li>
+              <li class="si"><i>✓</i><span><strong>31 clases en video:</strong> Solución definitiva para convivir en paz sin renegar nunca más</span></li>
+              <li class="si"><i>✓</i><span><strong>🎁 2 Manuales en PDF de regalo:</strong> Guía 56 pág + Plan 12 sem <span class="pdf-tag">INCLUIDOS ($15.000 OFF)</span></span></li>
+              <li class="si"><i>✓</i><span>Acceso de por vida inmediato + 30 días de garantía total</span></li>
+            </ul>
+          </div>
+        </div>
+        <span class="seg-meta">31 clases · 2 h 29 min</span>
       </div>
       <div class="pl-cta">
-        <a href="https://checkout.caninemethodtraining.com/o/1-plan-basico" class="btn btn-xl" data-cta>Quiero el plan Básico — AR$ 14.900</a>
+        <a href="https://checkout.caninemethodtraining.com/o/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
+      </div>
+      <div class="mp-pago-box">
+        <div class="mp-pago-header">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/mercado-pago-logo.png" alt="Mercado Pago" width="105" height="26" loading="lazy" style="display:inline-block;vertical-align:middle;object-fit:contain;">
+          <span class="mp-pago-shield"><svg viewBox="0 0 24 24" fill="none" stroke="#009ee3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Pago rápido y 100% seguro</span>
+        </div>
+        <p class="mp-pago-sub">Pagá con dinero en cuenta de Mercado Pago, débito o tarjeta de crédito en cuotas.</p>
       </div>
     </div>
     <div class="trust">
@@ -590,20 +691,29 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </section>
 
-<section>
+<section class="gris" id="manuales-sec">
   <div class="wrap">
-    <h2>Además van los <em>dos manuales</em></h2>
-    <p class="baja">Para cuando el video ya no alcanza y necesitás la respuesta escrita. Entran con el Completo y con el Avanzado.</p>
+    <div style="text-align:center;margin-bottom:6px">
+      <span style="display:inline-block;background:#eaf7ee;border:1px solid #cfe9d8;color:#1e7a37;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:100px">🎁 Bonos incluidos sin cargo</span>
+    </div>
+    <h2>Además van los <em>dos manuales en PDF</em></h2>
+    <p class="baja">Para cuando el video ya no alcanza y necesitás la respuesta escrita. <b>Vienen 100% GRATIS con el Plan Completo y el Plan Avanzado.</b></p>
     <div style="padding-top:10px">
       <div class="bono">
         <img src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/c4ce4e0f-8792-4520-bbe3-7a6692e5fc12/1786655386554_tapa-plana.webp" alt="El manual completo en PDF" loading="lazy" decoding="async">
-        <div><b>El manual completo · 56 páginas</b><span>Veintidós capítulos y un índice de síntomas: buscás lo que hace tu perro y está ahí.</span></div>
-        <em>INCLUIDO</em>
+        <div>
+          <b>El manual completo · 56 páginas</b>
+          <span>Veintidós capítulos y un índice de síntomas: buscás lo que hace tu perro y tenés la respuesta escrita al instante.</span>
+          <em>GRATIS CON COMPLETO / AVANZADO</em>
+        </div>
       </div>
       <div class="bono">
         <img src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/c4ce4e0f-8792-4520-bbe3-7a6692e5fc12/1786655388812_bono-01.webp" alt="Plan de 15 minutos" loading="lazy" decoding="async">
-        <div><b>Plan de 15 minutos · 12 semanas para imprimir</b><span>Doce hojas para la heladera, cada semana ya planificada. Este es el que usé yo.</span></div>
-        <em>INCLUIDO</em>
+        <div>
+          <b>Plan de 15 minutos · 12 semanas para imprimir</b>
+          <span>Doce hojas diseñadas para la heladera con el paso a paso de cada semana ya planificado. Este es el que usé yo.</span>
+          <em>GRATIS CON COMPLETO / AVANZADO</em>
+        </div>
       </div>
     </div>
   </div>
@@ -667,30 +777,30 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       <div class="tramo-hd">
         <div>
           <span class="tramo-tag">Plan Básico · 18 clases</span>
-          <h3>Tramo 1 · Los cimientos</h3>
+          <h3>Tramo 1 · Solo en casa</h3>
         </div>
       </div>
-      <p><b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza. Resuelve el sentado, echado, quieto, llamado, no saltar a visitas, no morder tus manos, hacer pis y caca en su lugar y no llorar al quedarse solo.</p>
+      <p><b>Para lo elemental adentro de casa.</b> Enseña sentado, quieto y dar la pata en un ambiente tranquilo y sin distracciones. Pero en la calle, con timbres, visitas o ruidos, tu perro sigue sin escuchar porque no incluye el protocolo de control de impulsos ni corte de conductas rebeldes.</p>
+    </div>
+
+    <div class="tramo-card" style="border:1.5px solid #28a745;box-shadow:0 6px 22px rgba(40,167,69,.12)">
+      <div class="tramo-hd">
+        <div>
+          <span class="tramo-tag" style="background:#eaf7ee;border-color:#cfe9d8;color:#1e7a37">Plan Completo · 31 clases + 2 PDFs</span>
+          <h3>Tramo 2 · Para que te haga caso en todo ⭐ El más elegido</h3>
+        </div>
+      </div>
+      <p><b>La solución definitiva para que tu perro te haga caso en el mundo real.</b> Corta los ladridos molestos cuando tocan el timbre o pasa gente, elimina los tirones en el paseo para caminar relajado aunque se crucen otros perros, frena que salte a las visitas y te da obediencia inmediata a la primera orden. Incluye <b>los 2 manuales en PDF incluidos 100% de regalo</b>.</p>
     </div>
 
     <div class="tramo-card">
       <div class="tramo-hd">
         <div>
-          <span class="tramo-tag">Plan Completo · 31 clases</span>
-          <h3>Tramo 2 · De 0 a 100</h3>
+          <span class="tramo-tag">Plan Avanzado · 36 clases + 2 PDFs</span>
+          <h3>Tramo 3 · Para que te haga caso y dejar a todos con la boca abierta</h3>
         </div>
       </div>
-      <p><b>Si ya te cansaste de arreglar una cosa por vez.</b> Querés cerrar el tema de una y quedarte tranquilo de que, pase lo que pase con tu perro, vas a saber qué hacer sin salir corriendo a buscar a alguien. Suma los cuidados esenciales (bañarlo, cepillarlo, darle una pastilla y curarle una pata un domingo a la noche) y los 9 trucos de destreza y autocontrol mental que lo dejan tranquilo.</p>
-    </div>
-
-    <div class="tramo-card">
-      <div class="tramo-hd">
-        <div>
-          <span class="tramo-tag">Plan Avanzado · 36 clases</span>
-          <h3>Tramo 3 · Sin techo</h3>
-        </div>
-      </div>
-      <p><b>Si buscás entrenamiento de verdad, no obediencia básica.</b> Transferencia del refuerzo de comida a juguete, control de impulsos, trabajo a distancia y juegos de motivación con frisbee. El nivel donde el perro trabaja porque quiere, suelto en el parque y sin comida en la mano. Además, todo curso nuevo que sumemos es gratis de por vida.</p>
+      <p><b>Todo el Plan Completo llevado a un nivel donde la gente se frena en la calle a mirar a tu perro.</b> Obediencia suelto sin correa en plazas abiertas, respuesta a distancia y con señas, trabajo con frisbee y control absoluto sin necesidad de comida en la mano. <b>Incluye los 2 manuales en PDF</b> y todos los cursos nuevos que sumemos gratis de por vida.</p>
     </div>
   </div>
 </section>
@@ -715,7 +825,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 <section class="gris">
   <div class="wrap">
     <h2>Preguntas <em>que nos hacen siempre</em></h2>
-    <div style="margin-top:20px"><details><summary>¿Sirve para un perro adulto o solo para cachorros?</summary><p>Para los dos. La clase 2 es específicamente cómo empezar con un perro adulto que ya tiene mañas, que es distinto a arrancar con un cachorro en blanco.</p></details><details><summary>¿Y si mi perro es de raza chica / grande / mestizo?</summary><p>El método no cambia con la raza ni con el tamaño. Lo que cambia es el tiempo que tarda cada perro, y eso lo trabajamos en la clase 1.</p></details><details><summary>¿Necesito comprar algo?</summary><p>Correa, collar y premios de comida. Nada más. Hay una clase entera sobre cómo entrenar sin premios de comida si preferís ese camino.</p></details><details><summary>¿Cuánto tardo en ver resultados?</summary><p>Depende del perro y de la constancia. Lo que sí te puedo decir es que la primera clase del curso es sobre por qué esperar resultados en cinco minutos es el error que arruina todo.</p></details><details><summary>¿Cómo accedo a las clases?</summary><p>Al pagar te llega un mail con el acceso. Están todas desbloqueadas desde el primer día, para ver en el celular, la tablet o la compu, cuantas veces quieras.</p></details><details><summary>¿Puedo pasar de un plan a otro después?</summary><p>Sí. Escribinos y pagás solamente la diferencia.</p></details><details><summary>¿Y si no me sirve?</summary><p>Tenés 30 días para pedir el reembolso completo, sin explicar nada.</p></details></div>
+    <div style="margin-top:20px"><details><summary>¿Sirve para un perro adulto o solo para cachorros?</summary><p>Para los dos. La clase 2 es específicamente cómo empezar con un perro adulto que ya tiene mañas, que es distinto a arrancar con un cachorro en blanco.</p></details><details><summary>¿Y si mi perro es de raza chica / grande / mestizo?</summary><p>El método no cambia con la raza ni con el tamaño. Lo que cambia es el tiempo que tarda cada perro, y eso lo trabajamos en la clase 1.</p></details><details><summary>¿Necesito comprar algo?</summary><p>Correa, collar y premios de comida. Nada más. Hay una clase entera sobre cómo entrenar sin premios de comida si preferís ese camino.</p></details><details><summary>¿Cuánto tardo en ver resultados?</summary><p>Depende del perro y de la constancia. Lo que sí te puedo decir es que la primera clase del curso es sobre por qué esperar resultados en cinco minutos es el error que arruina todo.</p></details><details><summary>¿Cómo accedo a las clases y los manuales?</summary><p>Al pagar te llega un mail inmediato con el acceso al aula virtual y los enlaces de descarga de los 2 manuales en PDF. Están todas las clases desbloqueadas desde el primer día para ver en celular, tablet o compu.</p></details><details><summary>¿Puedo pasar de un plan a otro después?</summary><p>Sí. Escribinos y pagás solamente la diferencia.</p></details><details><summary>¿Y si no me sirve?</summary><p>Tenés 30 días para pedir el reembolso completo, sin explicar nada.</p></details></div>
   </div>
 </section>
 
@@ -726,19 +836,38 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     <div class="planes" id="planes-cierre" data-planes>
       <p class="pl-cupos"><span><i></i>Precio promocional por tiempo limitado</span></p>
       <div class="seg-btns">
-        <label class="seg-b sel" data-nombre="Básico" data-que="<b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza."><input type="radio" name="planCierreSel" value="básico" checked><span class="seg-nivel">Los cimientos</span><span>Básico</span><em>18 clases</em></label>
-        <label class="seg-b" data-nombre="Completo" data-que="<b>Si ya te cansaste de arreglar una cosa por vez.</b> Querés cerrar el tema de una y quedarte tranquilo de que, pase lo que pase con tu perro, vas a saber qué hacer sin salir corriendo a buscar a alguien."><input type="radio" name="planCierreSel" value="completo"><i class='seg-tag'>Más elegido</i><span class="seg-nivel">De 0 a 100</span><span>Completo</span><em>31 clases</em></label>
-        <label class="seg-b" data-nombre="Avanzado" data-que="<b>Si buscás entrenamiento de verdad, no obediencia básica.</b> Transferencia del refuerzo de comida a juguete, control de impulsos, trabajo a distancia y juegos de motivación con frisbee. El nivel donde el perro trabaja porque quiere."><input type="radio" name="planCierreSel" value="avanzado"><span class="seg-nivel">Sin techo</span><span>Avanzado</span><em>36 clases</em></label>
+        <label class="seg-b" data-nombre="Básico"><input type="radio" name="planCierreSel" value="básico"><span class="seg-nivel">Los cimientos</span><span>Básico</span><em>18 clases · Solo en casa</em></label>
+        <label class="seg-b sel" data-nombre="Completo"><input type="radio" name="planCierreSel" value="completo" checked><i class='seg-tag'>Más elegido · Solución Total</i><span class="seg-nivel">Para que te haga caso</span><span>Completo</span><em>31 clases + 2 PDFs</em></label>
+        <label class="seg-b" data-nombre="Avanzado"><input type="radio" name="planCierreSel" value="avanzado"><span class="seg-nivel">Para impresionar</span><span>Avanzado</span><em>36 clases + 2 PDFs</em></label>
       </div>
       <div class="seg-precio">
-        <span class="seg-antes">Vuelve a <s>AR$ 62.300</s> cuando termine el tiempo</span>
-        <b class="seg-now">AR$ 14.900</b>
-        <span class="seg-ahorro">Ahorrás AR$ 47.400</span>
-        <span class="seg-que"><b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza.</span>
-        <span class="seg-meta">18 clases · 1 h 29 min</span>
+        <span class="seg-antes">Vuelve a <s>AR$ 80.299</s> cuando termine el tiempo</span>
+        <b class="seg-now">AR$ 22.900</b>
+        <span class="seg-ahorro">Ahorrás AR$ 57.399 (71% OFF)</span>
+        <div class="seg-features-slot">
+          <div style="text-align:center"><span class="seg-upgrade-pill">🔥 Más elegido: Por solo AR$ 8.000 más lográs que te haga caso en TODO + 2 PDFs gratis</span></div>
+          <div class="seg-features">
+            <div class="seg-features-title">Qué incluye este plan (⭐ Recomendado):</div>
+            <ul class="seg-features-list">
+              <li class="si"><i>✓</i><span><strong>Te hace caso en todo a la primera:</strong> Chau ladridos molestos, tirones de correa y saltar a visitas</span></li>
+              <li class="si"><i>✓</i><span><strong>Control total con distracciones:</strong> Paseás con correa floja aunque cruces otros perros</span></li>
+              <li class="si"><i>✓</i><span><strong>31 clases en video:</strong> Solución definitiva para convivir en paz sin renegar nunca más</span></li>
+              <li class="si"><i>✓</i><span><strong>🎁 2 Manuales en PDF de regalo:</strong> Guía 56 pág + Plan 12 sem <span class="pdf-tag">INCLUIDOS ($15.000 OFF)</span></span></li>
+              <li class="si"><i>✓</i><span>Acceso de por vida inmediato + 30 días de garantía total</span></li>
+            </ul>
+          </div>
+        </div>
+        <span class="seg-meta">31 clases · 2 h 29 min</span>
       </div>
       <div class="pl-cta">
-        <a href="https://checkout.caninemethodtraining.com/o/1-plan-basico" class="btn btn-xl" data-cta>Quiero el plan Básico — AR$ 14.900</a>
+        <a href="https://checkout.caninemethodtraining.com/o/2-plan-completo" class="btn btn-xl" data-cta>Quiero el plan Completo — AR$ 22.900</a>
+      </div>
+      <div class="mp-pago-box">
+        <div class="mp-pago-header">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/mercado-pago-logo.png" alt="Mercado Pago" width="105" height="26" loading="lazy" style="display:inline-block;vertical-align:middle;object-fit:contain;">
+          <span class="mp-pago-shield"><svg viewBox="0 0 24 24" fill="none" stroke="#009ee3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Pago rápido y 100% seguro</span>
+        </div>
+        <p class="mp-pago-sub">Pagá con dinero en cuenta de Mercado Pago, débito o tarjeta de crédito en cuotas.</p>
       </div>
     </div>
     <div class="trust">
@@ -767,7 +896,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     </div>
 
     <div class="pd-box">
-      <p><b>P.D.</b> — Si estás dudando: el Básico alcanza si tu único problema es que no te hace caso. Pero los cuidados del Completo son los que te salvan el domingo a la noche que tu perro se corta una pata y tenés que curárselo solo. Yo tuve que aprender eso a la fuerza. Son AR$ 8.000 de diferencia y tenés 30 días para arrepentirte de cualquiera de los dos. Y si al leer el Avanzado te dijiste “eso es lo que yo quiero”, hacele caso a eso: no se te va a ir.</p>
+      <p><b>P.D.</b> — Si estás dudando: el Básico solo te da comandos simples dentro de casa, pero <b>por solo AR$ 8.000 de diferencia el Plan Completo te da la solución definitiva para que te haga caso en todo (en la calle, con timbres y visitas) y te incluye los 2 Manuales en PDF de regalo</b>. Y si además querés dejar a todos impresionados con un perro que responde suelto en el parque sin correa y tener todos los cursos futuros gratis, el Avanzado es tu camino.</p>
     </div>
 
     <div style="padding-top:20px;text-align:center">
@@ -776,6 +905,13 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         <a class="btn btn-xl" href="https://checkout.caninemethodtraining.com/o/2-plan-completo" data-cta>
           Quiero el plan Completo — AR$ 22.900
         </a>
+      </div>
+      <div class="mp-pago-box">
+        <div class="mp-pago-header">
+          <img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/mercado-pago-logo.png" alt="Mercado Pago" width="105" height="26" loading="lazy" style="display:inline-block;vertical-align:middle;object-fit:contain;">
+          <span class="mp-pago-shield"><svg viewBox="0 0 24 24" fill="none" stroke="#009ee3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Pago rápido y 100% seguro</span>
+        </div>
+        <p class="mp-pago-sub">Pagá con dinero en cuenta de Mercado Pago, débito o tarjeta de crédito en cuotas.</p>
       </div>
       <p style="margin-top:14px;font-size:13.5px"><a href="#planes-hero" style="color:var(--tx3);text-decoration:underline">Ver los tres planes de nuevo</a></p>
     </div>
@@ -789,7 +925,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </footer>
 
-<div class="sticky"><a class="btn" href="https://checkout.caninemethodtraining.com/o/1-plan-basico">Empezar con el plan Básico</a></div>
+<div class="sticky"><a class="btn" href="https://checkout.caninemethodtraining.com/o/2-plan-completo">Quiero el plan Completo — AR$ 22.900</a></div>
 
 <script>
 (function(){
@@ -822,26 +958,26 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     'Básico': {
       precio: 14900,
       antes: 'Vuelve a <s>AR$ 62.300</s> cuando termine el tiempo',
-      ahorro: 'Ahorrás AR$ 47.400',
+      ahorro: 'Ahorrás AR$ 47.400 (76% OFF)',
       clases: '18 clases · 1 h 29 min',
       link: 'https://checkout.caninemethodtraining.com/o/1-plan-basico',
-      que: '<b>Si estás cansado de retarlo todo el día.</b> Querés lo mínimo indispensable: que te escuche, que el paseo deje de ser una lucha y volver a estar tranquilo en tu casa. Nada más, y con eso te alcanza.'
+      featuresHtml: '<div style="text-align:center"><span class="seg-upgrade-pill warn">⚠️ Solo comandos simples: No incluye solución para ladridos, tirones ni PDFs</span></div><div class="seg-features"><div class="seg-features-title">Qué incluye este plan:</div><ul class="seg-features-list"><li class="si"><i>✓</i><span><strong>18 clases en video:</strong> Comandos básicos dentro de casa (sentado, quieto y pata)</span></li><li class="si"><i>✓</i><span>Acceso de por vida en celular, tablet y compu</span></li><li class="no"><i>✕</i><span><strong>Sin solución para ladridos cuando tocan el timbre o pasa gente</strong> <span class="pdf-tag no">NO INCLUIDO</span></span></li><li class="no"><i>✕</i><span><strong>Sin control de tirones de correa en la calle con otros perros</strong> <span class="pdf-tag no">NO INCLUIDO</span></span></li><li class="no"><i>✕</i><span><strong>Sin los 2 manuales en PDF</strong> (Plan 12 sem + Guía 56 pág) <span class="pdf-tag no">NO INCLUIDO</span></span></li></ul></div>'
     },
     'Completo': {
       precio: 22900,
       antes: 'Vuelve a <s>AR$ 80.299</s> cuando termine el tiempo',
-      ahorro: 'Ahorrás AR$ 57.399',
+      ahorro: 'Ahorrás AR$ 57.399 (71% OFF)',
       clases: '31 clases · 2 h 29 min',
       link: 'https://checkout.caninemethodtraining.com/o/2-plan-completo',
-      que: '<b>Si ya te cansaste de arreglar una cosa por vez.</b> Querés cerrar el tema de una y quedarte tranquilo de que, pase lo que pase con tu perro, vas a saber qué hacer sin salir corriendo a buscar a alguien.'
+      featuresHtml: '<div style="text-align:center"><span class="seg-upgrade-pill">🔥 Más elegido: Por solo AR$ 8.000 más lográs que te haga caso en TODO + 2 PDFs gratis</span></div><div class="seg-features"><div class="seg-features-title">Qué incluye este plan (⭐ Recomendado):</div><ul class="seg-features-list"><li class="si"><i>✓</i><span><strong>Te hace caso en todo a la primera:</strong> Chau ladridos molestos, tirones de correa y saltar a visitas</span></li><li class="si"><i>✓</i><span><strong>Control total con distracciones:</strong> Paseás con correa floja aunque cruces otros perros</span></li><li class="si"><i>✓</i><span><strong>31 clases en video:</strong> Solución definitiva para convivir en paz sin renegar nunca más</span></li><li class="si"><i>✓</i><span><strong>🎁 2 Manuales en PDF de regalo:</strong> Guía 56 pág + Plan 12 sem <span class="pdf-tag">INCLUIDOS ($15.000 OFF)</span></span></li><li class="si"><i>✓</i><span>Acceso de por vida inmediato + 30 días de garantía total</span></li></ul></div>'
     },
     'Avanzado': {
       precio: 28900,
       antes: 'Vuelve a <s>AR$ 98.150</s> cuando termine el tiempo',
-      ahorro: 'Ahorrás AR$ 69.250',
+      ahorro: 'Ahorrás AR$ 69.250 (70% OFF)',
       clases: '36 clases · 3 h 06 min',
       link: 'https://checkout.caninemethodtraining.com/o/3-plan-avanzado',
-      que: '<b>Si buscás entrenamiento de verdad, no obediencia básica.</b> Transferencia del refuerzo de comida a juguete, control de impulsos, trabajo a distancia y juegos de motivación con frisbee. El nivel donde el perro trabaja porque quiere.'
+      featuresHtml: '<div style="text-align:center"><span class="seg-upgrade-pill pro">🚀 Nivel Superior: Todo el Plan Completo + entrenamiento para dejar a todos impresionados</span></div><div class="seg-features"><div class="seg-features-title">Qué incluye este plan (Sin techo):</div><ul class="seg-features-list"><li class="si"><i>✓</i><span><strong>Todo lo del Plan Completo:</strong> Obediencia total, cero ladridos y convivencia perfecta</span></li><li class="si"><i>✓</i><span><strong>Te hace caso suelto en el parque:</strong> Obediencia a distancia, sin correa y sin comida en la mano</span></li><li class="si"><i>✓</i><span><strong>Destreza que sorprende a cualquiera:</strong> La gente se frena en la calle a mirar cómo responde</span></li><li class="si"><i>✓</i><span><strong>🎁 2 Manuales en PDF + Cursos nuevos y actualizaciones GRATIS de por vida</strong></span></li><li class="si"><i>✓</i><span>Acceso de por vida + 30 días de garantía total de devolución</span></li></ul></div>'
     }
   };
 
@@ -860,8 +996,8 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       var an = box.querySelector('.seg-antes'); if(an) an.innerHTML = d.antes;
       var now = box.querySelector('.seg-now'); if(now) now.textContent = 'AR$ ' + fmt(d.precio);
       var ah = box.querySelector('.seg-ahorro'); if(ah) ah.textContent = d.ahorro;
-      var q = box.querySelector('.seg-que'); if(q) q.innerHTML = d.que;
       var mt = box.querySelector('.seg-meta'); if(mt) mt.textContent = d.clases;
+      var fSlot = box.querySelector('.seg-features-slot'); if(fSlot) fSlot.innerHTML = d.featuresHtml || '';
     });
 
     [].forEach.call(document.querySelectorAll('[data-cta]'),function(x){
@@ -872,7 +1008,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     var s = document.querySelector('.sticky a');
     if(s){
       s.setAttribute('href', d.link);
-      s.textContent = 'Empezar con el plan ' + nombre;
+      s.textContent = 'Quiero el plan ' + nombre + ' — AR$ ' + fmt(d.precio);
     }
   }
 
@@ -884,7 +1020,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       var c=e.target.closest('.seg-b'); if(c) pintar(c.getAttribute('data-nombre'));
     });
   });
-  pintar('Básico');
+  pintar('Completo');
 
   // aula: los 4 adelantos, se van encadenando y se puede elegir
   (function(){
@@ -925,11 +1061,13 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   // Meta: InitiateCheckout con el valor del plan que eligio
   (function(){
     function datos(){
-      var c=document.querySelector('.pl-card.sel')||document.querySelector('.pl-card');
-      if(!c) return null;
-      return {value:parseFloat(c.getAttribute('data-precio')),currency:'ARS',
-              content_name:'Plan '+c.getAttribute('data-nombre'),content_type:'product',
-              contents:[{id:c.getAttribute('data-nombre'),quantity:1}]};
+      var c=document.querySelector('.seg-b.sel');
+      var nom = c ? c.getAttribute('data-nombre') : 'Completo';
+      var d = planesData[nom];
+      if(!d) return null;
+      return {value:d.precio,currency:'ARS',
+              content_name:'Plan '+nom,content_type:'product',
+              contents:[{id:nom,quantity:1}]};
     }
     document.addEventListener('click',function(e){
       var a=e.target.closest('a.btn'); if(!a) return;
@@ -970,14 +1108,14 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   // cartel de compra reciente (social proof toast)
   (function(){
     var buyers = [
-      { name: "Carolina de Neuquén", prod: "Entró al curso · acceso de por vida", time: "hace 4 minutos", img: "05-da-la-pata.webp" },
-      { name: "Gonzalo de Córdoba", prod: "Plan Completo · 31 clases", time: "hace 12 minutos", img: "01-que-se-siente.webp" },
-      { name: "Lucía de Rosario", prod: "Plan Avanzado · 36 clases", time: "hace 18 minutos", img: "08-el-primer-truco.webp" },
-      { name: "Martín de Mendoza", prod: "Entró al curso · acceso de por vida", time: "hace 25 minutos", img: "02-que-se-acueste.webp" },
-      { name: "Valentina de Buenos Aires", prod: "Plan Completo · 31 clases", time: "hace 31 minutos", img: "10-el-comando-no.webp" },
-      { name: "Matías de Salta", prod: "Entró al curso · acceso de por vida", time: "hace 39 minutos", img: "10-el-comando-no.webp" },
-      { name: "Camila de Santa Fe", prod: "Plan Avanzado · 36 clases", time: "hace 44 minutos", img: "05-da-la-pata.webp" },
-      { name: "Joaquín de Mar del Plata", prod: "Entró al curso · acceso de por vida", time: "hace 52 minutos", img: "01-que-se-siente.webp" }
+      { name: "Carolina de Neuquén", prod: "Plan Completo · 31 clases + 2 PDFs", time: "hace 4 minutos", img: "05-da-la-pata.webp" },
+      { name: "Gonzalo de Córdoba", prod: "Plan Completo · 31 clases + 2 PDFs", time: "hace 12 minutos", img: "01-que-se-siente.webp" },
+      { name: "Lucía de Rosario", prod: "Plan Avanzado · 36 clases + 2 PDFs", time: "hace 18 minutos", img: "08-el-primer-truco.webp" },
+      { name: "Martín de Mendoza", prod: "Plan Completo · 31 clases + 2 PDFs", time: "hace 25 minutos", img: "02-que-se-acueste.webp" },
+      { name: "Valentina de Buenos Aires", prod: "Plan Completo · 31 clases + 2 PDFs", time: "hace 31 minutos", img: "10-el-comando-no.webp" },
+      { name: "Matías de Salta", prod: "Plan Avanzado · 36 clases + 2 PDFs", time: "hace 39 minutos", img: "10-el-comando-no.webp" },
+      { name: "Camila de Santa Fe", prod: "Plan Completo · 31 clases + 2 PDFs", time: "hace 44 minutos", img: "05-da-la-pata.webp" },
+      { name: "Joaquín de Mar del Plata", prod: "Plan Completo · 31 clases + 2 PDFs", time: "hace 52 minutos", img: "01-que-se-siente.webp" }
     ];
     var idx = 0;
     var toast = document.getElementById('spToast');
