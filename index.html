@@ -1264,7 +1264,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
 
       setTimeout(function() {
         toast.classList.remove('show');
-      }, 6000);
+      }, 5500);
 
       idx = (idx + 1) % buyers.length;
     }
@@ -1276,10 +1276,18 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       });
     }
 
+    function scheduleNext() {
+      var delay = Math.floor(Math.random() * (40000 - 26000 + 1)) + 26000; // entre 26 y 40 seg
+      setTimeout(function() {
+        showNext();
+        scheduleNext();
+      }, delay);
+    }
+
     setTimeout(function() {
       showNext();
-      setInterval(showNext, 18000);
-    }, 6000);
+      scheduleNext();
+    }, 10000);
   })();
 })();
 
