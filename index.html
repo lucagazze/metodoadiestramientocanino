@@ -276,14 +276,56 @@ section{padding:52px 0}
 .bene b{display:block;font-family:var(--display);font-size:15.5px;color:var(--tx);line-height:1.3;margin-bottom:4px}
 .bene span{display:block;font-size:13.6px;color:#6b7784;line-height:1.55}
 
-/* temario */
-.tm-bloque{background:#fff;border:1px solid var(--bd);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 12px rgba(18,25,31,.05)}
-.tm-bh{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;background:var(--bg2);border-bottom:1px solid var(--bd)}
-.tm-bh b{display:block;font-family:var(--display);font-size:15.5px;font-weight:700;color:var(--tx);line-height:1.3}
-.tm-bh span{display:block;font-size:12.4px;color:var(--tx3);margin-top:2px;line-height:1.4}
-.tm-bh em{flex:0 0 auto;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--vino);background:#faf4f4;border:1px solid #eedada;padding:5px 10px;border-radius:100px;text-align:center;line-height:1.3}
-.tm-c{display:flex;align-items:center;gap:12px;padding:10px 13px}
-.tm-c+.tm-c{border-top:1px solid #f1f4f6}
+/* temario estilo bonus */
+.tm-sec{background:#fff;padding:40px 0 28px}
+.tm-bloque{background:#fcfdfd;border:1px solid var(--bd);border-radius:14px;padding:14px 16px;margin-bottom:14px;box-shadow:0 2px 8px rgba(18,25,31,.03)}
+.tm-bh{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #edf1f5}
+.tm-bh-info{flex:1;min-width:0}
+.tm-bh-title{font-family:var(--display);font-size:16px;font-weight:700;color:var(--tx);line-height:1.3;display:block}
+.tm-bh-sub{font-size:12.5px;color:var(--tx3);margin-top:2px;display:block;line-height:1.4}
+.tm-bh-tag{
+  flex:0 0 auto;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--vino);background:#faf4f4;border:1px solid #eedada;padding:3px 9px;border-radius:100px;
+}
+
+.tm-cards-list{display:flex;flex-direction:column;gap:6px}
+.tm-card{
+  display:flex;align-items:center;gap:12px;background:#fcfdfd;border:1px solid #edf2f6;
+  border-radius:9px;padding:6px 10px;transition:all .2s ease;
+}
+.tm-card:hover{background:#fff;border-color:#dbe2e8;box-shadow:0 2px 6px rgba(18,25,31,.04);transform:translateY(-1px)}
+.tm-th{flex:0 0 auto;width:68px;border-radius:6px;overflow:hidden;background:#0f1516;aspect-ratio:16/9;box-shadow:0 1px 4px rgba(18,25,31,.1)}
+.tm-th img{width:100%;height:100%;object-fit:cover;display:block}
+.tm-t{flex:1;min-width:0}
+.tm-t b{display:block;font-family:var(--display);font-size:13.5px;font-weight:700;color:var(--tx);line-height:1.3}
+.tm-d{flex:0 0 auto;font-size:11.5px;font-weight:600;color:var(--tx3);font-variant-numeric:tabular-nums;background:#f6f8fa;padding:2px 7px;border-radius:5px;border:1px solid #e9edf1}
+
+.tm-extra{display:none;flex-direction:column;gap:6px;margin-top:6px}
+.tm-bloque.expanded .tm-extra{display:flex}
+
+.tm-more-btn{
+  width:100%;background:#faf4f4;border:1.5px dashed #eedada;border-radius:9px;
+  padding:9px 14px;margin-top:8px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  font-family:inherit;font-size:12.5px;font-weight:700;color:var(--vino);
+  transition:all .2s ease;
+}
+.tm-more-btn:hover{background:#f5e8e8;border-color:var(--vino);border-style:solid}
+.tm-more-btn svg{transition:transform .3s ease}
+.tm-bloque.expanded .tm-more-btn svg{transform:rotate(180deg)}
+
+.tm-total{text-align:center;margin-top:14px;padding:12px 14px;background:#faf7f7;border:1px solid #eedada;border-radius:10px;font-size:13.5px;color:var(--vino);line-height:1.4}
+.tm-total b{font-family:var(--display);font-weight:700}
+
+@media (max-width:480px){
+  .tm-bloque{padding:12px 12px;margin-bottom:12px}
+  .tm-card{gap:9px;padding:5px 8px}
+  .tm-th{width:58px}
+  .tm-t b{font-size:12.8px}
+  .tm-d{font-size:10.8px;padding:2px 5px}
+  .tm-bh{flex-direction:column;align-items:flex-start;gap:5px}
+  .tm-more-btn{font-size:12px;padding:8px 10px}
+}
 /* resumen de tramos */
 .tramos-sec{padding:54px 0}
 .tramo-card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:22px 24px;margin-bottom:16px;box-shadow:0 2px 10px rgba(18,25,31,.04);transition:transform .2s,box-shadow .2s}
@@ -674,29 +716,7 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </header>
 
-<section class="story-sec">
-  <div class="wrap">
-    <p class="xl">Si estás leyendo esto, hay tres cosas que casi seguro te están pasando ahora mismo.</p>
-
-    <h3>Primero: te hace caso cuando quiere</h3>
-    <p>A veces se sienta. A veces te mira, procesa, y sigue en la suya. Nunca sabés cuál de las dos va a ser, así que ya ni le pedís nada delante de gente, porque quedar en ridículo dos veces alcanza. Le repetís el nombre cuatro veces, subís el tono en la tercera, y en la cuarta ya estás gritando en tu propia casa.</p>
-
-    <h3>Segundo: el paseo dejó de ser un paseo</h3>
-    <p>Salís tensando el brazo desde la puerta. Cruzás de vereda cuando ves a alguien con perro. Cambiaste el horario para no encontrarte con nadie. Volvés con el hombro dolorido y con la cabeza en que mañana hay que hacerlo de nuevo. Y en algún momento empezaste a sacarlo menos, que es justo lo que lo empeora.</p>
-
-    <h3>Tercero: probaste, y no duró</h3>
-    <p>Videos de YouTube, cuentas de Instagram, el consejo del vecino que tuvo ovejeros toda la vida. Capaz hasta pagaste un adiestrador. Tres semanas de constancia, algo mejoró, y después se te cayó todo y volviste al punto de partida sintiéndote un poco más tonto que antes.</p>
-
-    <p>Y arriba de las tres está la que nadie dice en voz alta: <b>ya te escuchaste gritándole.</b> Y después te quedaste con esa sensación fea de haberla embarrado con un animal que no entiende una sola palabra de lo que le estás diciendo.</p>
-
-    <h3>Lo peor es que esto no se arregla solo</h3>
-    <p>Va para el otro lado. Cada día que tu perro tira de la correa, la practica una vez más. Cada vez que salta a una visita y alguien lo acaricia para calmarlo, se le refuerza. <b>Las mañas no se van con la edad: se consolidan.</b> Un perro de cinco años con dos años de tirón encima es mucho más difícil que ese mismo perro hace dos años.</p>
-
-    <p>Yo perdí dos años esperando que se le pasara. No se le pasó.</p>
-  </div>
-</section>
-
-<section id="planes-hero" style="padding-top:6px">
+<section id="planes-hero" style="padding-top:24px">
   <div class="wrap-w">
     <h2>Elegí <em>hasta dónde querés llegar</em></h2>
     <p class="baja">Un solo pago. Acceso de por vida. Todas las clases desbloqueadas desde el primer día.</p>
@@ -705,18 +725,18 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       <div class="seg-btns">
         <label class="seg-b sel" data-nombre="Básico">
           <input type="radio" name="planSel" value="básico" checked>
-          <span class="seg-b-title">Plan Básico</span>
+          <span class="seg-b-title">Básico</span>
           <em class="seg-b-sub">15 clases en video</em>
         </label>
         <label class="seg-b" data-nombre="Intermedio">
           <input type="radio" name="planSel" value="intermedio">
           <i class='seg-tag'>🔥 Más Elegido</i>
-          <span class="seg-b-title">Plan Intermedio</span>
+          <span class="seg-b-title">Intermedio</span>
           <em class="seg-b-sub">26 clases + 2 PDFs</em>
         </label>
         <label class="seg-b" data-nombre="Completo">
           <input type="radio" name="planSel" value="completo">
-          <span class="seg-b-title">Plan Completo</span>
+          <span class="seg-b-title">Completo</span>
           <em class="seg-b-sub">36 clases + 2 PDFs</em>
         </label>
       </div>
@@ -759,6 +779,270 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
   </div>
 </section>
 
+<section class="tm-sec" id="temario-sec">
+  <div class="wrap">
+    <h2>Todas las clases, <em>en el orden en que hay que verlas</em></h2>
+    <p class="baja">Cada clase: qué hacer, cómo se hace y el error que casi todos cometen.</p>
+    
+    <!-- Bloque 1: Básico -->
+    <div class="tm-bloque" id="tmBloqueBasico">
+      <div class="tm-bh">
+        <div class="tm-bh-info">
+          <span class="tm-bh-title">Básico · 15 clases en video</span>
+        </div>
+        <span class="tm-bh-tag">Cimientos en casa</span>
+      </div>
+
+      <div class="tm-cards-list">
+        <!-- 3 clases visibles de Básico -->
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/e01-el-error.webp" alt="El error que arruina todo adiestramiento" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>1. El error que arruina todo adiestramiento</b></div>
+          <div class="tm-d">3:08</div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/08-el-primer-truco.webp" alt="Cómo entrenar a un perro adulto y captar su atención" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>2. Cómo entrenar a un perro adulto y captar su atención</b></div>
+          <div class="tm-d">6:04</div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/01-que-se-siente.webp" alt="Los 3 tipos de premio y la orden SENTADO" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>3. Los 3 tipos de premio y la orden SENTADO</b></div>
+          <div class="tm-d">5:32</div>
+        </div>
+
+        <!-- 12 clases restantes ocultas en acordeon -->
+        <div class="tm-extra">
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c04-sentado-pro.webp" alt="El SENTADO profesional con la técnica de luring" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>4. El SENTADO profesional con la técnica de luring</b></div>
+            <div class="tm-d">7:28</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/02-que-se-acueste.webp" alt="La orden ECHADO · método del pecho" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>5. La orden ECHADO · método del pecho</b></div>
+            <div class="tm-d">1:46</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/13-se-tumba-facil.webp" alt="La orden ECHADO · 2 técnicas de luring" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>6. La orden ECHADO · 2 técnicas de luring</b></div>
+            <div class="tm-d">4:58</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/06-el-quieto.webp" alt="La orden QUIETO y el VEN AQUÍ" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>7. La orden QUIETO y el VEN AQUÍ</b></div>
+            <div class="tm-d">6:39</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c08-firme.webp" alt="La orden FIRME" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>8. La orden FIRME</b></div>
+            <div class="tm-d">7:03</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/16-come-a-la-orden.webp" alt="Que coma solo cuando vos se lo permitas" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>9. Que coma solo cuando vos se lo permitas</b></div>
+            <div class="tm-d">2:15</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c10-respeta.webp" alt="Que respete la comida aunque no le digas nada" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>10. Que respete la comida aunque no le digas nada</b></div>
+            <div class="tm-d">6:09</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/10-el-comando-no.webp" alt="El comando NO, sin gritar" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>11. El comando NO, sin gritar</b></div>
+            <div class="tm-d">3:46</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/u2-04-muertito.webp" alt="El truco del muertito" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>12. El truco del muertito</b></div>
+            <div class="tm-d">4:52</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/11-no-muerde-las-manos.webp" alt="Que deje de morderte las manos" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>13. Que deje de morderte las manos</b></div>
+            <div class="tm-d">3:17</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/07-no-salta-encima.webp" alt="Que no te salte encima cuando llega alguien" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>14. Que no te salte encima cuando llega alguien</b></div>
+            <div class="tm-d">3:36</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/12-pis-donde-quieras.webp" alt="Que haga pis y caca donde vos quieras" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>15. Que haga pis y caca donde vos quieras</b></div>
+            <div class="tm-d">5:40</div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="tm-more-btn" onclick="toggleTmMore('tmBloqueBasico', 12, 'Básico')" aria-expanded="false">
+        <span class="tm-more-txt">+ Ver las 12 clases restantes de Básico</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+    </div>
+
+    <!-- Bloque 2: Intermedio -->
+    <div class="tm-bloque" id="tmBloqueIntermedio">
+      <div class="tm-bh">
+        <div class="tm-bh-info">
+          <span class="tm-bh-title">Intermedio · 11 clases extra (26 en total) + 2 PDFs</span>
+        </div>
+        <span class="tm-bh-tag" style="background:#eaf7ee;border-color:#cfe9d8;color:#1e7a37">⭐ Más Elegido</span>
+      </div>
+
+      <div class="tm-cards-list">
+        <!-- 3 clases visibles de Intermedio -->
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/03-quiere-banarse.webp" alt="Que quiera bañarse y pierda el miedo al agua" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>16. Que quiera bañarse y pierda el miedo al agua</b></div>
+          <div class="tm-d">6:16</div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/u2-02-ladrar.webp" alt="Que ladre cuando vos se lo pidas" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>17. Que ladre cuando vos se lo pidas</b></div>
+          <div class="tm-d">4:33</div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/04-no-muerde-las-cosas.webp" alt="Que deje de morder tus cosas" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>18. Que deje de morder tus cosas</b></div>
+          <div class="tm-d">4:19</div>
+        </div>
+
+        <!-- 8 clases restantes ocultas en acordeon -->
+        <div class="tm-extra">
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/15-los-juguetes.webp" alt="Que juegue con sus juguetes y traiga la pelota" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>19. Que juegue con sus juguetes y traiga la pelota</b></div>
+            <div class="tm-d">5:38</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c35-frisbee.webp" alt="Que juegue al frisbee" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>20. Que juegue al frisbee</b></div>
+            <div class="tm-d">9:35</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c36-sin-premios.webp" alt="Entrenarlo sin premios de comida" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>21. Entrenarlo sin premios de comida</b></div>
+            <div class="tm-d">5:04</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/u1-02-cepillado.webp" alt="Cepillado fácil y rápido" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>22. Cepillado fácil y rápido</b></div>
+            <div class="tm-d">3:38</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/14-la-pastilla.webp" alt="Cómo darle una pastilla sin pelear" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>23. Cómo darle una pastilla sin pelear</b></div>
+            <div class="tm-d">3:28</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c22-curar.webp" alt="Cómo curarle una herida" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>24. Cómo curarle una herida</b></div>
+            <div class="tm-d">3:35</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/05-da-la-pata.webp" alt="Que te dé la pata a la orden" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>25. Que te dé la pata a la orden</b></div>
+            <div class="tm-d">4:38</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c25-vueltas.webp" alt="Que dé vueltas sobre sí mismo" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>26. Que dé vueltas sobre sí mismo</b></div>
+            <div class="tm-d">4:49</div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="tm-more-btn" onclick="toggleTmMore('tmBloqueIntermedio', 8, 'Intermedio')" aria-expanded="false">
+        <span class="tm-more-txt">+ Ver las 8 clases restantes de Intermedio</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+    </div>
+
+    <!-- Bloque 3: Completo / Avanzado -->
+    <div class="tm-bloque" id="tmBloqueCompleto">
+      <div class="tm-bh">
+        <div class="tm-bh-info">
+          <span class="tm-bh-title">Completo · 10 clases extra (36 en total) + 2 PDFs</span>
+        </div>
+        <span class="tm-bh-tag">🔥 Experiencia Total</span>
+      </div>
+
+      <div class="tm-cards-list">
+        <!-- 3 clases visibles de Completo -->
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/17-pasear-sin-tirar.webp" alt="Pasear sin que te tire de la correa" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>27. Pasear sin que te tire de la correa</b></div>
+          <div class="tm-d">4:06</div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/09-deja-de-llorar.webp" alt="Que deje de llorar cuando te vas" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>28. Que deje de llorar cuando te vas</b></div>
+          <div class="tm-d">4:57</div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c18-cama.webp" alt="Que ame y respete su cama" loading="lazy" decoding="async" width="800" height="447"></div>
+          <div class="tm-t"><b>29. Que ame y respete su cama</b></div>
+          <div class="tm-d">8:32</div>
+        </div>
+
+        <!-- 7 clases restantes ocultas en acordeon -->
+        <div class="tm-extra">
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c32-pasear.webp" alt="Cómo pasear a un perro desde cero" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>30. Cómo pasear a un perro desde cero</b></div>
+            <div class="tm-d">9:49</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c33-solo.webp" alt="Que aprenda a quedarse solo" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>31. Que aprenda a quedarse solo</b></div>
+            <div class="tm-d">7:06</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c27-pum.webp" alt="El “pum”: que se haga el muerto de un disparo" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>32. El “pum”: que se haga el muerto de un disparo</b></div>
+            <div class="tm-d">7:56</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/u2-03-saltar.webp" alt="Que salte obstáculos" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>33. Que salte obstáculos</b></div>
+            <div class="tm-d">3:17</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c29-salto-imp.webp" alt="El salto de obstáculo que impresiona" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>34. El salto de obstáculo que impresiona</b></div>
+            <div class="tm-d">3:20</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c30-obstaculo.webp" alt="El obstáculo profesional, sin premios" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>35. El obstáculo profesional, sin premios</b></div>
+            <div class="tm-d">5:22</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-th"><img src="https://czocbnyoenjbpxmcqobn.supabase.co/storage/v1/object/public/algoritmia-img/adiestramiento-canino/clases/c31-8trucos.webp" alt="8 trucos en 5 minutos" loading="lazy" decoding="async" width="800" height="447"></div>
+            <div class="tm-t"><b>36. 8 trucos en 5 minutos</b></div>
+            <div class="tm-d">4:31</div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="tm-more-btn" onclick="toggleTmMore('tmBloqueCompleto', 7, 'Completo')" aria-expanded="false">
+        <span class="tm-more-txt">+ Ver las 7 clases restantes de Completo</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="tm-total"><b>36 clases · 3 h 06 min de video</b> · más los 2 manuales en PDF. Está todo grabado: entrás y lo tenés completo.</div>
+  </div>
+</section>
+
 <section class="gris" id="manuales-sec">
   <div class="wrap">
     <div style="text-align:center;margin-bottom:6px">
@@ -784,6 +1068,28 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="story-sec">
+  <div class="wrap">
+    <p class="xl">Si estás leyendo esto, hay tres cosas que casi seguro te están pasando ahora mismo.</p>
+
+    <h3>Primero: te hace caso cuando quiere</h3>
+    <p>A veces se sienta. A veces te mira, procesa, y sigue en la suya. Nunca sabés cuál de las dos va a ser, así que ya ni le pedís nada delante de gente, porque quedar en ridículo dos veces alcanza. Le repetís el nombre cuatro veces, subís el tono en la tercera, y en la cuarta ya estás gritando en tu propia casa.</p>
+
+    <h3>Segundo: el paseo dejó de ser un paseo</h3>
+    <p>Salís tensando el brazo desde la puerta. Cruzás de vereda cuando ves a alguien con perro. Cambiaste el horario para no encontrarte con nadie. Volvés con el hombro dolorido y con la cabeza en que mañana hay que hacerlo de nuevo. Y en algún momento empezaste a sacarlo menos, que es justo lo que lo empeora.</p>
+
+    <h3>Tercero: probaste, y no duró</h3>
+    <p>Videos de YouTube, cuentas de Instagram, el consejo del vecino que tuvo ovejeros toda la vida. Capaz hasta pagaste un adiestrador. Tres semanas de constancia, algo mejoró, y después se te cayó todo y volviste al punto de partida sintiéndote un poco más tonto que antes.</p>
+
+    <p>Y arriba de las tres está la que nadie dice en voz alta: <b>ya te escuchaste gritándole.</b> Y después te quedaste con esa sensación fea de haberla embarrado con un animal que no entiende una sola palabra de lo que le estás diciendo.</p>
+
+    <h3>Lo peor es que esto no se arregla solo</h3>
+    <p>Va para el otro lado. Cada día que tu perro tira de la correa, la practica una vez más. Cada vez que salta a una visita y alguien lo acaricia para calmarlo, se le refuerza. <b>Las mañas no se van con la edad: se consolidan.</b> Un perro de cinco años con dos años de tirón encima es mucho más difícil que ese mismo perro hace dos años.</p>
+
+    <p>Yo perdí dos años esperando que se le pasara. No se le pasó.</p>
   </div>
 </section>
 
@@ -932,18 +1238,18 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
       <div class="seg-btns">
         <label class="seg-b sel" data-nombre="Básico">
           <input type="radio" name="planCierreSel" value="básico" checked>
-          <span class="seg-b-title">Plan Básico</span>
+          <span class="seg-b-title">Básico</span>
           <em class="seg-b-sub">15 clases en video</em>
         </label>
         <label class="seg-b" data-nombre="Intermedio">
           <input type="radio" name="planCierreSel" value="intermedio">
           <i class='seg-tag'>🔥 Más Elegido</i>
-          <span class="seg-b-title">Plan Intermedio</span>
+          <span class="seg-b-title">Intermedio</span>
           <em class="seg-b-sub">26 clases + 2 PDFs</em>
         </label>
         <label class="seg-b" data-nombre="Completo">
           <input type="radio" name="planCierreSel" value="completo">
-          <span class="seg-b-title">Plan Completo</span>
+          <span class="seg-b-title">Completo</span>
           <em class="seg-b-sub">36 clases + 2 PDFs</em>
         </label>
       </div>
@@ -1153,6 +1459,21 @@ src="https://www.facebook.com/tr?id=2504143436724225&ev=PageView&noscript=1"></n
     });
   });
   pintar('Básico');
+
+  // toggle ver mas clases por bloque (Basico, Intermedio, Completo)
+  window.toggleTmMore = function(id, count, planName){
+    var el = document.getElementById(id);
+    if(!el) return;
+    var isExpanded = el.classList.toggle('expanded');
+    var btn = el.querySelector('.tm-more-btn');
+    if(btn){
+      btn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      var txt = btn.querySelector('.tm-more-txt');
+      if(txt){
+        txt.textContent = isExpanded ? 'Plegar clases ▲' : '+ Ver las ' + count + ' clases restantes de ' + planName;
+      }
+    }
+  };
 
   // aula: los 4 adelantos, se van encadenando y se puede elegir
   (function(){
